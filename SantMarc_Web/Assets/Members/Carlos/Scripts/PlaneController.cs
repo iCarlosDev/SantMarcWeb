@@ -1,30 +1,36 @@
+using System;
 using UnityEngine;
 using System.Collections;
 
 public class PlaneController : MonoBehaviour
 {
+    [SerializeField] private Vector3 movement;
+    [SerializeField] private float speed;
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float horizontalInput;
+    [SerializeField] private float verticalInput;
+    
+    [SerializeField] private Rigidbody plane_Rigidbody;
+    
 // Use this for initialization
-    void Start () 
+    void Start ()
     {
-        Debug.Log("Fly script added to: " + gameObject.name);
+        plane_Rigidbody = GetComponent<Rigidbody>();
     }
 
 // Update is called once per frame
-    void Update () 
+    void Update ()
     {
-        transform.position += transform.forward * Time.deltaTime * 10.0f;
-        
-        if (Input.GetButton("Fire1"))
-        {
-            transform.position += transform.forward * Time.deltaTime * 40.0f; 
-        }
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
 
-        transform.Rotate( Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal") );
-        float terrainHeightWhereWeAre = Terrain.activeTerrain.SampleHeight( transform.position );
+        plane_Rigidbody.AddForce(transform.forward * speed * Time.deltaTime, ForceMode.Impulse);
 
-        if (terrainHeightWhereWeAre > transform.position.y) 
-        {
-            transform.position = new Vector3(transform.position.x, terrainHeightWhereWeAre, transform.position.z);
-        }
+        transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime * horizontalInput);
+        transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime * verticalInput);
+    }
+
+    private void FixedUpdate()
+    {
     }
 }
