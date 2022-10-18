@@ -6,7 +6,8 @@ public class PlaneController : MonoBehaviour
 {
     [SerializeField] private Vector3 movement;
     [SerializeField] private float speed;
-    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float verticalRotationSpeed;
+    [SerializeField] private float horizontalRotationSpeed;
     [SerializeField] private float horizontalInput;
     [SerializeField] private float verticalInput;
     
@@ -26,8 +27,8 @@ public class PlaneController : MonoBehaviour
 
         plane_Rigidbody.AddForce(transform.forward * speed * Time.deltaTime, ForceMode.Impulse);
 
-        transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime * horizontalInput);
-        transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime * verticalInput);
+        transform.Rotate(Vector3.back * horizontalRotationSpeed * Time.deltaTime * horizontalInput);
+        transform.Rotate(Vector3.right * verticalRotationSpeed * Time.deltaTime * verticalInput);
     }
 
     private void FixedUpdate()
