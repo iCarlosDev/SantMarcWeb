@@ -14,6 +14,9 @@ public class Tarea : ScriptableObject
 
     public Sprite recompensa;
 
+    public bool Recompensa;
+    public bool Tiempo;
+
     public void Print()
     {
         Debug.Log(nombre + ": " + descripcion + " | Tienes " + minParaCompletarla + " min para completarla");
