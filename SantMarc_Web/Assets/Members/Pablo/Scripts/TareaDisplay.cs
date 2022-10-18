@@ -12,10 +12,14 @@ public class TareaDisplay : MonoBehaviour
     public TextMeshProUGUI nombreText;
     public TextMeshProUGUI descripcionText;
 
+    private GameObject recompensaImageParent;
     public Image recompensaImage;
 
     public TextMeshProUGUI minParaCompletar;
     public TextMeshProUGUI segParaCompletar;
+
+    public bool Recompensa;
+    public bool Tiempo;
     
     void Start()
     {/*
@@ -41,9 +45,28 @@ public class TareaDisplay : MonoBehaviour
         nombreText.text = tarea.name;
         descripcionText.text = tarea.descripcion;
         
-        recompensaImage.sprite = tarea.recompensa;
+        
 
-        minParaCompletar.text = tarea.minParaCompletarla;
-        segParaCompletar.text = tarea.segParaCompletarla;
+        if (Recompensa)
+        {
+            recompensaImage.sprite = tarea.recompensa;
+        }
+        else
+        {
+            recompensaImageParent = recompensaImage.GetComponentInParent(gameObject);
+        }
+        
+        if (Tiempo)
+        {
+            minParaCompletar.text = tarea.minParaCompletarla;
+            segParaCompletar.text = tarea.segParaCompletarla;
+        }
+        else
+        {
+            minParaCompletar.gameObject.SetActive(false);
+            segParaCompletar.gameObject.SetActive(false);
+        }
+
+
     }
 }
