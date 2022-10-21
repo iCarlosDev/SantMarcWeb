@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
+        
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)

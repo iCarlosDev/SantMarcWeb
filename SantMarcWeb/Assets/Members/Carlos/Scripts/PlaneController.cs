@@ -12,7 +12,7 @@ public class PlaneController : MonoBehaviour
     [SerializeField] private float horizontalInput;
     [SerializeField] private float verticalInput;
     
-    [SerializeField] private Rigidbody plane_Rigidbody;
+    public Rigidbody plane_Rigidbody;
     
 // Use this for initialization
     void Start ()

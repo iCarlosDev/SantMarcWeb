@@ -7,6 +7,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     //Variables
+    [SerializeField] private PlaneController planeController;
+    
     [SerializeField] private GameObject planeVehicle;
     [SerializeField] private GameObject planeCamera;
     
@@ -18,6 +20,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        if (planeController == null)
+        {
+            planeController = FindObjectOfType<PlaneController>();
+        }
     }
 
     private void Update()
@@ -53,6 +60,8 @@ public class GameManager : MonoBehaviour
 
             planeVehicle.transform.position = player.transform.position;
             planeVehicle.transform.rotation = player.transform.rotation;
+            
+            planeController.plane_Rigidbody.velocity *= 0f;
         }
     }
 }
