@@ -7,6 +7,7 @@ public class ActualizarTarea : MonoBehaviour
 {
 
     public TareaDisplay TareaDisplay;
+    public Tarea tarea_a_Mostrar;
 
 
     private void Awake()
@@ -18,7 +19,7 @@ public class ActualizarTarea : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            TareaDisplay.UpdateTarea();
+            TareaDisplay.UpdateTarea(tarea_a_Mostrar);
         }
     }
 }

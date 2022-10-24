@@ -63,17 +63,18 @@ public class TareaDisplay : MonoBehaviour
         
     }
 
-    public void UpdateTarea()
+    public void UpdateTarea(Tarea nuevaTarea)
     {
-        nombreText.text = tarea.name;
-        descripcionText.text = tarea.descripcion;
+        nombreText.text = nuevaTarea.name;
+        descripcionText.text = nuevaTarea.descripcion;
 
-        Recompensa = tarea.recompensa;
-        Tiempo = tarea.Tiempo;
+        Recompensa = nuevaTarea.recompensa;
+        Tiempo = nuevaTarea.Tiempo;
         
         if (Recompensa)
         {
-            recompensaImage.sprite = tarea.recompensa;
+            recompensaImage.sprite = nuevaTarea.recompensa;
+            recompensaImageParent.SetActive(true);
         }
         else
         {
@@ -84,6 +85,7 @@ public class TareaDisplay : MonoBehaviour
         if (Tiempo)
         {
             empezarTemporizador();
+            tiempoParent.SetActive(true);
         }
         else
         {
