@@ -14,22 +14,22 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject playerCamera;
-
+    
+    public GameObject invocatePlaneVFX;
+    
     public bool isChanged;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-
-        if (planeController == null)
-        {
-            planeController = FindObjectOfType<PlaneController>();
-        }
+        invocatePlaneVFX.GetComponentInChildren<ParticleSystem>().Stop();
     }
 
     private void Update()
     {
         CambiarPersonaje();
+
+        invocatePlaneVFX.transform.position = player.transform.position;
     }
 
     private void CambiarPersonaje()
@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             isChanged = !isChanged;
+            invocatePlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
         }
         
         if (isChanged)
