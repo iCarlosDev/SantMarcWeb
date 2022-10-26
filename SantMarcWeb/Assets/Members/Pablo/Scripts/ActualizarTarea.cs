@@ -20,6 +20,8 @@ public class ActualizarTarea : MonoBehaviour
         if (other.tag == "Player")
         {
             TareaDisplay.UpdateTarea(tarea_a_Mostrar);
+            TareaDisplay.resetearTemporizador();
+            Destroy(this.gameObject);
         }
     }
 }

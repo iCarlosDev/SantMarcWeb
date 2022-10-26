@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,42 +13,69 @@ public class TareaDisplay : MonoBehaviour
     public TextMeshProUGUI nombreText;
     public TextMeshProUGUI descripcionText;
 
-    private GameObject recompensaImageParent;
+    [SerializeField] private GameObject recompensaImageParent;
     public Image recompensaImage;
 
-    private GameObject tiempoParent;
+    [SerializeField] private GameObject tiempoParent;
     public TextMeshProUGUI tiempoParaCompletar;
 
-    [SerializeField] private int segundos, minutos;
+    [SerializeField] public int segundos, minutos;
 
     public bool Recompensa;
     public bool Tiempo;
-    
+
+    //private bool timerStarted = false;
+    [SerializeField] private bool TareaCompletada = true;
+
+
+    private void Start()
+    {
+        recompensaImage.enabled = false;
+        recompensaImageParent = recompensaImage.gameObject.transform.parent.gameObject;
+        tiempoParent = tiempoParaCompletar.gameObject.transform.parent.gameObject;
+    }
+
     public void empezarTemporizador()
     {
+        minutos = int.Parse(tarea.minParaCompletarla);
+        segundos = int.Parse(tarea.segParaCompletarla);
         escribirTiempo(minutos, segundos);
-        Invoke("actualizarTemporizador", 1f);
+        //if (!timerStarted)
+        {
+            Invoke("actualizarTemporizador", 1f);
+        }
+        //timerStarted = true;
+    }
+
+    public void resetearTemporizador()
+    {
+        escribirTiempo(03, 00);
     }
 
     private void actualizarTemporizador()
     {
-        segundos--;
-        if (segundos < 0)
+        if(TareaCompletada == false)
         {
-            if (minutos == 0)
+            if (Tiempo)
             {
-                //Tiempo Agotado
-                Debug.Log("TIEMPO AGOTADO");
-            }
-            else
-            {
-                minutos--;
-                segundos = 59;
+                segundos--;
+                if (segundos < 0)
+                {
+                    if (minutos == 0)
+                    {
+                        //Tiempo Agotado
+                        Debug.Log("TIEMPO AGOTADO");
+                    }
+                    else
+                    {
+                        minutos--;
+                        segundos = 59;
+                    }
+                }
+                escribirTiempo(minutos, segundos);
+                Invoke("actualizarTemporizador", 1f);
             }
         }
-        
-        escribirTiempo(minutos, segundos);
-        Invoke("actualizarTemporizador", 1f);
     }
 
     private void escribirTiempo(int minutos, int segundos)
@@ -73,12 +101,12 @@ public class TareaDisplay : MonoBehaviour
         
         if (Recompensa)
         {
+            recompensaImage.enabled = true;
             recompensaImage.sprite = nuevaTarea.recompensa;
             recompensaImageParent.SetActive(true);
         }
         else
         {
-            recompensaImageParent = recompensaImage.gameObject.transform.parent.gameObject;
             recompensaImageParent.SetActive(false);
         }
         
@@ -89,10 +117,7 @@ public class TareaDisplay : MonoBehaviour
         }
         else
         {
-            tiempoParent = tiempoParaCompletar.gameObject.transform.parent.gameObject;
-            tiempoParent.SetActive(false);
+            resetearTemporizador();
         }
-
-
     }
 }
