@@ -10,13 +10,11 @@ public class GameManager : MonoBehaviour
     //Variables
     
     [SerializeField] private PlaneController planeController;
-    [SerializeField] private GameObject generalCamera;
     
     [Header("--- PLANE ---")]
     [SerializeField] private GameObject planeVehicle;
-    [SerializeField] private GameObject planeCamera;
-    [SerializeField] private CinemachineFreeLook freeLookCam;
-    [SerializeField] private CinemachineVirtualCamera virtualCam;
+    [SerializeField] private GameObject virtualCam;
+    [SerializeField] private GameObject freeLookCam;
     [SerializeField] private bool canResetCam;
     
     [Header("--- PLAYER ---")]
@@ -70,7 +68,6 @@ public class GameManager : MonoBehaviour
         playerCamera.SetActive(false);
             
         planeVehicle.SetActive(true);
-        planeCamera.SetActive(true);
 
         player.transform.position = planeVehicle.transform.position;
         player.transform.rotation = planeVehicle.transform.rotation;
@@ -81,13 +78,16 @@ public class GameManager : MonoBehaviour
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");
 
+        if (canResetCam)
+        { 
+            virtualCam.SetActive(true);
+        }
+        
         if (canResetCam && (mouseX != 0 || mouseY != 0))
         {
             canResetCam = false;
-            virtualCam.enabled = false;
-            freeLookCam.enabled = true;
-            freeLookCam.Priority = 10;
-            virtualCam.Priority = 0;
+            virtualCam.SetActive(false);
+            freeLookCam.SetActive(true);
             StartCoroutine(WaitResetCamera());
         }
     }
@@ -95,10 +95,8 @@ public class GameManager : MonoBehaviour
     private IEnumerator WaitResetCamera()
     {
         yield return new WaitForSeconds(3);
-        freeLookCam.enabled = false;
-        virtualCam.enabled = true;
-        freeLookCam.Priority = 0;
-        virtualCam.Priority = 10;
+        freeLookCam.SetActive(false);
+        virtualCam.SetActive(true);
         canResetCam = true;
     }
     
@@ -112,7 +110,8 @@ public class GameManager : MonoBehaviour
         playerCamera.SetActive(true);
             
         planeVehicle.SetActive(false);
-        planeCamera.SetActive(false);
+        virtualCam.SetActive(false);
+        freeLookCam.SetActive(false);
 
         planeVehicle.transform.position = player.transform.position;
         planeVehicle.transform.rotation = player.transform.rotation;
