@@ -37,7 +37,7 @@ public class PlaneController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Untagged"))
         {
-            gameManager.isChanged = false;
+            gameManager.changeToPlane = false;
             gameManager.invocatePlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
         }
     }

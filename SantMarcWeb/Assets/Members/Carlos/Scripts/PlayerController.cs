@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
     
     [SerializeField] private Vector3 velocity;
-    [SerializeField] private bool isGrounded;
+    public bool isGrounded;
 
     private void Start()
     {
