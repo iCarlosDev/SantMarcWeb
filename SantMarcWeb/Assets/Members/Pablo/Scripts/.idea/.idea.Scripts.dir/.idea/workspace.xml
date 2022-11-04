@@ -8,7 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Tarea.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tarea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TareaDisplay.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -38,6 +38,8 @@
       <updated>1666109229502</updated>
       <workItem from="1666109230777" duration="51000" />
       <workItem from="1666630454088" duration="486000" />
+      <workItem from="1667494342756" duration="122000" />
+      <workItem from="1667494478037" duration="163000" />
     </task>
     <servers />
   </component>

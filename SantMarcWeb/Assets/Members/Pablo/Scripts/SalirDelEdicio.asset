@@ -19,3 +19,6 @@ MonoBehaviour:
   recompensa: {fileID: 0}
   Recompensa: 0
   Tiempo: 1
+  checkpoint1: 1
+  checkpoint2: 0
+  checkpoint3: 0
