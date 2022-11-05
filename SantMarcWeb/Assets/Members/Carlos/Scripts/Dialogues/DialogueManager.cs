@@ -1,20 +1,37 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private DialogueObjectDisplay _dialogueObjectDisplay;
     [SerializeField] private GameManager _gameManager;
-    private Queue<string> sentences;
+    [SerializeField] private Animator dialogueAnimator;
+    
+    [SerializeField] private TextMeshProUGUI TMP_Name;
+    [SerializeField] private TextMeshProUGUI TMP_Sentence;
+    [SerializeField] private Image Avatar_IMG;
+    
+    [Header("-------- TASKS --------")]
+    [Space(10)]
+    public Animator taskAnimator;
+    public TaskObject[] task;
+    public TextMeshProUGUI TMP_TaskSentence;
 
-    [SerializeField] private GameObject DialogueBox;
+    [Header("--- ACT 1 BOOLS ---")] 
+    [Space(10)] 
+    public bool isAct1_Dialogue_1;
+    
+    private Queue<string> sentences;
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        TMP_TaskSentence.text = task[0].DescriptionTask_TXT;
     }
 
     private void Update()
@@ -28,8 +45,12 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(DialogueObject dialogueObject)
     {
         _gameManager.isDialogue = true;
+     
+        dialogueAnimator.SetBool("DialogueIsOn", true);
+
+        TMP_Name.text = dialogueObject.name_TXT;
+        Avatar_IMG.sprite = dialogueObject.sprite_IMG;
         
-        DialogueBox.SetActive(true);
         sentences.Clear();
         
         foreach (string sentence in dialogueObject.sentence_TXT)
@@ -55,10 +76,10 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeSentence(string sentence)
     {
-        _dialogueObjectDisplay.TMP_Description.text = "";
+        TMP_Sentence.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            _dialogueObjectDisplay.TMP_Description.text += letter;
+            TMP_Sentence.text += letter;
             yield return null;
         }
     }
@@ -66,6 +87,16 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         _gameManager.isDialogue = false;
-        DialogueBox.SetActive(false);
+        dialogueAnimator.SetBool("DialogueIsOn", false);
+        
+        ACT1_Bools_Manager();
+    }
+
+    private void ACT1_Bools_Manager()
+    {
+        if (!isAct1_Dialogue_1)
+        {
+            taskAnimator.SetBool("TaskIsOn", true);
+        }
     }
 }

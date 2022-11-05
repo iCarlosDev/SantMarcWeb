@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e006d602f4387e6469f78bdd84a28793, type: 3}
-  m_Name: Ruben
+  m_Name: Tu_Dialogo_Acto2_1
   m_EditorClassIdentifier: 
-  name_TXT: "Rub\xE9n"
+  name_TXT: "T\xFA"
   sentence_TXT:
-  - Hola Alumno!
-  - "Eres muy feo cabr\xF3n"
-  - Nos vemos luego cerdaco
+  - "Esta puerta est\xE1 cerrada..."
   sprite_IMG: {fileID: 21300000, guid: bf0a59ba21cc6c94b859b762e59dfee6, type: 3}

@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private PlaneController planeController;
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private DialogueManager _dialogueManager;
+    [SerializeField] private DialogueObject _dialogueObject;
     
     [Header("--- PLANE ---")]
     [SerializeField] private GameObject planeVehicle;
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         invocatePlaneVFX.GetComponentInChildren<ParticleSystem>().Stop();
+        
+        _dialogueManager.StartDialogue(_dialogueObject);
     }
 
     private void Update()
