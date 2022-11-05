@@ -31,8 +31,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject carFreeLookCam;
     [SerializeField] private bool canResetCarCam;
     private Coroutine WaitCarCamera;
-    
-    
+
+    [Header("--- MODO DIALOGO ---")] 
+    [Space(10)] 
+    public bool isDialogue;
+
     [Header("--- OTHER ---")]
     [Space(10)]
     public GameObject invocatePlaneVFX;
@@ -51,8 +54,17 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         CambiarPersonaje();
-
+        
         invocatePlaneVFX.transform.position = player.transform.position;
+
+        if (isDialogue)
+        {
+            playerController.enabled = false;
+        }
+        else
+        {
+            playerController.enabled = true;
+        }
     }
 
     private void CambiarPersonaje()
@@ -93,7 +105,7 @@ public class GameManager : MonoBehaviour
             
         planeVehicle.SetActive(true);
 
-        player.transform.position = planeVehicle.transform.position;
+        player.transform.position = new Vector3(planeVehicle.transform.position.x, planeVehicle.transform.position.y + 1, planeVehicle.transform.position.z);
         player.transform.rotation = planeVehicle.transform.rotation;
     }
     
@@ -139,7 +151,7 @@ public class GameManager : MonoBehaviour
         
         carVehicle.SetActive(true);
 
-        player.transform.position = carVehicle.transform.position;
+        player.transform.position = new Vector3(carVehicle.transform.position.x, carVehicle.transform.position.y + 1, carVehicle.transform.position.z);
         player.transform.rotation = carVehicle.transform.rotation;
     }
     
@@ -191,10 +203,10 @@ public class GameManager : MonoBehaviour
         carVirtualCam.SetActive(false);
         carFreeLookCam.SetActive(false);
 
-        planeVehicle.transform.position = player.transform.position;
+        planeVehicle.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
         planeVehicle.transform.rotation = player.transform.rotation;
 
-        carVehicle.transform.position = player.transform.position;
+        carVehicle.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
         carVehicle.transform.rotation = player.transform.rotation;
             
         planeController.plane_Rigidbody.velocity *= 0f;
