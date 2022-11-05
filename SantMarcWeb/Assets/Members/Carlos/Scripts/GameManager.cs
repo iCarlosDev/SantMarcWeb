@@ -11,9 +11,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private PlaneController planeController;
     [SerializeField] private PlayerController playerController;
-    [SerializeField] private DialogueManager _dialogueManager;
-    [SerializeField] private DialogueObject _dialogueObject;
-    
+
     [Header("--- PLANE ---")]
     [SerializeField] private GameObject planeVehicle;
     [SerializeField] private GameObject planeVirtualCam;
@@ -35,7 +33,7 @@ public class GameManager : MonoBehaviour
     private Coroutine WaitCarCamera;
 
     [Header("--- MODO DIALOGO ---")] 
-    [Space(10)] 
+    [Space(10)]
     public bool isDialogue;
 
     [Header("--- OTHER ---")]
@@ -51,8 +49,6 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         invocatePlaneVFX.GetComponentInChildren<ParticleSystem>().Stop();
-        
-        _dialogueManager.StartDialogue(_dialogueObject);
     }
 
     private void Update()

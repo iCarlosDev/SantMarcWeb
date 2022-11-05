@@ -9,8 +9,11 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager;
+
+    [Header("--- DIALOGUES ---")]
+    [Space(10)]
     [SerializeField] private Animator dialogueAnimator;
-    
+    [SerializeField] private DialogueObject _dialogueObject;
     [SerializeField] private TextMeshProUGUI TMP_Name;
     [SerializeField] private TextMeshProUGUI TMP_Sentence;
     [SerializeField] private Image Avatar_IMG;
@@ -32,11 +35,13 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         TMP_TaskSentence.text = task[0].DescriptionTask_TXT;
+        
+        StartDialogue(_dialogueObject);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Fire1"))
         {
             DisplayNextSentence();
         }
