@@ -19,3 +19,6 @@ MonoBehaviour:
   recompensa: {fileID: 21300000, guid: fe36322c884baad4285ed92a9f459ac1, type: 3}
   Recompensa: 0
   Tiempo: 0
+  checkpoint1: 1
+  checkpoint2: 1
+  checkpoint3: 1

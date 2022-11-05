@@ -9,10 +9,22 @@ public class ActualizarTarea : MonoBehaviour
     public TareaDisplay TareaDisplay;
     public Tarea tarea_a_Mostrar;
 
+    public bool primeraTarea;
+
 
     private void Awake()
     {
+        
+    }
+
+    private void Start()
+    {
         TareaDisplay = FindObjectOfType<TareaDisplay>();
+        if (primeraTarea)
+        {
+            TareaDisplay.UpdateTarea(tarea_a_Mostrar);
+            TareaDisplay.resetearTemporizador();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

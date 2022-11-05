@@ -17,6 +17,10 @@ public class Tarea : ScriptableObject
     public bool Recompensa;
     public bool Tiempo;
 
+    public bool checkpoint1;
+    public bool checkpoint2;
+    public bool checkpoint3;
+
     public void Print()
     {
         Debug.Log(nombre + ": " + descripcion + " | Tienes " + minParaCompletarla + " min para completarla");
