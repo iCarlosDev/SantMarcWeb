@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 823342ee3a5973e488ff8c4eb44bf332, type: 3}
-  m_Name: SalirDelEdicio
+  m_Name: Modela
   m_EditorClassIdentifier: 
-  nombre: Sal Del Edicio
-  descripcion: Ves hasta la puerta principal
+  nombre: "Modela el Avi\xF3n"
+  descripcion: Presiona "Enter" cerca del PC para empezar a modelar
   minParaCompletarla: 3
   segParaCompletarla: 0
-  recompensa: {fileID: 0}
+  recompensa: {fileID: 21300000, guid: fe36322c884baad4285ed92a9f459ac1, type: 3}
   Recompensa: 0
   Tiempo: 1
   checkpoint1: 1
-  checkpoint2: 0
-  checkpoint3: 0
+  checkpoint2: 1
+  checkpoint3: 1
