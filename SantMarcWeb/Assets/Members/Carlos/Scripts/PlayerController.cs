@@ -8,20 +8,28 @@ public class PlayerController : MonoBehaviour
     //Variables
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform cam;
+    
+    [Header("--- PLAYER BASIC VALUES ---")] 
+    [Space(10)] 
     [SerializeField] private float speed = 6f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float jumpHeight = 3f;
     [SerializeField] private float turnSmoothTime = 0.1f;
     [SerializeField] private float turnSmoothVelocity;
-    [SerializeField] private float horizontal;
-    [SerializeField] private float vertical;
+    public float horizontal;
+    public float vertical;
     
+    [Header("--- PLAYER GROUND VALUES ---")] 
+    [Space(10)]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
-    
     [SerializeField] private Vector3 velocity;
     public bool isGrounded;
+
+    [Header("--- ANIMATIONS ---")] 
+    [Space(10)] 
+    public Animator playerAnimator;
 
     private void Start()
     {
@@ -29,6 +37,12 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
+    {
+        PlayerControl();
+        AnimationsController();
+    }
+
+    private void PlayerControl()
     {
         transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
         
@@ -39,8 +53,8 @@ public class PlayerController : MonoBehaviour
             velocity.y = -2f;
         }
 
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         velocity.y += gravity * Time.deltaTime;
@@ -60,5 +74,11 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
+    }
+
+    private void AnimationsController()
+    {
+        playerAnimator.SetFloat("X", horizontal);
+        playerAnimator.SetFloat("Y", vertical);
     }
 }

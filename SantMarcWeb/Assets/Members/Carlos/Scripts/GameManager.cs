@@ -60,6 +60,10 @@ public class GameManager : MonoBehaviour
         if (isDialogue)
         {
             playerController.enabled = false;
+            playerController.horizontal = 0;
+            playerController.vertical = 0;
+            playerController.playerAnimator.SetFloat("X", 0);
+            playerController.playerAnimator.SetFloat("Y", 0);
         }
         else
         {
