@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Members.Carlos.Scripts.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Members.Carlos.Scripts
 {
@@ -62,8 +63,11 @@ namespace Members.Carlos.Scripts
 
         private void Update()
         {
-            ChangeCharacter();
-        
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                ChangeCharacter();   
+            }
+
             spawnPlaneVFX.transform.position = player.transform.position;
 
             if (isDialogue)
@@ -82,7 +86,7 @@ namespace Members.Carlos.Scripts
             if (taskManager.exit2Checked)
             {
                 teachersDoor.transform.localEulerAngles = new Vector3(0, 210, 0);
-                studentsDoor.transform.localEulerAngles = new Vector3(0, 105, 0);
+                studentsDoor.transform.localEulerAngles = new Vector3(0, -135, 0);
             }
         }
 
