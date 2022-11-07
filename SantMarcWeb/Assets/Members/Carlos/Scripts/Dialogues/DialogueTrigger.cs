@@ -56,16 +56,15 @@ namespace Members.Carlos.Scripts.Dialogues
             if (!other.CompareTag("Player")) return;
 
             _display.checkpointUI.SetActive(true);
-            if (!taskManager.teacherFound)
+            playerOnRange = true;
+            if(taskManager.exit2Checked == false)
             {
-                _display.checkpointUI.GetComponent<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[0].InteracionString;
+                _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[0].InteracionString;
             }
             else
             {
-                _display.checkpointUI.GetComponent<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[1].InteracionString;
+                _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[1].InteracionString;
             }
-            
-            playerOnRange = true;
         }
         
         private void OnTriggerExit(Collider other)

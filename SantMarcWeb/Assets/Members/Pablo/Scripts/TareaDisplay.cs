@@ -52,7 +52,7 @@ public class TareaDisplay : MonoBehaviour
 
     private void Start()
     {
-        
+        tiempoParent.SetActive(false);
     }
 
     #region Temporizador
@@ -118,9 +118,9 @@ public class TareaDisplay : MonoBehaviour
     public void UpdateTarea(Tarea nuevaTarea)
     {
         tarea = nuevaTarea;
-        nombreText.text = nuevaTarea.name;
+        //nombreText.text = nuevaTarea.name;
         descripcionText.text = nuevaTarea.descripcion;
-        checkpointUI.GetComponent<TextMeshProUGUI>().text = "Presiona E para " + tarea.interactionString;
+        checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + tarea.interactionString;
         
         checkpoint1 = nuevaTarea.checkpoint1;
         checkpoint2 = nuevaTarea.checkpoint2;
@@ -140,12 +140,13 @@ public class TareaDisplay : MonoBehaviour
         else
         {
             resetearTemporizador();
+            tiempoParent.SetActive(false);
         }
     }
 
     public void CambiarTarea(int ArrayTareas_Index)
-    { 
-        gameManager.instance.taskManager.taskAnimator.SetBool(TaskIsOn, false);
+    {
+        gameManager.instance.taskManager.SwapTaskAnimation();
         StartCoroutine(Delay(ArrayTareas_Index));
     }
 

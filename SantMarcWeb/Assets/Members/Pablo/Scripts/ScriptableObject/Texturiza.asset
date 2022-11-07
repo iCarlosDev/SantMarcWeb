@@ -15,10 +15,10 @@ MonoBehaviour:
   dialogueObjects: []
   interactionString: Texturizar
   nombre: "Texturiza el Avi\xF3n"
-  descripcion: Presiona "Enter" cerca del PC para empezar a texturizar
+  descripcion: Presiona "E" cerca del PC para empezar a texturizar
   minParaCompletarla: 3
   segParaCompletarla: 0
-  Tiempo: 1
+  Tiempo: 0
   checkpoint1: 1
   checkpoint2: 0
   checkpoint3: 0

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Members.Carlos.Scripts.Tasks;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 public class CheckPoint_Tarea : MonoBehaviour
 {
@@ -39,6 +39,11 @@ public class CheckPoint_Tarea : MonoBehaviour
                     checkpoint = true; 
                     _display.checkpointUI.SetActive(false); 
                     Destroy(this);
+
+                    if (tarea == _display.ArrayDeTareas[3])
+                    {
+                        SceneManager.LoadScene(1);
+                    }
                 }
             }
         }

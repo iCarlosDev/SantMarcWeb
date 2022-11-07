@@ -62,6 +62,12 @@ namespace Members.Carlos.Scripts.Tasks
         
             StartCoroutine(TaskAnimatorTransition());
         }
+
+        public void SwapTaskAnimation()
+        {
+            taskAnimator.SetBool(TaskIsOn, false);
+            StartCoroutine(TaskAnimatorTransition());
+        }
     
         private IEnumerator TaskAnimatorTransition()
         {

@@ -84,7 +84,7 @@ namespace Members.Carlos.Scripts
         {
             if (other.CompareTag("Finish"))
             {
-                SceneManager.LoadScene(1);
+                //SceneManager.LoadScene(1);
             }
         }
     }
