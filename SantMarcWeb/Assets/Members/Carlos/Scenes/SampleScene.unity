@@ -25249,9 +25249,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 98d3dd640b812254ca289c983e682816, type: 2}
   - {fileID: 11400000, guid: c919e127d6d8ff740afde3f37f79fda3, type: 2}
   tmpTaskSentence: {fileID: 2022745705}
-  firstDialogueCompleted: 1
-  exit1Checked: 1
-  exit2Checked: 1
+  firstDialogueCompleted: 0
+  exit1Checked: 0
+  exit2Checked: 0
   teacherFound: 0
   teacherFound1Vz: 0
   task1Done: 0
