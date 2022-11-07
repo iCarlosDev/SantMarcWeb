@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Members.Carlos.Scripts
 {
@@ -77,6 +78,14 @@ namespace Members.Carlos.Scripts
         {
             playerAnimator.SetFloat(X, horizontal);
             playerAnimator.SetFloat(Y, vertical);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Finish"))
+            {
+                SceneManager.LoadScene(1);
+            }
         }
     }
 }

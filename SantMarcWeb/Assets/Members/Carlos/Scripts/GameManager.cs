@@ -1,4 +1,5 @@
 using System.Collections;
+using Members.Carlos.Scripts.Tasks;
 using UnityEngine;
 
 namespace Members.Carlos.Scripts
@@ -9,6 +10,7 @@ namespace Members.Carlos.Scripts
     
         [SerializeField] private PlaneController planeController;
         [SerializeField] private PlayerController playerController;
+        [SerializeField] private TaskManager taskManager;
 
         [Header("--- PLANE ---")]
         [SerializeField] private GameObject planeVehicle;
@@ -35,6 +37,8 @@ namespace Members.Carlos.Scripts
         [Header("--- OTHER ---")]
         [Space(10)]
         public GameObject spawnPlaneVFX;
+        public GameObject teachersDoor;
+        public GameObject studentsDoor;
     
         public bool changeToPlane;
         public bool changeToCar ;
@@ -66,6 +70,12 @@ namespace Members.Carlos.Scripts
             else
             {
                 playerController.enabled = true;
+            }
+
+            if (taskManager.exit2Checked)
+            {
+                teachersDoor.transform.localEulerAngles = new Vector3(0, 210, 0);
+                studentsDoor.transform.localEulerAngles = new Vector3(0, 105, 0);
             }
         }
 
