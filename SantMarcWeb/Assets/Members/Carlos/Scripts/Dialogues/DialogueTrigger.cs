@@ -1,47 +1,37 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+using Members.Carlos.Scripts.Tasks;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+namespace Members.Carlos.Scripts.Dialogues
 {
-    public DialogueObject dialogueObject;
-    public DialogueManager _dialogueManager;
-
-    [SerializeField] private bool isPlayerTriggered;
-    
-    private void OnTriggerEnter(Collider other)
+    public class DialogueTrigger : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        public DialogueObject dialogueObject;
+        public TaskManager taskManager;
+
+        private void OnTriggerEnter(Collider other)
         {
+            if (!other.CompareTag("Player")) return;
+            
             FindObjectOfType<DialogueManager>().StartDialogue(dialogueObject);
-            isPlayerTriggered = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerTriggered = false;
-        }
-
-        if (!isPlayerTriggered)
-        {
-            if (!_dialogueManager.isAct1_Dialogue_1)
+            
+            if (taskManager.firstDialogueCompleted && !taskManager.exit1Checked)
             {
-                _dialogueManager.isAct1_Dialogue_1 = true;
-                _dialogueManager.taskAnimator.SetBool("TaskIsOn", false);
-                StartCoroutine(TaskAnimatorTransition());
+                taskManager.exit1Checked = true;
+                Destroy(gameObject.GetComponent<Collider>());
+                return;
+            }
+            
+            if (taskManager.exit1Checked && !taskManager.exit2Checked)
+            {
+                taskManager.exit2Checked = true;
+                Destroy(gameObject.GetComponent<Collider>());
+                return;
+            }
+
+            if (taskManager.exit2Checked)
+            {
+                taskManager.teacherFound = true;
             }
         }
-    }
-
-    private IEnumerator TaskAnimatorTransition()
-    {
-        yield return new WaitForSeconds(2);
-        _dialogueManager.TMP_TaskSentence.text = _dialogueManager.task[1].DescriptionTask_TXT  ;
-        _dialogueManager.taskAnimator.SetBool("TaskIsOn", true);
     }
 }

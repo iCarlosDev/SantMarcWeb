@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Task", menuName = "Task")]
-public class TaskObject : ScriptableObject
+namespace Members.Carlos.Scripts.Tasks
 {
-   public string DescriptionTask_TXT;
+   [CreateAssetMenu(fileName = "New Task", menuName = "Task")]
+   public class TaskObject : ScriptableObject
+   {
+      public string descriptionTaskTxt;
+   }
 }

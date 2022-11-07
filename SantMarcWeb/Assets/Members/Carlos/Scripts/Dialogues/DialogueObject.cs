@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
-[System.Serializable]
-public class DialogueObject : ScriptableObject
+namespace Members.Carlos.Scripts.Dialogues
 {
-    public string name_TXT;
-    public string[] sentence_TXT;
+    [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
+    [System.Serializable]
+    public class DialogueObject : ScriptableObject
+    {
+        public string nameTxt;
+        public string[] sentenceTxt;
 
-    public Sprite sprite_IMG;
+        public Sprite spriteImg;
+    }
 }

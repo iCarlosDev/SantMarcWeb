@@ -1,107 +1,105 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using Members.Carlos.Scripts.Tasks;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour
+namespace Members.Carlos.Scripts.Dialogues
 {
-    [SerializeField] private GameManager _gameManager;
-
-    [Header("--- DIALOGUES ---")]
-    [Space(10)]
-    [SerializeField] private Animator dialogueAnimator;
-    [SerializeField] private DialogueObject _dialogueObject;
-    [SerializeField] private TextMeshProUGUI TMP_Name;
-    [SerializeField] private TextMeshProUGUI TMP_Sentence;
-    [SerializeField] private Image Avatar_IMG;
-    
-    [Header("-------- TASKS --------")]
-    [Space(10)]
-    public Animator taskAnimator;
-    public TaskObject[] task;
-    public TextMeshProUGUI TMP_TaskSentence;
-
-    [Header("--- ACT 1 BOOLS ---")] 
-    [Space(10)] 
-    public bool isAct1_Dialogue_1;
-    
-    private Queue<string> sentences;
-
-    // Start is called before the first frame update
-    void Start()
+    public class DialogueManager : MonoBehaviour
     {
-        sentences = new Queue<string>();
-        TMP_TaskSentence.text = task[0].DescriptionTask_TXT;
-        
-        StartDialogue(_dialogueObject);
-    }
+        [SerializeField] private GameManager gameManager;
+        [SerializeField] private TaskManager taskManager;
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
+        [Header("--- DIALOGUES ---")]
+        [Space(10)]
+        [SerializeField] private Animator dialogueAnimator;
+        [SerializeField] private DialogueObject firstDialogueObject;
+        [SerializeField] private DialogueObject[] dialogueObjects;
+        [SerializeField] private TextMeshProUGUI tmpName;
+        [SerializeField] private TextMeshProUGUI tmpSentence;
+        [SerializeField] private Image avatarImg;
+
+        private Queue<string> _sentences;
+        private static readonly int DialogueIsOn = Animator.StringToHash("DialogueIsOn");
+
+        // Start is called before the first frame update
+        void Start()
         {
+            _sentences = new Queue<string>();
+
+            StartDialogue(firstDialogueObject);
+        }
+
+        private void Update()
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                DisplayNextSentence();
+            }
+        }
+
+        public void StartDialogue(DialogueObject dialogueObject)
+        {
+            gameManager.isDialogue = true;
+     
+            dialogueAnimator.SetBool(DialogueIsOn, true);
+
+            tmpName.text = dialogueObject.nameTxt;
+            avatarImg.sprite = dialogueObject.spriteImg;
+        
+            _sentences.Clear();
+        
+            foreach (string sentence in dialogueObject.sentenceTxt)
+            {
+                _sentences.Enqueue(sentence);
+            }
+
             DisplayNextSentence();
         }
-    }
 
-    public void StartDialogue(DialogueObject dialogueObject)
-    {
-        _gameManager.isDialogue = true;
-     
-        dialogueAnimator.SetBool("DialogueIsOn", true);
-
-        TMP_Name.text = dialogueObject.name_TXT;
-        Avatar_IMG.sprite = dialogueObject.sprite_IMG;
-        
-        sentences.Clear();
-        
-        foreach (string sentence in dialogueObject.sentence_TXT)
+        private void DisplayNextSentence()
         {
-            sentences.Enqueue(sentence);
+            if (_sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }
+        
+            string sentence = _sentences.Dequeue();
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
         }
 
-        DisplayNextSentence();
-    }
-
-    public void DisplayNextSentence()
-    {
-        if (sentences.Count == 0)
+        private IEnumerator TypeSentence(string sentence)
         {
-            EndDialogue();
-            return;
+            tmpSentence.text = "";
+            foreach (char letter in sentence)
+            {
+                tmpSentence.text += letter;
+                yield return null;
+            }
         }
-        
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-    }
 
-    private IEnumerator TypeSentence(string sentence)
-    {
-        TMP_Sentence.text = "";
-        foreach (char letter in sentence.ToCharArray())
+        private void EndDialogue()
         {
-            TMP_Sentence.text += letter;
-            yield return null;
-        }
-    }
+            gameManager.isDialogue = false;
+            dialogueAnimator.SetBool(DialogueIsOn, false);
 
-    private void EndDialogue()
-    {
-        _gameManager.isDialogue = false;
-        dialogueAnimator.SetBool("DialogueIsOn", false);
+            taskManager.TasksBoolCheck();
         
-        ACT1_Bools_Manager();
-    }
+            if (taskManager.teacherFound && !taskManager.teacherFound1Vz)
+            {
+                taskManager.teacherFound1Vz = true;
+                StartDialogue(dialogueObjects[0]);
+                return;
+            }
 
-    private void ACT1_Bools_Manager()
-    {
-        if (!isAct1_Dialogue_1)
-        {
-            taskAnimator.SetBool("TaskIsOn", true);
+            if (taskManager.teacherFound1Vz)
+            {
+                GameObject.FindWithTag("Profe").GetComponent<DialogueTrigger>().dialogueObject = dialogueObjects[1];
+            }
         }
     }
 }
