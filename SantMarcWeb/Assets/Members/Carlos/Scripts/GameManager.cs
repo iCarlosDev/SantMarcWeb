@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Members.Carlos.Scripts.Tasks;
 using UnityEngine;
@@ -7,10 +8,11 @@ namespace Members.Carlos.Scripts
     public class GameManager : MonoBehaviour
     {
         //Variables
-    
+        public GameManager instance;
+        
         [SerializeField] private PlaneController planeController;
         [SerializeField] private PlayerController playerController;
-        [SerializeField] private TaskManager taskManager;
+        public TaskManager taskManager;
 
         [Header("--- PLANE ---")]
         [SerializeField] private GameObject planeVehicle;
@@ -46,6 +48,11 @@ namespace Members.Carlos.Scripts
         public float mouseX, mouseY;
         private static readonly int X = Animator.StringToHash("X");
         private static readonly int Y = Animator.StringToHash("Y");
+
+        private void Awake()
+        {
+            instance = this;
+        }
 
         private void Start()
         {

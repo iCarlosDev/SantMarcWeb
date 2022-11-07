@@ -14391,7 +14391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeController: {fileID: 968716358}
   playerController: {fileID: 1744094135}
-  taskManager: {fileID: 0}
+  taskManager: {fileID: 1395801646}
   planeVehicle: {fileID: 968716359}
   planeVirtualCam: {fileID: 1990166782}
   planeFreeLookCam: {fileID: 1879469238}
@@ -14404,8 +14404,8 @@ MonoBehaviour:
   canResetCarCam: 1
   isDialogue: 0
   spawnPlaneVFX: {fileID: 821037081}
-  teachersDoor: {fileID: 0}
-  studentsDoor: {fileID: 0}
+  teachersDoor: {fileID: 1768166780}
+  studentsDoor: {fileID: 1385506259}
   changeToPlane: 0
   changeToCar: 0
   mouseX: 0

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Members.Carlos.Scripts.Tasks;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -8,7 +9,7 @@ public class CheckPoint_Tarea : MonoBehaviour
 {
 
     private TareaDisplay _display;
-    
+
     public Tarea tarea;
     public bool checkpoint;
 
@@ -35,8 +36,8 @@ public class CheckPoint_Tarea : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     _display.CompletarCheckpoint();
-                    checkpoint = true;
-                    _display.checkpointUI.SetActive(false);
+                    checkpoint = true; 
+                    _display.checkpointUI.SetActive(false); 
                     Destroy(this);
                 }
             }

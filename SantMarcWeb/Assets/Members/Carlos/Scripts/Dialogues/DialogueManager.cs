@@ -91,6 +91,7 @@ namespace Members.Carlos.Scripts.Dialogues
         
             if (taskManager.teacherFound && !taskManager.teacherFound1Vz)
             {
+                FindObjectOfType<TareaDisplay>().CambiarTarea(0);
                 taskManager.teacherFound1Vz = true;
                 StartDialogue(dialogueObjects[0]);
                 return;

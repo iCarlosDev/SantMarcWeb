@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: BuscarProfe
   m_EditorClassIdentifier: Assembly-CSharp::Task
   descriptionTaskTxt: Busca a un profesor para poder salir...
+  InteracionString: hablar con el profesor

@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Members.Carlos.Scripts.Dialogues;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Nueva Tarea", menuName = "Tarea")]
 public class Tarea : ScriptableObject
 {
+    public DialogueObject[] dialogueObjects;
 
+    public string interactionString;
     public new string nombre;
     public string descripcion;
 
     public string minParaCompletarla;
     public string segParaCompletarla;
 
-    public Sprite recompensa;
-
-    public bool Recompensa;
     public bool Tiempo;
 
     public bool checkpoint1;

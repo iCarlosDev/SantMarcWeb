@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: BuscarSalida
   m_EditorClassIdentifier: Assembly-CSharp::Task
   descriptionTaskTxt: Busca una salida...
+  InteracionString: abrir la puerta

@@ -6,5 +6,6 @@ namespace Members.Carlos.Scripts.Tasks
    public class TaskObject : ScriptableObject
    {
       public string descriptionTaskTxt;
+      public string InteracionString;
    }
 }

@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Members.Carlos.Scripts;
+using Members.Carlos.Scripts.Dialogues;
+using Members.Carlos.Scripts.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +11,8 @@ using UnityEngine.UI;
 public class TareaDisplay : MonoBehaviour
 {
 
+    public GameManager gameManager;
+    
     public Tarea tarea;
     
     public Tarea[] ArrayDeTareas;
@@ -16,10 +21,7 @@ public class TareaDisplay : MonoBehaviour
 
     public TextMeshProUGUI nombreText;
     public TextMeshProUGUI descripcionText;
-
-    [SerializeField] private GameObject recompensaImageParent;
-    public Image recompensaImage;
-
+    
     [SerializeField] private GameObject tiempoParent;
     public TextMeshProUGUI tiempoParaCompletar;
 
@@ -40,22 +42,17 @@ public class TareaDisplay : MonoBehaviour
     
     //private bool timerStarted = false;
     [SerializeField] private bool TareaCompletada = true;
+    private static readonly int TaskIsOn = Animator.StringToHash("TaskIsOn");
 
     private void Awake()
     {
-        recompensaImage.enabled = false;
-        recompensaImageParent = recompensaImage.gameObject.transform.parent.gameObject;
         tiempoParent = tiempoParaCompletar.gameObject.transform.parent.gameObject;
-        
-        checkpoint1 = tarea.checkpoint1;
-        checkpoint2 = tarea.checkpoint2;
-        checkpoint3 = tarea.checkpoint3;
     }
 
 
     private void Start()
     {
-        CambiarTarea(TareasCompletadas);
+        
     }
 
     #region Temporizador
@@ -123,6 +120,7 @@ public class TareaDisplay : MonoBehaviour
         tarea = nuevaTarea;
         nombreText.text = nuevaTarea.name;
         descripcionText.text = nuevaTarea.descripcion;
+        checkpointUI.GetComponent<TextMeshProUGUI>().text = "Presiona E para " + tarea.interactionString;
         
         checkpoint1 = nuevaTarea.checkpoint1;
         checkpoint2 = nuevaTarea.checkpoint2;
@@ -131,20 +129,8 @@ public class TareaDisplay : MonoBehaviour
         checkpoint1_C = false;
         checkpoint2_C = false;
         checkpoint3_C = false;
-
-        Recompensa = nuevaTarea.recompensa;
-        Tiempo = nuevaTarea.Tiempo;
         
-        if (Recompensa)
-        {
-            recompensaImage.enabled = true;
-            recompensaImage.sprite = nuevaTarea.recompensa;
-            recompensaImageParent.SetActive(true);
-        }
-        else
-        {
-            recompensaImageParent.SetActive(false);
-        }
+        Tiempo = nuevaTarea.Tiempo;
         
         if (Tiempo)
         {
@@ -158,7 +144,14 @@ public class TareaDisplay : MonoBehaviour
     }
 
     public void CambiarTarea(int ArrayTareas_Index)
+    { 
+        gameManager.instance.taskManager.taskAnimator.SetBool(TaskIsOn, false);
+        StartCoroutine(Delay(ArrayTareas_Index));
+    }
+
+    private IEnumerator Delay(int ArrayTareas_Index)
     {
+        yield return new WaitForSeconds(1);
         UpdateTarea(ArrayDeTareas[ArrayTareas_Index]);
         resetearTemporizador();
     }
@@ -168,6 +161,10 @@ public class TareaDisplay : MonoBehaviour
         if (checkpoint1 && !checkpoint1_C)
         {
             checkpoint1_C = true;
+            if (tarea.dialogueObjects.Length > 0)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(tarea.dialogueObjects[0]);
+            }
             
             if (!checkpoint2 && !checkpoint3)
             {
@@ -178,6 +175,12 @@ public class TareaDisplay : MonoBehaviour
         else if (checkpoint2 && !checkpoint2_C)
         {
             checkpoint2_C = true;
+            
+            if (tarea.dialogueObjects.Length > 0)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(tarea.dialogueObjects[1]);
+            }
+            
             if (!checkpoint3)
             {
                 TareasCompletadas++;
@@ -187,6 +190,12 @@ public class TareaDisplay : MonoBehaviour
         else if (checkpoint3 && !checkpoint3_C)
         {
             checkpoint3_C = true;
+            
+            if (tarea.dialogueObjects.Length > 0)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(tarea.dialogueObjects[2]);
+            }
+            
             TareasCompletadas++;
             CambiarTarea(TareasCompletadas);
         }

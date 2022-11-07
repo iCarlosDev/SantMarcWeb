@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823342ee3a5973e488ff8c4eb44bf332, type: 3}
   m_Name: SalirDelEdicio
   m_EditorClassIdentifier: 
+  dialogueObjects:
+  - {fileID: 11400000, guid: 6d50d0a6813bac744b2db5ae6e4279cb, type: 2}
+  - {fileID: 11400000, guid: e16120afda956d74d95a272fb636c497, type: 2}
   nombre: Sal Del Edicio
   descripcion: Ves hasta la puerta principal antes de que cierren
   minParaCompletarla: 2
   segParaCompletarla: 0
   recompensa: {fileID: 0}
-  Recompensa: 0
-  Tiempo: 1
+  Tiempo: 0
   checkpoint1: 1
-  checkpoint2: 0
+  checkpoint2: 1
   checkpoint3: 0
