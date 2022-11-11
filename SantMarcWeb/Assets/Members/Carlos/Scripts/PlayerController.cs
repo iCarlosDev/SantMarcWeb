@@ -18,7 +18,7 @@ namespace Members.Carlos.Scripts
         [SerializeField] private float turnSmoothVelocity;
         public float horizontal;
         public float vertical;
-    
+
         [Header("--- PLAYER GROUND VALUES ---")] 
         [Space(10)]
         [SerializeField] private Transform groundCheck;

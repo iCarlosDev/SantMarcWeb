@@ -7,8 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class CheckPoint_Tarea : MonoBehaviour
 {
-
+    public GameObject SnakeCanvas;
+    
     private TareaDisplay _display;
+
+    private CinemachineSwitcher _cinemachine;
 
     public Tarea tarea;
     public bool checkpoint;
@@ -18,6 +21,7 @@ public class CheckPoint_Tarea : MonoBehaviour
     private void Awake()
     {
         _display = FindObjectOfType<TareaDisplay>();
+        _cinemachine = FindObjectOfType<CinemachineSwitcher>();
     }
 
     // Start is called before the first frame update
@@ -35,11 +39,19 @@ public class CheckPoint_Tarea : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    _display.CompletarCheckpoint();
-                    checkpoint = true; 
-                    _display.checkpointUI.SetActive(false); 
-                    Destroy(this);
-
+                    if (_display.tarea == _display.ArrayDeTareas[0])
+                    {
+                        _display.checkpointUI.SetActive(false);
+                        _cinemachine.ActivarPCModelaje();
+                    }
+                    else
+                    {
+                        _display.CompletarCheckpoint();
+                        checkpoint = true; 
+                        _display.checkpointUI.SetActive(false); 
+                        Destroy(this);
+                    }
+                    
                     if (tarea == _display.ArrayDeTareas[3])
                     {
                         SceneManager.LoadScene(1);
