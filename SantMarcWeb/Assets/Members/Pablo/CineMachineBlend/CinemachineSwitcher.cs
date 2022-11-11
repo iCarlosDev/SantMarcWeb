@@ -11,7 +11,7 @@ public class CinemachineSwitcher : MonoBehaviour
     public CinemachineVirtualCamera PCModelaje1Camera;
     public CinemachineVirtualCamera PCTexturizado1Camera;
     public CinemachineVirtualCamera PCProgramacion1Camera;
-    public GameObject Player;
+    public GameManager GM;
     
     public GameObject SnakeCanvas;
     public GameObject NormalCanvas;
@@ -21,7 +21,7 @@ public class CinemachineSwitcher : MonoBehaviour
     {
         StartCoroutine("ActivarSnakeCanvas");
         PCModelaje1Camera.Priority = 11;
-        Player.GetComponent<PlayerController>().enabled = false;
+        GM.isDialogue = true;
     }
     
     private IEnumerator ActivarSnakeCanvas()

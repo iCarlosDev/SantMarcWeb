@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.19595142, g: 0.23736857, b: 0.31077638, a: 1}
+  m_IndirectSpecularColor: {r: 0.19609106, g: 0.23714736, b: 0.31157455, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23078,7 +23078,7 @@ MonoBehaviour:
   PCModelaje1Camera: {fileID: 1229229122}
   PCTexturizado1Camera: {fileID: 0}
   PCProgramacion1Camera: {fileID: 0}
-  Player: {fileID: 0}
+  GM: {fileID: 1186738781}
   SnakeCanvas: {fileID: 1597817390}
   NormalCanvas: {fileID: 1405467363}
 --- !u!4 &1452886965
