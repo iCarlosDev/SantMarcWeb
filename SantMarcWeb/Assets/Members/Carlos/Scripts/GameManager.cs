@@ -85,8 +85,8 @@ namespace Members.Carlos.Scripts
 
             if (taskManager.exit2Checked)
             {
-                teachersDoor.transform.localEulerAngles = new Vector3(0, 210, 0);
-                studentsDoor.transform.localEulerAngles = new Vector3(0, -135, 0);
+                teachersDoor.transform.localEulerAngles = new Vector3(0, 75, 0);
+                studentsDoor.transform.localEulerAngles = new Vector3(0, -150, 0);
             }
         }
 

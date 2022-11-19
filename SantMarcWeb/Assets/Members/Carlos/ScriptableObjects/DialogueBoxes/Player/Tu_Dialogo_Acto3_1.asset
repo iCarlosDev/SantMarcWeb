@@ -16,4 +16,4 @@ MonoBehaviour:
   sentenceTxt:
   - "Perdona Nacho, podr\xEDas abrirme la puerta..."
   - Estaba haciendo un trabajo y se me ha ido el santo al cielo
-  spriteImg: {fileID: 21300000, guid: bf0a59ba21cc6c94b859b762e59dfee6, type: 3}
+  spriteImg: {fileID: 21300000, guid: c9b347cb4ce6636429e7393d2df7dcfd, type: 3}
