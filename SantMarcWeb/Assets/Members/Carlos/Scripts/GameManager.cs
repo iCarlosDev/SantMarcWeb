@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Members.Carlos.Scripts.Dialogues;
 using Members.Carlos.Scripts.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ namespace Members.Carlos.Scripts
         
         [SerializeField] private PlaneController planeController;
         [SerializeField] private PlayerController playerController;
+        [SerializeField] private DialogueManager dialogueManager;
         public TaskManager taskManager;
 
         [Header("--- PLANE ---")]
@@ -36,6 +38,21 @@ namespace Members.Carlos.Scripts
         [Header("--- DIALOGUE MODE ---")] 
         [Space(10)]
         public bool isDialogue;
+        [SerializeField] private GameObject dialogueCanvas;
+
+        [Header("--- CONTROLS MENU ---")] 
+        [Space(10)] 
+        public bool controlsMenuOpen;
+        
+        [SerializeField] private GameObject controlsMenu;
+        [SerializeField] private GameObject characterMenu;
+        [SerializeField] private GameObject carMenu;
+        [SerializeField] private GameObject planeMenu;
+        
+        [SerializeField] private Animator characterMenu_Animator;
+        [SerializeField] private Animator carMenu_Animator;
+        [SerializeField] private Animator planeMenu_Animator;
+        [SerializeField] private Animator exitMenu_Animator;
 
         [Header("--- OTHER ---")]
         [Space(10)]
@@ -49,6 +66,7 @@ namespace Members.Carlos.Scripts
         public float mouseX, mouseY;
         private static readonly int X = Animator.StringToHash("X");
         private static readonly int Y = Animator.StringToHash("Y");
+        private static readonly int DialogueIsOn = Animator.StringToHash("DialogueIsOn");
 
         private void Awake()
         {
@@ -63,9 +81,18 @@ namespace Members.Carlos.Scripts
 
         private void Update()
         {
+            ButtonsAnimations();
+            
+            //////////////////////////////////////////////////////
+            
             if (SceneManager.GetActiveScene().buildIndex == 1)
             {
-                ChangeCharacter();   
+                ChangeCharacter();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                PlayerControlsMenu();
             }
 
             spawnPlaneVFX.transform.position = player.transform.position;
@@ -78,9 +105,9 @@ namespace Members.Carlos.Scripts
                 playerController.playerAnimator.SetFloat(X, 0);
                 playerController.playerAnimator.SetFloat(Y, 0);
             }
-            else
+            else if (!controlsMenuOpen)
             {
-                playerController.enabled = true;
+                playerController.enabled = true; 
             }
 
             if (taskManager.exit2Checked)
@@ -118,6 +145,122 @@ namespace Members.Carlos.Scripts
                 PlayerActive();
             }
         }
+
+        #region - CONTROLS MENU -
+
+        private void PlayerControlsMenu()
+        {
+            controlsMenuOpen = !controlsMenuOpen;
+            
+            if (controlsMenuOpen)
+            {
+                OpenControlsMenu();
+                if (isDialogue)
+                {
+                    dialogueCanvas.SetActive(false);   
+                }
+            }
+            else
+            {
+                CloseControlsMenu();
+                if (isDialogue)
+                {
+                    dialogueCanvas.SetActive(true);
+                    dialogueManager.dialogueAnimator.SetBool(DialogueIsOn, true);
+                }
+            }
+        }
+
+        #region - MENU -
+        
+        private void OpenControlsMenu()
+        {
+            controlsMenu.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+                
+            playerController.enabled = false;
+            playerController.horizontal = 0;
+            playerController.vertical = 0;
+            playerController.playerAnimator.SetFloat(X, 0);
+            playerController.playerAnimator.SetFloat(Y, 0);
+            
+            exitMenu_Animator.SetTrigger("Normal");
+        }
+        
+        public void CloseControlsMenu()
+        {
+            controlsMenuOpen = false;
+            controlsMenu.SetActive(false);
+            ShowCharacterControls();
+                
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+                
+            playerController.enabled = true;
+            
+            exitMenu_Animator.SetTrigger("Normal");
+        }
+
+        private void ButtonsAnimations()
+        {
+            if (characterMenu.activeSelf)
+            {
+                characterMenu_Animator.SetTrigger("Selected");
+                carMenu_Animator.SetTrigger("Normal");
+                planeMenu_Animator.SetTrigger("Normal");
+            }
+            else if (carMenu.activeSelf)
+            {
+                characterMenu_Animator.SetTrigger("Normal");
+                carMenu_Animator.SetTrigger("Selected");
+                planeMenu_Animator.SetTrigger("Normal");
+            }
+            else if (planeMenu.activeSelf)
+            { 
+                characterMenu_Animator.SetTrigger("Normal");
+                carMenu_Animator.SetTrigger("Normal");
+                planeMenu_Animator.SetTrigger("Selected");
+            }
+        }
+        
+        #endregion
+
+        #region - CHARACTER MENU -
+
+        public void ShowCharacterControls()
+        {
+            characterMenu.SetActive(true);
+            carMenu.SetActive(false);
+            planeMenu.SetActive(false);
+        }
+
+        #endregion
+
+        #region - CAR MENU -
+
+        public void ShowCarControls()
+        {
+            characterMenu.SetActive(false);
+            carMenu.SetActive(true);
+            planeMenu.SetActive(false);
+        }
+
+        #endregion
+
+        #region - PLANE MENU -
+
+        public void ShowPlaneControls()
+        {
+            characterMenu.SetActive(false);
+            carMenu.SetActive(false);
+            planeMenu.SetActive(true);
+        }
+
+        #endregion
+
+        #endregion
 
         #region - PLANE -
     

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Members.Carlos.Scripts.Tasks;
@@ -14,7 +15,7 @@ namespace Members.Carlos.Scripts.Dialogues
 
         [Header("--- DIALOGUES ---")]
         [Space(10)]
-        [SerializeField] private Animator dialogueAnimator;
+        public Animator dialogueAnimator;
         [SerializeField] private DialogueObject firstDialogueObject;
         [SerializeField] private DialogueObject[] dialogueObjects;
         [SerializeField] private TextMeshProUGUI tmpName;
@@ -24,7 +25,6 @@ namespace Members.Carlos.Scripts.Dialogues
         private Queue<string> _sentences;
         private static readonly int DialogueIsOn = Animator.StringToHash("DialogueIsOn");
 
-        // Start is called before the first frame update
         void Start()
         {
             _sentences = new Queue<string>();
@@ -34,7 +34,7 @@ namespace Members.Carlos.Scripts.Dialogues
 
         private void Update()
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && !gameManager.instance.controlsMenuOpen)
             {
                 DisplayNextSentence();
             }
