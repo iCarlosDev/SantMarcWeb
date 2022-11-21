@@ -2,8 +2,11 @@ using System;
 using System.Collections;
 using Members.Carlos.Scripts.Dialogues;
 using Members.Carlos.Scripts.Tasks;
+using Members.Carlos.Scripts.Vehicles.Plane;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Members.Carlos.Scripts
 {
@@ -43,6 +46,8 @@ namespace Members.Carlos.Scripts
         [Header("--- CONTROLS MENU ---")] 
         [Space(10)] 
         public bool controlsMenuOpen;
+
+        [SerializeField] private TextMeshProUGUI titleControlsMenu;
         
         [SerializeField] private GameObject controlsMenu;
         [SerializeField] private GameObject characterMenu;
@@ -185,8 +190,6 @@ namespace Members.Carlos.Scripts
             playerController.vertical = 0;
             playerController.playerAnimator.SetFloat(X, 0);
             playerController.playerAnimator.SetFloat(Y, 0);
-            
-            exitMenu_Animator.SetTrigger("Normal");
         }
         
         public void CloseControlsMenu()
@@ -199,26 +202,31 @@ namespace Members.Carlos.Scripts
             Cursor.visible = false;
                 
             playerController.enabled = true;
-            
-            exitMenu_Animator.SetTrigger("Normal");
         }
 
         private void ButtonsAnimations()
         {
             if (characterMenu.activeSelf)
             {
+                titleControlsMenu.text = characterMenu.name + " CONTROLS";
+                
                 characterMenu_Animator.SetTrigger("Selected");
                 carMenu_Animator.SetTrigger("Normal");
                 planeMenu_Animator.SetTrigger("Normal");
+                exitMenu_Animator.SetTrigger("Normal");
             }
             else if (carMenu.activeSelf)
             {
+                titleControlsMenu.text = carMenu.name + " CONTROLS";
+                
                 characterMenu_Animator.SetTrigger("Normal");
                 carMenu_Animator.SetTrigger("Selected");
                 planeMenu_Animator.SetTrigger("Normal");
             }
             else if (planeMenu.activeSelf)
             { 
+                titleControlsMenu.text = planeMenu.name + " CONTROLS";
+                
                 characterMenu_Animator.SetTrigger("Normal");
                 carMenu_Animator.SetTrigger("Normal");
                 planeMenu_Animator.SetTrigger("Selected");
