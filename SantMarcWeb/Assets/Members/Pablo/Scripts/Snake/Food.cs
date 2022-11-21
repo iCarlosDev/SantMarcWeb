@@ -8,6 +8,8 @@ public class Food : MonoBehaviour
 {
     private RectTransform _rectTransform;
 
+    public bool Preview;
+
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -21,7 +23,7 @@ public class Food : MonoBehaviour
     private void RandomziePosition()
     {
 
-        float x = Random.Range(8, -8);
+        float x = Random.Range(5, -8);
         float y = Random.Range(4, -4);
 
         int Xdecimal = Random.Range(0, 2);
