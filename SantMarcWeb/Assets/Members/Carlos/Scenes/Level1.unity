@@ -6637,9 +6637,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 98d3dd640b812254ca289c983e682816, type: 2}
   - {fileID: 11400000, guid: c919e127d6d8ff740afde3f37f79fda3, type: 2}
   tmpTaskSentence: {fileID: 2022745705}
-  firstDialogueCompleted: 0
-  exit1Checked: 0
-  exit2Checked: 0
+  firstDialogueCompleted: 1
+  exit1Checked: 1
+  exit2Checked: 1
   teacherFound: 0
   teacherFound1Vz: 0
   task1Done: 0
@@ -15734,7 +15734,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1711475114978446825
 MeshCollider:
@@ -46127,7 +46127,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &8890111005800715477
 MeshCollider:
