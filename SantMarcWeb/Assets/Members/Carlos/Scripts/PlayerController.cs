@@ -19,6 +19,11 @@ namespace Members.Carlos.Scripts
         public float horizontal;
         public float vertical;
 
+        public float Speed
+        {
+            get => speed;
+        }
+
         [Header("--- PLAYER GROUND VALUES ---")] 
         [Space(10)]
         [SerializeField] private Transform groundCheck;
