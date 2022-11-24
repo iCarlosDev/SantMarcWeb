@@ -7,17 +7,30 @@ using Random = UnityEngine.Random;
 public class Food : MonoBehaviour
 {
     private RectTransform _rectTransform;
+    private Snake _snake;
 
     public bool Preview;
+
+    private Vector3 Position;
 
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
+        _snake = FindObjectOfType<Snake>();
     }
 
     private void Start()
     {
-        RandomziePosition();
+        if (!Preview)
+        {
+            RandomziePosition();
+        }
+        else
+        {
+            Position = _rectTransform.localPosition;
+            PreviewPosition();
+        }
+        
     }
 
     private void RandomziePosition()
@@ -75,17 +88,59 @@ public class Food : MonoBehaviour
         
         Debug.Log("X = " + x);
         Debug.Log("Y = " + y);
+
+        foreach (RectTransform _snake in _snake._segments)
+        {
+            if (_rectTransform.localPosition == _snake.localPosition)
+            {
+                RandomziePosition();
+            }
+        }
     }
 
+    private void PreviewPosition()
+    {
+        if (Position == new Vector3(-425.0f, 425.0f, 0.0f))
+        {
+            Position = new Vector3(-425.0f, -425.0f, 0.0f);
+            _rectTransform.localPosition = Position;
+        }
+        else if (Position == new Vector3(-425.0f, -425.0f, 0.0f))
+        {
+            Position = new Vector3(425.0f, -425.0f, 0.0f);
+            _rectTransform.localPosition = Position;
+        }
+        else if (Position == new Vector3(425.0f, -425.0f, 0.0f))
+        {
+            Position = new Vector3(425.0f, 425.0f, 0.0f);
+            _rectTransform.localPosition = Position;
+        }
+        else if (Position == new Vector3(425.0f, 425.0f, 0.0f))
+        {
+            Position = new Vector3(-425.0f, 425.0f, 0.0f);
+            _rectTransform.localPosition = Position;
+        }
+        
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            RandomziePosition();
+            if (!Preview)
+            {
+                RandomziePosition();
+            }
+            else
+            {
+                PreviewPosition();
+            }
         }
         if (other.CompareTag("Obstacle"))
         {
-            RandomziePosition();
+            if (!Preview)
+            {
+                RandomziePosition();
+            }
         }
     }
 }

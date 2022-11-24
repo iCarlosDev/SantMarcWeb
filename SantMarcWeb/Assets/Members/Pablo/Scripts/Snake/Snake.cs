@@ -10,7 +10,7 @@ public class Snake : MonoBehaviour
     public bool Preview;
     public float timeRemaining = 5;
     
-    private Vector2 _direction = Vector2.right;
+    private Vector2 _direction = Vector2.left;
     private RectTransform _rectTransform;
     public GameObject SnakeCanvasParent;
 
@@ -28,6 +28,10 @@ public class Snake : MonoBehaviour
 
     public int initialSize = 4;
 
+    private Vector3 Position;
+
+    private bool canChangeDirection;
+    
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -37,51 +41,39 @@ public class Snake : MonoBehaviour
     private void Start()
     {
         ResetGame();
+        actualizarPreview(Vector2.down);
     }
 
     void Update()
     {
-        if (!Preview)
+        if (Preview)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            Position = _rectTransform.localPosition;
+            Debug.Log(Position);
+
+            if (Position == new Vector3(-425.0f, 425.0f, 0.0f))
             {
-                if (_direction != Vector2.down)
-                {
-                    _direction = Vector2.up;
-                }
+                actualizarPreview(Vector2.down);
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Position == new Vector3(-425.0f, -425.0f, 0.0f))
             {
-                if (_direction != Vector2.up)
-                {
-                    _direction = Vector2.down;
-                }
+                actualizarPreview(Vector2.right);
             }
-            else if (Input.GetKeyDown(KeyCode.A))
+            else if (Position == new Vector3(425.0f, -425.0f, 0.0f))
             {
-                if (_direction != Vector2.right)
-                {
-                    _direction = Vector2.left;
-                }
-            
+                actualizarPreview(Vector2.up);
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Position == new Vector3(425.0f, 425.0f, 0.0f))
             {
-                if (_direction != Vector2.left)
-                {
-                    _direction = Vector2.right;
-                }
+                actualizarPreview(Vector2.left);
             }
         }
-        else
+
+        if (!Preview)
         {
-            if (timeRemaining > 0)
+            if (canChangeDirection)
             {
-                timeRemaining -= Time.deltaTime;
-            }
-            else
-            {
-                timeRemaining = 10;
+                ChangeDirection();
             }
         }
     }
@@ -97,8 +89,53 @@ public class Snake : MonoBehaviour
             Mathf.Round(_rectTransform.localPosition.x)  + _direction.x * 50,
             Mathf.Round(_rectTransform.localPosition.y) + _direction.y * 50,
             0.0f);
+        
+        canChangeDirection = true;
     }
 
+    private void ChangeDirection()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (_direction != Vector2.down)
+            {
+                _direction = Vector2.up;
+                canChangeDirection = false;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (_direction != Vector2.up)
+            {
+                _direction = Vector2.down;
+                canChangeDirection = false;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (_direction != Vector2.right)
+            {
+                _direction = Vector2.left;
+                canChangeDirection = false;
+            }
+        
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (_direction != Vector2.left)
+            {
+                _direction = Vector2.right;
+                canChangeDirection = false;
+            }
+        }
+    }
+
+    private void actualizarPreview(Vector2 direccion)
+    {
+        _direction = direccion;
+    }
+    
+    
     private void Grow()
     {
         RectTransform segment = Instantiate(segmentPrefab, SnakeCanvasParent.transform);
@@ -111,9 +148,12 @@ public class Snake : MonoBehaviour
 
     private void UpdateScore()
     {
-        Score++;
-        ScoreTMP.text = "SCORE : " + Score;
-
+        if (!Preview)
+        {
+            Score++;
+            ScoreTMP.text = "SCORE : " + Score;
+        }
+        
         if (QuaretersActive < 3)
         {
             QuaretersActive++;
@@ -158,7 +198,10 @@ public class Snake : MonoBehaviour
             _segments.Add(Instantiate(segmentPrefab, SnakeCanvasParent.transform));
         }
 
-        this._rectTransform.localPosition = Vector3.zero;
+        if (!Preview)
+        {
+            this._rectTransform.localPosition = Vector3.zero;
+        }
         
         for (int i = 0; i < 4; i++)
         {
