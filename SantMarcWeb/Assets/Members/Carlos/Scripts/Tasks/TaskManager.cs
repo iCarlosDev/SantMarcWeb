@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -7,6 +8,8 @@ namespace Members.Carlos.Scripts.Tasks
     public class TaskManager : MonoBehaviour
     {
         //Variables
+        public static TaskManager instance;
+        
         [Header("-------- TASKS --------")]
         [Space(10)]
         public Animator taskAnimator;
@@ -33,6 +36,11 @@ namespace Members.Carlos.Scripts.Tasks
         public bool task2Done;
         public bool task3Done;
         private static readonly int TaskIsOn = Animator.StringToHash("TaskIsOn");
+
+        private void Awake()
+        {
+            instance = this;
+        }
 
         private void Start()
         {

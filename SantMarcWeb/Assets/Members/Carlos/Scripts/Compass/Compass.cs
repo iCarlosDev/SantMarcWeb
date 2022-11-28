@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Members.Carlos.Scripts.Compass
@@ -8,6 +9,8 @@ namespace Members.Carlos.Scripts.Compass
     public class Compass : MonoBehaviour
     {
         //Variables
+        public static Compass instance;
+        
         [SerializeField] private GameObject iconPrefab;
         [SerializeField] private List<QuestMarker> questMarkers = new List<QuestMarker>();
         
@@ -25,6 +28,7 @@ namespace Members.Carlos.Scripts.Compass
         [SerializeField] private QuestMarker texture;
         [SerializeField] private QuestMarker programming;
         [SerializeField] private QuestMarker playVR;
+        [SerializeField] private QuestMarker Exit;
 
         public List<QuestMarker> QuestMarkers
         {
@@ -37,12 +41,26 @@ namespace Members.Carlos.Scripts.Compass
         public QuestMarker Texture => texture;
         public QuestMarker Programming => programming;
         public QuestMarker PlayVR => playVR;
+
+
+        private void Awake()
+        {
+            instance = this;
+        }
+
         private void Start()
         {
             compassUnit = compassImage.rectTransform.rect.width / 360f;
-            
-            AddQuestMarker(door1);
-            AddQuestMarker(door2);
+
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                AddQuestMarker(door1);
+                AddQuestMarker(door2);   
+            }
+            else
+            {
+                AddQuestMarker(Exit);
+            }
         }
 
         private void Update()

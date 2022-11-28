@@ -115,11 +115,15 @@ namespace Members.Carlos.Scripts
                 playerController.enabled = true; 
             }
 
-            if (taskManager.exit2Checked)
+            if (taskManager != null)
             {
-                teachersDoor.transform.localEulerAngles = new Vector3(0, 75, 0);
-                studentsDoor.transform.localEulerAngles = new Vector3(0, -150, 0);
+                if (taskManager.exit2Checked)
+                {
+                    teachersDoor.transform.localEulerAngles = new Vector3(0, 75, 0);
+                    studentsDoor.transform.localEulerAngles = new Vector3(0, -150, 0);
+                }
             }
+            
         }
 
         private void ChangeCharacter()
