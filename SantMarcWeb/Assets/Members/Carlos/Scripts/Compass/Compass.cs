@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -51,6 +52,7 @@ namespace Members.Carlos.Scripts.Compass
         private void Start()
         {
             compassUnit = compassImage.rectTransform.rect.width / 360f;
+            
 
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
@@ -69,7 +71,12 @@ namespace Members.Carlos.Scripts.Compass
 
             foreach (QuestMarker marker in questMarkers)
             {
+                var distanceVector = marker.gameObject.transform.position - GameObject.FindWithTag("Player").transform.position;
+                var distance = distanceVector.sqrMagnitude;
+                
+                
                 marker.Image.rectTransform.anchoredPosition = getPosOnCompass(marker);
+                marker.DistanceTMP.text = (int)distance + " m";
             }
         }
 
@@ -78,6 +85,7 @@ namespace Members.Carlos.Scripts.Compass
             GameObject newMarker = Instantiate(iconPrefab, compassImage.transform);
             marker.Image = newMarker.GetComponent<Image>();
             marker.Image.sprite = marker.Icon;
+            marker.DistanceTMP = newMarker.GetComponentInChildren<TextMeshProUGUI>();
             
             questMarkers.Add(marker);
         }

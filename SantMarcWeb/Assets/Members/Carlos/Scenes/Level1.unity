@@ -8958,7 +8958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d51c8adcd30cf4d8d4d1f7a452a824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iconPrefab: {fileID: 6596214010201114897, guid: e592945eae6f291439c5b3b420456cf0, type: 3}
+  iconPrefab: {fileID: 1283472975777272389, guid: e592945eae6f291439c5b3b420456cf0, type: 3}
   questMarkers: []
   compassImage: {fileID: 526986562}
   player: {fileID: 963194228}
@@ -13777,7 +13777,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -22529,6 +22529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   image: {fileID: 0}
+  distance_TMP: {fileID: 0}
 --- !u!1001 &1225461049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23023,7 +23024,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 748, y: 50}
+  m_SizeDelta: {x: 748, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1250285266
 MonoBehaviour:
@@ -43246,6 +43247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   image: {fileID: 0}
+  distance_TMP: {fileID: 0}
 --- !u!114 &1586295153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43260,6 +43262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   image: {fileID: 0}
+  distance_TMP: {fileID: 0}
 --- !u!114 &1586295154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43274,6 +43277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   image: {fileID: 0}
+  distance_TMP: {fileID: 0}
 --- !u!114 &1586295155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43288,6 +43292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   image: {fileID: 0}
+  distance_TMP: {fileID: 0}
 --- !u!114 &1586296502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49870,6 +49875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   image: {fileID: 0}
+  distance_TMP: {fileID: 0}
 --- !u!1 &1885954440
 GameObject:
   m_ObjectHideFlags: 0
@@ -58774,6 +58780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   image: {fileID: 0}
+  distance_TMP: {fileID: 0}
 --- !u!1 &5332387583953064665
 GameObject:
   m_ObjectHideFlags: 0

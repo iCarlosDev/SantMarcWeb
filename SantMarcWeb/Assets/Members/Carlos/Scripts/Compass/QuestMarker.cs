@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ namespace Members.Carlos.Scripts.Compass
         //Variables
         [SerializeField] private Sprite icon;
         [SerializeField] private Image image;
+        [SerializeField] private TextMeshProUGUI distance_TMP;
 
         public Vector2 position
         {
@@ -25,6 +27,12 @@ namespace Members.Carlos.Scripts.Compass
         {
             get => image;
             set => image = value;
+        }
+        
+        public TextMeshProUGUI DistanceTMP
+        {
+            get => distance_TMP;
+            set => distance_TMP = value;
         }
     }
 }
