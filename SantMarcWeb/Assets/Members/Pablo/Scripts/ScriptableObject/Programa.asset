@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueObjects: []
   interactionString: Programar
   nombre: "Programa el Avi\xF3n"
-  descripcion: Presiona "Enter" cerca del PC para empezar a programar
+  descripcion: Presiona "E" cerca del PC para empezar a programar
   minParaCompletarla: 3
   segParaCompletarla: 0
   Tiempo: 1

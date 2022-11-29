@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Cinemachine;
 using Members.Carlos.Scripts.Dialogues;
 using Members.Carlos.Scripts.Tasks;
 using Members.Carlos.Scripts.Vehicles.Plane;
@@ -194,6 +195,11 @@ namespace Members.Carlos.Scripts
             playerController.vertical = 0;
             playerController.playerAnimator.SetFloat(X, 0);
             playerController.playerAnimator.SetFloat(Y, 0);
+            
+            playerCamera.GetComponent<CinemachineFreeLook>().m_XAxis.m_InputAxisName = string.Empty;
+            playerCamera.GetComponent<CinemachineFreeLook>().m_YAxis.m_InputAxisName = string.Empty;
+            playerCamera.GetComponent<CinemachineFreeLook>().m_XAxis.m_InputAxisValue = 0;
+            playerCamera.GetComponent<CinemachineFreeLook>().m_YAxis.m_InputAxisValue = 0;
         }
         
         public void CloseControlsMenu()
@@ -206,6 +212,9 @@ namespace Members.Carlos.Scripts
             Cursor.visible = false;
                 
             playerController.enabled = true;
+
+            playerCamera.GetComponent<CinemachineFreeLook>().m_XAxis.m_InputAxisName = "Mouse X";
+            playerCamera.GetComponent<CinemachineFreeLook>().m_YAxis.m_InputAxisName = "Mouse Y";
         }
 
         private void ButtonsAnimations()

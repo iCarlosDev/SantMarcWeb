@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueObjects: []
   interactionString: Modelar
   nombre: "Modela el Avi\xF3n"
-  descripcion: Presiona "Enter" cerca del PC para empezar a modelar
+  descripcion: Presiona "E" cerca del PC para empezar a modelar
   minParaCompletarla: 3
   segParaCompletarla: 0
   Tiempo: 1
