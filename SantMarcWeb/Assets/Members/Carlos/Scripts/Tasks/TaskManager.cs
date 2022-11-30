@@ -24,6 +24,7 @@ namespace Members.Carlos.Scripts.Tasks
         [Space(10)]
         public bool exit1Checked;
         public bool exit2Checked;
+        public bool exitsCompleted;
     
         [Header("--- ACT 3 ---")]
         [Space(10)]
@@ -56,8 +57,9 @@ namespace Members.Carlos.Scripts.Tasks
                 tmpTaskSentence.text = task[0].descriptionTaskTxt;
             }
         
-            if (exit1Checked && exit2Checked && !teacherFound)
+            if (exit1Checked && exit2Checked && !teacherFound && !exitsCompleted)
             {
+                exitsCompleted = true;
                 taskAnimator.SetBool(TaskIsOn, false);
                 tmpTaskSentence.text = task[1].descriptionTaskTxt;
             }

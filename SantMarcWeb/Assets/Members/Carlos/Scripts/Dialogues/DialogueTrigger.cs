@@ -25,7 +25,7 @@ namespace Members.Carlos.Scripts.Dialogues
         {
             if (playerOnRange)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && !GameManager.instance.isDialogue)
                 {
                     _display.checkpointUI.SetActive(false); 
                     FindObjectOfType<DialogueManager>().StartDialogue(dialogueObject);
@@ -39,21 +39,24 @@ namespace Members.Carlos.Scripts.Dialogues
                         if (gameObject.CompareTag("Door1"))
                         {
                             Destroy(compass.QuestMarkers[0].Image.gameObject);
+                            Destroy(compass.QuestMarkers[0].gameObject.GetComponent<Outline>());
                             compass.QuestMarkers.Remove(compass.QuestMarkers[0]);
                         }
                         else
                         {
                             Destroy(compass.QuestMarkers[1].Image.gameObject);
+                            Destroy(compass.QuestMarkers[1].gameObject.GetComponent<Outline>());
                             compass.QuestMarkers.Remove(compass.QuestMarkers[1]);
                         }
                         return;
                     }
                     
-                    foreach (QuestMarker compass in compass.QuestMarkers)
+                    foreach (QuestMarker compass_ in compass.QuestMarkers)
                     {
-                        Destroy(compass.Image.gameObject);
+                        Destroy(compass_.gameObject.GetComponent<Outline>());
+                        Destroy(compass_.Image.gameObject);
                     }
-            
+
                     if (taskManager.exit1Checked && !taskManager.exit2Checked)
                     {
                         taskManager.exit2Checked = true;
@@ -65,7 +68,7 @@ namespace Members.Carlos.Scripts.Dialogues
                         return;
                     }
 
-                    if (taskManager.exit2Checked)
+                    if (taskManager.exit2Checked && !taskManager.teacherFound)
                     {
                         taskManager.teacherFound = true;
                         
@@ -82,11 +85,11 @@ namespace Members.Carlos.Scripts.Dialogues
 
             _display.checkpointUI.SetActive(true);
             playerOnRange = true;
-            if(taskManager.exit2Checked == false)
+            if(!taskManager.exit2Checked)
             {
                 _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[0].InteracionString;
             }
-            else
+            else if (!taskManager.teacherFound1Vz)
             {
                 _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[1].InteracionString;
             }

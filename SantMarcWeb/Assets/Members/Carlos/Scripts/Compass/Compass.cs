@@ -57,7 +57,7 @@ namespace Members.Carlos.Scripts.Compass
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 AddQuestMarker(door1);
-                AddQuestMarker(door2);   
+                AddQuestMarker(door2);
             }
             else
             {
@@ -68,16 +68,16 @@ namespace Members.Carlos.Scripts.Compass
         private void Update()
         {
             compassImage.uvRect = new Rect(player.localEulerAngles.y / 360f, 0f, 1f, 1f);
-
+            
             foreach (QuestMarker marker in questMarkers)
             {
                 var distanceVector = marker.gameObject.transform.position - GameObject.FindWithTag("Player").transform.position;
                 var distance = distanceVector.sqrMagnitude;
-                
-                
+
                 marker.Image.rectTransform.anchoredPosition = getPosOnCompass(marker);
                 marker.DistanceTMP.text = (int)distance + " m";
             }
+            
         }
 
         public void AddQuestMarker(QuestMarker marker)
@@ -86,6 +86,10 @@ namespace Members.Carlos.Scripts.Compass
             marker.Image = newMarker.GetComponent<Image>();
             marker.Image.sprite = marker.Icon;
             marker.DistanceTMP = newMarker.GetComponentInChildren<TextMeshProUGUI>();
+
+            marker.gameObject.AddComponent<Outline>();
+            marker.gameObject.GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineVisible;
+            marker.gameObject.GetComponent<Outline>().OutlineWidth = 2;
             
             questMarkers.Add(marker);
         }

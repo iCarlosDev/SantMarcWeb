@@ -34,7 +34,7 @@ namespace Members.Carlos.Scripts.Dialogues
 
         private void Update()
         {
-            if (Input.GetButtonDown("Fire1") && !gameManager.instance.controlsMenuOpen)
+            if (Input.GetButtonDown("Fire1") && !gameManager.controlsMenuOpen)
             {
                 DisplayNextSentence();
             }

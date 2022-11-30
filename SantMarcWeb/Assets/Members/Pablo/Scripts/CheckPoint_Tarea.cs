@@ -62,6 +62,7 @@ public class CheckPoint_Tarea : MonoBehaviour
                     {
                         TaskManager.instance.task1Done = true;
 
+                        Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
                         Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
                         Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
                         Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.Texture);
@@ -72,6 +73,7 @@ public class CheckPoint_Tarea : MonoBehaviour
                     {
                         TaskManager.instance.task2Done = true;
                         
+                        Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
                         Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
                         Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
                         Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.Programming);
@@ -81,7 +83,7 @@ public class CheckPoint_Tarea : MonoBehaviour
                     if (TaskManager.instance.task2Done && !TaskManager.instance.task3Done)
                     {
                         TaskManager.instance.task3Done = true;
-                        
+                        Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
                         Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
                         Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
                         Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.PlayVR);

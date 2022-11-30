@@ -14,7 +14,7 @@ namespace Members.Carlos.Scripts
     public class GameManager : MonoBehaviour
     {
         //Variables
-        public GameManager instance;
+        public static GameManager instance;
         
         [SerializeField] private PlaneController planeController;
         [SerializeField] private PlayerController playerController;

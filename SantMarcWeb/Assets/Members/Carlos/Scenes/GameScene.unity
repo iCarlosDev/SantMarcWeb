@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d51c8adcd30cf4d8d4d1f7a452a824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iconPrefab: {fileID: 6596214010201114897, guid: e592945eae6f291439c5b3b420456cf0, type: 3}
+  iconPrefab: {fileID: 1283472975777272389, guid: e592945eae6f291439c5b3b420456cf0, type: 3}
   questMarkers: []
   compassImage: {fileID: 128875242}
   player: {fileID: 775677458}
@@ -10898,7 +10898,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab5daa16f980fb4fb8cf0290abbff2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instance: {fileID: 1504718981}
   planeController: {fileID: 2038942732}
   playerController: {fileID: 742692708}
   dialogueManager: {fileID: 0}
@@ -28382,6 +28381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   image: {fileID: 0}
+  distance_TMP: {fileID: 0}
 --- !u!114 &2053813604
 MonoBehaviour:
   m_ObjectHideFlags: 0

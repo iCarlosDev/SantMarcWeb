@@ -146,7 +146,7 @@ public class TareaDisplay : MonoBehaviour
 
     public void CambiarTarea(int ArrayTareas_Index)
     {
-        gameManager.instance.taskManager.SwapTaskAnimation();
+        gameManager.taskManager.SwapTaskAnimation();
         StartCoroutine(Delay(ArrayTareas_Index));
     }
 
