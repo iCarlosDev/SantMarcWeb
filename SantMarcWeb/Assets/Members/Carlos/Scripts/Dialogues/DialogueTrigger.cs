@@ -3,6 +3,7 @@ using Members.Carlos.Scripts.Compass;
 using Members.Carlos.Scripts.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Members.Carlos.Scripts.Dialogues
 {
@@ -33,7 +34,7 @@ namespace Members.Carlos.Scripts.Dialogues
                     if (taskManager.firstDialogueCompleted && !taskManager.exit1Checked)
                     {
                         taskManager.exit1Checked = true;
-                        Destroy(gameObject.GetComponent<Collider>());
+                        Destroy(gameObject.GetComponent<BoxCollider>());
                         Destroy(this);
                         
                         if (gameObject.CompareTag("Door1"))
@@ -63,7 +64,7 @@ namespace Members.Carlos.Scripts.Dialogues
                     if (taskManager.exit1Checked && !taskManager.exit2Checked)
                     {
                         taskManager.exit2Checked = true;
-                        Destroy(gameObject.GetComponent<Collider>());
+                        Destroy(gameObject.GetComponent<BoxCollider>());
                         Destroy(this);
                         
                         compass.QuestMarkers.Clear();
@@ -93,6 +94,10 @@ namespace Members.Carlos.Scripts.Dialogues
                 _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[0].InteracionString;
             }
             else if (!taskManager.teacherFound1Vz)
+            {
+                _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[1].InteracionString;
+            }
+            else if (name.Equals("NPC_NACHO"))
             {
                 _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[1].InteracionString;
             }

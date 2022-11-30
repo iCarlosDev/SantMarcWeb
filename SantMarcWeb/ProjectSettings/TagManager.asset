@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - SnakeCanvas
   - Door1
+  - NachoChair
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,7 @@ namespace Members.Carlos.Scripts
     {
         //Variables
         [SerializeField] private CharacterController controller;
+        [SerializeField] private Vector3 Velocity0;
         [SerializeField] private Transform cam;
     
         [Header("--- PLAYER BASIC VALUES ---")] 
@@ -18,6 +19,12 @@ namespace Members.Carlos.Scripts
         [SerializeField] private float turnSmoothVelocity;
         public float horizontal;
         public float vertical;
+
+        public float Speed
+        {
+            get => speed;
+            set => speed = value;
+        }
 
         [Header("--- PLAYER GROUND VALUES ---")] 
         [Space(10)]
@@ -78,7 +85,7 @@ namespace Members.Carlos.Scripts
                 controller.Move(moveDir.normalized * (speed * Time.deltaTime));
             }
 
-            if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+            if (Input.GetKey(KeyCode.LeftShift) && isGrounded && controller.velocity != Velocity0)
             {
                 if (speed >= 3)
                 {
@@ -94,9 +101,17 @@ namespace Members.Carlos.Scripts
                 {
                     speed = 1;
                 }
-                
-                playerAnimator.SetBool(IsSprinting, false);
-                speed -= Time.deltaTime;
+
+                if (controller.velocity.Equals(Velocity0))
+                {
+                    playerAnimator.SetBool(IsSprinting, false);
+                    speed -= Time.deltaTime * 5;
+                }
+                else
+                {
+                    playerAnimator.SetBool(IsSprinting, false);
+                    speed -= Time.deltaTime; 
+                }
             }
         }
 

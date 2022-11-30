@@ -110,6 +110,9 @@ namespace Members.Carlos.Scripts
                 playerController.vertical = 0;
                 playerController.playerAnimator.SetFloat(X, 0);
                 playerController.playerAnimator.SetFloat(Y, 0);
+                playerController.Speed = 1;
+                playerController.playerAnimator.SetFloat("WalkToSprint", 0.3f);
+                playerController.playerAnimator.SetBool("IsSprinting", false);
             }
             else if (!controlsMenuOpen)
             {

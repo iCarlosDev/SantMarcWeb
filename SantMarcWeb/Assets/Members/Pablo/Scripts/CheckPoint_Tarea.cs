@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Members.Carlos.Scripts.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -107,6 +108,7 @@ public class CheckPoint_Tarea : MonoBehaviour
             {
                 _display.checkpointUI.SetActive(true);
                 playerOnRange = true;
+                _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + _display.tarea.interactionString;
             }
         }
     }
