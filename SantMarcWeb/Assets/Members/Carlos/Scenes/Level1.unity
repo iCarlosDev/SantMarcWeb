@@ -9671,7 +9671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 016eb0a8aa9d1b441a51ac5e5ef0ae08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7589a5e814cad714993d43200619e797, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30376,6 +30376,10 @@ PrefabInstance:
     - target: {fileID: -5237127020944580906, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5237127020944580906, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+      propertyPath: m_TagString
+      value: Door1
       objectReference: {fileID: 0}
     - target: {fileID: -5237127020944580906, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -55710,6 +55714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 919132149146547591}
+  Velocity0: {x: 0, y: 0, z: 0}
   cam: {fileID: 963194228}
   speed: 1
   gravity: -9.81

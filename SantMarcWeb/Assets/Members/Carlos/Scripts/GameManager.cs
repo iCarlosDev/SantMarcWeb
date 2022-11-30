@@ -35,6 +35,7 @@ namespace Members.Carlos.Scripts
         [Header("--- CAR ---")] 
         [Space(10)] 
         [SerializeField] private GameObject carVehicle;
+        [SerializeField] private GameObject carSpawner;
         [SerializeField] private GameObject carVirtualCam;
         [SerializeField] private GameObject carFreeLookCam;
         [SerializeField] private bool canResetCarCam;
@@ -341,7 +342,8 @@ namespace Members.Carlos.Scripts
         
             carVehicle.SetActive(true);
 
-            player.transform.position = carVehicle.transform.position;
+            var carPosition = carVehicle.transform.position;
+            player.transform.position = new Vector3(carPosition.x, carPosition.y + 1.5f, carPosition.z);
             player.transform.rotation = carVehicle.transform.rotation;
         }
     
@@ -393,11 +395,14 @@ namespace Members.Carlos.Scripts
             carVirtualCam.SetActive(false);
             carFreeLookCam.SetActive(false);
 
-            planeVehicle.transform.position = player.transform.position;
-            planeVehicle.transform.rotation = player.transform.rotation;
+            var position = player.transform.position;
+            var rotation = player.transform.rotation;
 
-            carVehicle.transform.position = planeVehicle.transform.position;
-            carVehicle.transform.rotation = planeVehicle.transform.rotation;
+            planeVehicle.transform.position = position;
+            planeVehicle.transform.rotation = rotation;
+
+            carVehicle.transform.position = new Vector3(position.x, position.y + 1f, position.z);
+            carVehicle.transform.rotation = rotation;
             
             planeController.planeRigidbody.velocity *= 0f;
         }
