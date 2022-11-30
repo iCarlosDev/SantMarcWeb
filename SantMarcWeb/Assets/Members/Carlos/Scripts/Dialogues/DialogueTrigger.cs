@@ -50,13 +50,16 @@ namespace Members.Carlos.Scripts.Dialogues
                         }
                         return;
                     }
-                    
-                    foreach (QuestMarker compass_ in compass.QuestMarkers)
-                    {
-                        Destroy(compass_.gameObject.GetComponent<Outline>());
-                        Destroy(compass_.Image.gameObject);
-                    }
 
+                    if (!taskManager.teacherFound1Vz)
+                    {
+                        foreach (QuestMarker compass_ in compass.QuestMarkers)
+                        {
+                            Destroy(compass_.gameObject.GetComponent<Outline>());
+                            Destroy(compass_.Image.gameObject);
+                        }
+                    }
+                    
                     if (taskManager.exit1Checked && !taskManager.exit2Checked)
                     {
                         taskManager.exit2Checked = true;
