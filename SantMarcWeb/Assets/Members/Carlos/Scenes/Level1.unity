@@ -8846,14 +8846,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552991384092632877, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.00000027395453
       objectReference: {fileID: 0}
     - target: {fileID: -7552991384092632877, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.00000035824795
       objectReference: {fileID: 0}
     - target: {fileID: -7552991384092632877, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
       propertyPath: m_LocalRotation.z
+      value: 0.0000003278257
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552991384092632877, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5922722601023230856, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
@@ -8921,7 +8925,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 241665669508829042, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000027395447
+      objectReference: {fileID: 0}
+    - target: {fileID: 241665669508829042, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000031610128
+      objectReference: {fileID: 0}
+    - target: {fileID: 241665669508829042, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
       propertyPath: m_LocalRotation.z
+      value: 0.00000044703467
+      objectReference: {fileID: 0}
+    - target: {fileID: 241665669508829042, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d236bb7a75fa1bb40b328f045ad868dc, type: 3}
@@ -18379,6 +18395,7 @@ MonoBehaviour:
   nachoAnimator: {fileID: 0}
   player: {fileID: 0}
   monitor: {fileID: 0}
+  silla: {fileID: 0}
 --- !u!1 &978221529
 GameObject:
   m_ObjectHideFlags: 0
@@ -22504,6 +22521,7 @@ MonoBehaviour:
   player: {fileID: 919132149146547590}
   playerCamera: {fileID: 1423393649}
   carVehicle: {fileID: 642287923709325475}
+  carSpawner: {fileID: 0}
   carVirtualCam: {fileID: 1383467801}
   carFreeLookCam: {fileID: 856149582}
   canResetCarCam: 1

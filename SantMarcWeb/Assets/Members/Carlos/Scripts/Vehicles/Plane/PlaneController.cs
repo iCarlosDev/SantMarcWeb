@@ -35,7 +35,7 @@ namespace Members.Carlos.Scripts.Vehicles.Plane
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Untagged"))
+            if (collision.gameObject.CompareTag("Floor"))
             {
                 gameManager.changeToPlane = false;
                 gameManager.spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();

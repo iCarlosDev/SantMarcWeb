@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using Cinemachine;
+using EasyUI.Toast;
 using Members.Carlos.Scripts.Dialogues;
 using Members.Carlos.Scripts.Tasks;
 using Members.Carlos.Scripts.Vehicles.Plane;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using static EasyUI.Toast.Toast;
 
 namespace Members.Carlos.Scripts
 {
@@ -130,20 +131,30 @@ namespace Members.Carlos.Scripts
             }
             
         }
-
+        
         private void ChangeCharacter()
         {
-            if (Input.GetKeyDown(KeyCode.F) && !playerController.isGrounded)
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                changeToPlane = !changeToPlane;
-                spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
+                var spawnDetecter = FindObjectOfType<SpawnDetecter>();
+                
+                if (spawnDetecter != null)
+                {
+                    if (spawnDetecter.CanTransform)
+                    {
+                        Transform();
+                    }
+                    else
+                    {
+                        Toast.Show("No hay espacio para transformarse");
+                    }
+                }
+                else
+                {
+                    Transform();
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.F) && playerController.isGrounded)
-            {
-                changeToCar = !changeToCar;
-                spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
-            }
-        
+
             if (changeToPlane)
             {
                 PlaneActive();
@@ -158,6 +169,24 @@ namespace Members.Carlos.Scripts
             {
                 PlayerActive();
             }
+        }
+        
+        private void Transform()
+        {
+            if(!playerController.isGrounded)
+            {
+                changeToPlane = !changeToPlane;
+                spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
+                canResetPlaneCam = true;
+            }
+            else if (playerController.isGrounded)
+            {
+                changeToCar = !changeToCar;
+                spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
+                canResetCarCam = true;
+            }
+               
+            StopAllCoroutines(); 
         }
 
         #region - CONTROLS MENU -
@@ -199,6 +228,9 @@ namespace Members.Carlos.Scripts
             playerController.vertical = 0;
             playerController.playerAnimator.SetFloat(X, 0);
             playerController.playerAnimator.SetFloat(Y, 0);
+            playerController.Speed = 1;
+            playerController.playerAnimator.SetFloat("WalkToSprint", 0.3f);
+            playerController.playerAnimator.SetBool("IsSprinting", false);
             
             playerCamera.GetComponent<CinemachineFreeLook>().m_XAxis.m_InputAxisName = string.Empty;
             playerCamera.GetComponent<CinemachineFreeLook>().m_YAxis.m_InputAxisName = string.Empty;
@@ -315,7 +347,8 @@ namespace Members.Carlos.Scripts
                 canResetPlaneCam = false;
                 planeVirtualCam.SetActive(false);
                 planeFreeLookCam.SetActive(true);
-                StopCoroutine(nameof(WaitResetPlaneCamera));
+                StopAllCoroutines();
+                //StopCoroutine(nameof(WaitResetPlaneCamera));
             }
             else if (!canResetPlaneCam && (mouseX == 0 && mouseY == 0))
             {
@@ -362,7 +395,8 @@ namespace Members.Carlos.Scripts
                 canResetCarCam = false;
                 carVirtualCam.SetActive(false);
                 carFreeLookCam.SetActive(true);
-                StopCoroutine(nameof(WaitResetCarCamera));
+                StopAllCoroutines();
+                //StopCoroutine(nameof(WaitResetCarCamera));
             }
             else if (!canResetCarCam && (mouseX == 0 && mouseY == 0))
             {

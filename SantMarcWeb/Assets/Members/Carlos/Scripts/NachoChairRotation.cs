@@ -13,6 +13,7 @@ public class NachoChairRotation : MonoBehaviour
     [SerializeField] private Animator nachoAnimator;
     [SerializeField] private Transform player;
     [SerializeField] private Transform monitor;
+    [SerializeField] private Transform silla;
     private static readonly int IsOnRange = Animator.StringToHash("IsOnRange");
 
 
@@ -20,6 +21,7 @@ public class NachoChairRotation : MonoBehaviour
     {
         nachoAnimator = GameObject.Find("NPC_NACHO").GetComponent<Animator>();
         monitor = GameObject.Find("Monitor").transform;
+        silla = GameObject.Find("SillaProfes_Mid_Jnt").transform;
         player = FindObjectOfType<PlayerController>().gameObject.transform;
     }
 
@@ -27,17 +29,17 @@ public class NachoChairRotation : MonoBehaviour
     {
         if (canRotate && nachoAnimator.GetCurrentAnimatorStateInfo(0).IsName("Sitting Idle"))
         {
-            var lookPos = player.position - transform.position;
+            var lookPos = player.position - silla.transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
+            silla.transform.rotation = Quaternion.Slerp(silla.transform.rotation, rotation, Time.deltaTime * damping);
         }
         else
         {
-            var lookPos = monitor.position - transform.position;
+            var lookPos = monitor.position - silla.transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
+            silla.transform.rotation = Quaternion.Slerp(silla.transform.rotation, rotation, Time.deltaTime * damping);
         }
     }
 

@@ -10,6 +10,7 @@ TagManager:
   - SnakeCanvas
   - Door1
   - NachoChair
+  - Floor
   layers:
   - Default
   - TransparentFX
