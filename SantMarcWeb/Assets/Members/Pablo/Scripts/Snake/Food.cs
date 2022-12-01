@@ -42,8 +42,8 @@ public class Food : MonoBehaviour
         int Xdecimal = Random.Range(0, 2);
         int Ydecimal = Random.Range(0, 2);
         
-        Debug.Log("Xdecimal = " + Xdecimal);
-        Debug.Log("Ydecimal = " + Ydecimal);
+        //Debug.Log("Xdecimal = " + Xdecimal);
+        //Debug.Log("Ydecimal = " + Ydecimal);
 
         Mathf.Round(x);
         Mathf.Round(y);
@@ -86,8 +86,8 @@ public class Food : MonoBehaviour
         
         _rectTransform.localPosition = new Vector3(x * 50 + Xdecimal, y * 50 + Ydecimal, 0.0f);
         
-        Debug.Log("X = " + x);
-        Debug.Log("Y = " + y);
+        //Debug.Log("X = " + x);
+        //Debug.Log("Y = " + y);
 
         foreach (RectTransform _snake in _snake._segments)
         {

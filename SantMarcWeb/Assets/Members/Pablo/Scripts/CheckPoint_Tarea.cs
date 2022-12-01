@@ -41,7 +41,7 @@ public class CheckPoint_Tarea : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    /*if (_display.tarea == _display.ArrayDeTareas[0])
+                    if (_display.tarea == _display.ArrayDeTareas[0])
                     {
                         _display.checkpointUI.SetActive(false);
                         _cinemachine.ActivarPCModelaje();
@@ -52,13 +52,8 @@ public class CheckPoint_Tarea : MonoBehaviour
                         checkpoint = true; 
                         _display.checkpointUI.SetActive(false); 
                         Destroy(this);
-                    }*/
+                    }
                     
-                    _display.CompletarCheckpoint();
-                    checkpoint = true; 
-                    _display.checkpointUI.SetActive(false); 
-                    Destroy(this);
-
                     if (!TaskManager.instance.task1Done)
                     {
                         TaskManager.instance.task1Done = true;

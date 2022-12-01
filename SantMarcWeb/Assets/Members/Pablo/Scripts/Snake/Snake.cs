@@ -12,7 +12,7 @@ public class Snake : MonoBehaviour
 
     [Header("--- STATS ---")]
     [Space(10)]
-    public float fixedDeltaTime = 0.0f;
+    public float fixedDeltaTime;
     public int initialSize = 4;
     
     [Header("--- VARIABLES ---")]
@@ -47,6 +47,7 @@ public class Snake : MonoBehaviour
     {
         ResetGame();
         actualizarPreview(Vector2.down);
+        Debug.Log("STARTED");
     }
 
     void Update()
@@ -140,7 +141,6 @@ public class Snake : MonoBehaviour
         _direction = direccion;
     }
     
-    
     private void Grow()
     {
         RectTransform segment = Instantiate(segmentPrefab, SnakeCanvasParent.transform);
@@ -190,6 +190,19 @@ public class Snake : MonoBehaviour
     
     private void ResetGame()
     {
+        if (!Preview)
+        {
+            this._rectTransform.localPosition = Vector3.zero;
+        }
+
+        //CORREGIR ERROR CON LA ARRAY AL CAMBIAR DE CANVAS
+        /*for (int i = 0; i < SnakeCanvasParent.transform.childCount; i++)
+        {
+            Destroy(SnakeCanvasParent.transform.GetChild(i).gameObject);
+        }*/
+        
+        
+        
         for (int i = 1; i < _segments.Count; i++)
         {
             Destroy(_segments[i].gameObject);
@@ -197,15 +210,10 @@ public class Snake : MonoBehaviour
         
         _segments.Clear();
         _segments.Add(this._rectTransform);
-
+        
         for (int i = 1; i < initialSize; i++)
         {
             _segments.Add(Instantiate(segmentPrefab, SnakeCanvasParent.transform));
-        }
-
-        if (!Preview)
-        {
-            this._rectTransform.localPosition = Vector3.zero;
         }
         
         for (int i = 0; i < 4; i++)
@@ -217,14 +225,21 @@ public class Snake : MonoBehaviour
             FinalImage[i].enabled = false;
         }
         
-        _menuSnake.RetryMenu(Score);
-        
         Score = 0;
         ScoreTMP.text = "SCORE : " + Score;
         FinalImageActive = 0;
         QuaretersActive = 0;
         fixedDeltaTime = 0.1f;
         Time.fixedDeltaTime = fixedDeltaTime;
+
+        if (!Preview)
+        {
+            Debug.Log("HAS PERDIDO FR");
+        }
+        else
+        {
+            Debug.Log("HAS PERDIDO PREVIEW");
+        }
 
     }
     
@@ -237,6 +252,12 @@ public class Snake : MonoBehaviour
         
         if (other.CompareTag("Obstacle"))
         {
+            
+            if (!Preview)
+            {
+                _menuSnake.RetryMenu(Score);
+                Debug.Log("HAS PERDIDO FR:" + Score);
+            }
             ResetGame();
         }
     }

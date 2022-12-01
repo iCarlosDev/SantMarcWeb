@@ -8,9 +8,9 @@ public class CinemachineSwitcher : MonoBehaviour
 {
 
     public CinemachineFreeLook ThirdPersonCamera;
-    public CinemachineVirtualCamera PCModelaje1Camera;
-    public CinemachineVirtualCamera PCTexturizado1Camera;
-    public CinemachineVirtualCamera PCProgramacion1Camera;
+    public CinemachineFreeLook PCModelaje1Camera;
+    public CinemachineFreeLook PCTexturizado1Camera;
+    public CinemachineFreeLook PCProgramacion1Camera;
     public GameManager GM;
     
     public GameObject SnakeCanvas;
@@ -19,20 +19,31 @@ public class CinemachineSwitcher : MonoBehaviour
 
     public void ActivarPCModelaje()
     {
-        StartCoroutine("ActivarSnakeCanvas");
-        PCModelaje1Camera.Priority = 11;
         GM.isDialogue = true;
+        ThirdPersonCamera.m_XAxis.m_InputAxisName = string.Empty;
+        ThirdPersonCamera.m_YAxis.m_InputAxisName = string.Empty;
+        ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;
+        ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
+        PCModelaje1Camera.Priority = 11;
+        StartCoroutine("ActivarSnakeCanvas");
+        
     }
     
     public void DesactivarPCModelaje()
     {
         StartCoroutine("DesactivarSnakeCanvas");
         PCModelaje1Camera.Priority = 1;
+        SnakeCanvas.SetActive(false);
+        NormalCanvas.SetActive(true);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     
     private IEnumerator ActivarSnakeCanvas()
     {
         yield return new WaitForSeconds(2);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
         SnakeCanvas.SetActive(true);
         NormalCanvas.SetActive(false);
     }
@@ -40,8 +51,10 @@ public class CinemachineSwitcher : MonoBehaviour
     private IEnumerator DesactivarSnakeCanvas()
     {
         yield return new WaitForSeconds(2);
-        SnakeCanvas.SetActive(false);
-        NormalCanvas.SetActive(true);
         GM.isDialogue = false;
+        ThirdPersonCamera.m_XAxis.m_InputAxisName = "Mouse X";
+        ThirdPersonCamera.m_YAxis.m_InputAxisName = "Mouse Y";
+        ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;
+        ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
     }
 }

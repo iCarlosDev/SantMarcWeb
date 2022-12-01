@@ -37,7 +37,10 @@ public class Menu_Snake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ResetStars();
+        if (RetryMenuPanel.activeSelf)
+        {
+            ResetStars();
+        }
     }
 
     // Update is called once per frame
@@ -45,7 +48,7 @@ public class Menu_Snake : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            var randomScore = Random.Range(0, 36);
+            var randomScore = Random.Range(0, 37);
             RetryMenu(randomScore);
             Debug.Log(""+ randomScore);
         }
@@ -71,10 +74,19 @@ public class Menu_Snake : MonoBehaviour
     }
     public void RetryMenu(int puntuacion)
     {
-        ResetStars();
-        Score = puntuacion;
+        if (RetryMenuPanel.activeSelf)
+        {
+            ResetStars();
+        }
         
-        if (puntuacion >= 9 && puntuacion <= 17)
+        Score = puntuacion;
+        Cursor.visible = true;
+        
+        MainMenuPanel.SetActive(false);
+        GamePanel.SetActive(false);
+        RetryMenuPanel.SetActive(true);
+        
+        if (puntuacion >= 0 && puntuacion <= 17)
         {
             var star1Color = Star1.color;
             star1Color.a = 255f;
@@ -123,7 +135,6 @@ public class Menu_Snake : MonoBehaviour
             Star4.color = star4Color;
         }
     }
-
     public void PressRetryBttn()
     {
         MainMenuPanel.SetActive(false);
