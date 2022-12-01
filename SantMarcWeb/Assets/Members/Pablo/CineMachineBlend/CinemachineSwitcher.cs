@@ -24,10 +24,24 @@ public class CinemachineSwitcher : MonoBehaviour
         GM.isDialogue = true;
     }
     
+    public void DesactivarPCModelaje()
+    {
+        StartCoroutine("DesactivarSnakeCanvas");
+        PCModelaje1Camera.Priority = 1;
+    }
+    
     private IEnumerator ActivarSnakeCanvas()
     {
         yield return new WaitForSeconds(2);
         SnakeCanvas.SetActive(true);
         NormalCanvas.SetActive(false);
+    }
+    
+    private IEnumerator DesactivarSnakeCanvas()
+    {
+        yield return new WaitForSeconds(2);
+        SnakeCanvas.SetActive(false);
+        NormalCanvas.SetActive(true);
+        GM.isDialogue = false;
     }
 }

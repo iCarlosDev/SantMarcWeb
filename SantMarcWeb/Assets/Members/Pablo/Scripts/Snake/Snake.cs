@@ -7,35 +7,40 @@ using UnityEngine.UI;
 
 public class Snake : MonoBehaviour
 {
+    [Header("--- PREVIEW ---")]
     public bool Preview;
-    public float timeRemaining = 5;
+
+    [Header("--- STATS ---")]
+    [Space(10)]
+    public float fixedDeltaTime = 0.0f;
+    public int initialSize = 4;
     
+    [Header("--- VARIABLES ---")]
+    [Space(10)]
     private Vector2 _direction = Vector2.left;
     private RectTransform _rectTransform;
     public GameObject SnakeCanvasParent;
-
     public List<RectTransform> _segments = new List<RectTransform>();
     public RectTransform segmentPrefab;
 
+    [Header("--- SCORE ---")]
+    [Space(10)]
     public TextMeshProUGUI ScoreTMP;
     private int Score = 0;
     public Image[] QuarterImages;
     private int QuaretersActive = 0;
     public Image[] FinalImage;
     private int FinalImageActive = 0;
-
-    public float fixedDeltaTime;
-
-    public int initialSize = 4;
-
     private Vector3 Position;
-
     private bool canChangeDirection;
+
+    private Menu_Snake _menuSnake;
     
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
         Time.fixedDeltaTime = fixedDeltaTime;
+        _menuSnake = FindObjectOfType<Menu_Snake>();
     }
 
     private void Start()
@@ -49,7 +54,7 @@ public class Snake : MonoBehaviour
         if (Preview)
         {
             Position = _rectTransform.localPosition;
-            Debug.Log(Position);
+            //Debug.Log(Position);
 
             if (Position == new Vector3(-425.0f, 425.0f, 0.0f))
             {
@@ -211,6 +216,8 @@ public class Snake : MonoBehaviour
         {
             FinalImage[i].enabled = false;
         }
+        
+        _menuSnake.RetryMenu(Score);
         
         Score = 0;
         ScoreTMP.text = "SCORE : " + Score;
