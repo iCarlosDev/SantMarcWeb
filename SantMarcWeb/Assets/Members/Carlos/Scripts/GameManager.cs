@@ -168,6 +168,7 @@ namespace Members.Carlos.Scripts
             else
             {
                 PlayerActive();
+                FindObjectOfType<CinemachineBrain>().m_UpdateMethod = CinemachineBrain.UpdateMethod.SmartUpdate;
             }
         }
         
@@ -175,12 +176,14 @@ namespace Members.Carlos.Scripts
         {
             if(!playerController.isGrounded)
             {
+                FindObjectOfType<CinemachineBrain>().m_UpdateMethod = CinemachineBrain.UpdateMethod.FixedUpdate;
                 changeToPlane = !changeToPlane;
                 spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
                 canResetPlaneCam = true;
             }
             else if (playerController.isGrounded)
             {
+                FindObjectOfType<CinemachineBrain>().m_UpdateMethod = CinemachineBrain.UpdateMethod.FixedUpdate;
                 changeToCar = !changeToCar;
                 spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
                 canResetCarCam = true;

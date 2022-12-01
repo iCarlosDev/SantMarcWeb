@@ -42,6 +42,8 @@ namespace Members.Carlos.Scripts
         private static readonly int Y = Animator.StringToHash("Y");
         private static readonly int WalkToSprint = Animator.StringToHash("WalkToSprint");
         private static readonly int IsSprinting = Animator.StringToHash("IsSprinting");
+        private static readonly int IsJumping = Animator.StringToHash("IsJumping");
+        private static readonly int IsFalling = Animator.StringToHash("IsFalling");
 
         private void Update()
         {
@@ -54,6 +56,11 @@ namespace Members.Carlos.Scripts
             gameObject.transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
         
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+            if (isGrounded)
+            {
+                playerAnimator.SetBool(IsFalling, false);
+            }
 
             if (isGrounded && velocity.y < 0)
             {
@@ -69,10 +76,7 @@ namespace Members.Carlos.Scripts
 
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
-                if (SceneManager.GetActiveScene().buildIndex == 1)
-                {
-                    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-                }
+                playerAnimator.SetBool(IsJumping, true);
             }
 
             if (direction.magnitude >= 0.1f)
@@ -85,7 +89,7 @@ namespace Members.Carlos.Scripts
                 controller.Move(moveDir.normalized * (speed * Time.deltaTime));
             }
 
-            if (Input.GetKey(KeyCode.LeftShift) && isGrounded && controller.velocity != Velocity0)
+            if (Input.GetKey(KeyCode.LeftShift) && isGrounded && vertical >= 1)
             {
                 if (speed >= 3)
                 {
@@ -93,7 +97,7 @@ namespace Members.Carlos.Scripts
                 }
                 
                 playerAnimator.SetBool(IsSprinting, true);
-                speed += Time.deltaTime;
+                speed += Time.deltaTime * 3;
             }
             else
             {
@@ -110,16 +114,30 @@ namespace Members.Carlos.Scripts
                 else
                 {
                     playerAnimator.SetBool(IsSprinting, false);
-                    speed -= Time.deltaTime; 
+                    speed -= Time.deltaTime * 3; 
                 }
             }
+        }
+
+        public void Jump()
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            { 
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            }
+        }
+
+        public void IsNotJumping()
+        {
+            playerAnimator.SetBool(IsJumping, false);
+            playerAnimator.SetBool(IsFalling, true);
         }
 
         private void AnimationsController()
         {
             playerAnimator.SetFloat(X, horizontal);
             playerAnimator.SetFloat(Y, vertical);
-            playerAnimator.SetFloat(WalkToSprint, speed / 3);
+            playerAnimator.SetFloat(WalkToSprint, speed);
         }
     }
 }

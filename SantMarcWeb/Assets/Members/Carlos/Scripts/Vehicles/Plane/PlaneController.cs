@@ -30,7 +30,7 @@ namespace Members.Carlos.Scripts.Vehicles.Plane
             planeRigidbody.AddForce(transform.forward * (speed * Time.deltaTime), ForceMode.Impulse);
 
             transform.Rotate(Vector3.back * (horizontalRotationSpeed * Time.deltaTime * horizontalInput));
-            transform.Rotate(Vector3.right * (verticalRotationSpeed * Time.deltaTime * verticalInput));
+            transform.Rotate(Vector3.right * (verticalRotationSpeed * Time.deltaTime * -verticalInput));
         }
 
         private void OnCollisionEnter(Collision collision)

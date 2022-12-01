@@ -6076,7 +6076,7 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   groundCheck: {fileID: 699344693}
-  groundDistance: 0.4
+  groundDistance: 0.15
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -29973,7 +29973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178002457410101125, guid: 73cb57edfc8dbea47a0339d94fa2be00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000062584877
+      value: -0.0000021457672
       objectReference: {fileID: 0}
     - target: {fileID: 3178002457410101125, guid: 73cb57edfc8dbea47a0339d94fa2be00, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29981,7 +29981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178002457410101125, guid: 73cb57edfc8dbea47a0339d94fa2be00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2199967
+      value: -1.2199874
       objectReference: {fileID: 0}
     - target: {fileID: 3178002457410101125, guid: 73cb57edfc8dbea47a0339d94fa2be00, type: 3}
       propertyPath: m_LocalRotation.w
