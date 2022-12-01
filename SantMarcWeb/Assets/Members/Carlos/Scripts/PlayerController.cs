@@ -29,10 +29,13 @@ namespace Members.Carlos.Scripts
         [Header("--- PLAYER GROUND VALUES ---")] 
         [Space(10)]
         [SerializeField] private Transform groundCheck;
+        [SerializeField] private Transform groundCheckAnimator;
         [SerializeField] private float groundDistance = 0.4f;
+        [SerializeField] private float groundDistanceAnimator = 0.4f;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private Vector3 velocity;
         public bool isGrounded;
+        public bool isGroundedAnimator;
 
         [Header("--- ANIMATIONS ---")] 
         [Space(10)] 
@@ -43,7 +46,7 @@ namespace Members.Carlos.Scripts
         private static readonly int WalkToSprint = Animator.StringToHash("WalkToSprint");
         private static readonly int IsSprinting = Animator.StringToHash("IsSprinting");
         private static readonly int IsJumping = Animator.StringToHash("IsJumping");
-        private static readonly int IsFalling = Animator.StringToHash("IsFalling");
+        private static readonly int Grounded = Animator.StringToHash("Grounded");
 
         private void Update()
         {
@@ -56,10 +59,11 @@ namespace Members.Carlos.Scripts
             gameObject.transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
         
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            isGroundedAnimator = Physics.CheckSphere(groundCheckAnimator.position, groundDistanceAnimator, groundMask);
 
-            if (isGrounded)
+            if (isGroundedAnimator)
             {
-                playerAnimator.SetBool(IsFalling, false);
+                playerAnimator.SetBool(Grounded,true);
             }
 
             if (isGrounded && velocity.y < 0)
@@ -122,15 +126,15 @@ namespace Members.Carlos.Scripts
         public void Jump()
         {
             if (SceneManager.GetActiveScene().buildIndex == 1)
-            { 
+            {
+                playerAnimator.SetBool(IsJumping, true);
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
         }
 
-        public void IsNotJumping()
+        public void isNotGrounded()
         {
-            playerAnimator.SetBool(IsJumping, false);
-            playerAnimator.SetBool(IsFalling, true);
+            playerAnimator.SetBool(Grounded, false);
         }
 
         private void AnimationsController()
