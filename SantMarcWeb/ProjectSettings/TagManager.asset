@@ -11,6 +11,7 @@ TagManager:
   - Door1
   - NachoChair
   - Floor
+  - Car
   layers:
   - Default
   - TransparentFX
