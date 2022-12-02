@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -47,6 +48,14 @@ namespace Members.Carlos.Scripts
         private static readonly int IsSprinting = Animator.StringToHash("IsSprinting");
         private static readonly int IsJumping = Animator.StringToHash("IsJumping");
         private static readonly int Grounded = Animator.StringToHash("Grounded");
+
+        private void Awake()
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                playerAnimator.SetBool(Grounded,true);
+            }
+        }
 
         private void Update()
         {
@@ -115,7 +124,7 @@ namespace Members.Carlos.Scripts
                     speed -= Time.deltaTime * 3; 
                 }
             }
-            
+
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded && SceneManager.GetActiveScene().buildIndex == 1)
             {
                 playerAnimator.SetBool(IsJumping, true);
@@ -123,7 +132,6 @@ namespace Members.Carlos.Scripts
             
             if (isGroundedAnimator)
             {
-                playerAnimator.SetBool(IsJumping, false);
                 playerAnimator.SetBool(Grounded,true);
             }
         }
@@ -132,6 +140,11 @@ namespace Members.Carlos.Scripts
         {
             playerAnimator.SetBool(IsJumping, true); 
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        public void IsNotJumping()
+        {
+            playerAnimator.SetBool(IsJumping, false);
         }
 
         public void isNotGrounded()
