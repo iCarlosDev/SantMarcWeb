@@ -12,6 +12,9 @@ TagManager:
   - NachoChair
   - Floor
   - Car
+  - CarToken
+  - PlaneToken
+  - Plane
   layers:
   - Default
   - TransparentFX

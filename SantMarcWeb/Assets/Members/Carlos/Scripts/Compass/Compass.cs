@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Cinemachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,7 @@ namespace Members.Carlos.Scripts.Compass
         [SerializeField] private List<QuestMarker> questMarkers = new List<QuestMarker>();
         
         [SerializeField] private RawImage compassImage;
+        [SerializeField] private Transform camera;
         [SerializeField] private Transform player;
 
         [SerializeField] private float compassUnit;
@@ -47,6 +49,8 @@ namespace Members.Carlos.Scripts.Compass
         private void Awake()
         {
             instance = this;
+            player = FindObjectOfType<PlayerController>().gameObject.transform;
+            camera = FindObjectOfType<CinemachineBrain>().gameObject.transform;
         }
 
         private void Start()
@@ -67,11 +71,11 @@ namespace Members.Carlos.Scripts.Compass
 
         private void Update()
         {
-            compassImage.uvRect = new Rect(player.localEulerAngles.y / 360f, 0f, 1f, 1f);
+            compassImage.uvRect = new Rect(camera.localEulerAngles.y / 360f, 0f, 1f, 1f);
             
             foreach (QuestMarker marker in questMarkers)
             {
-                var distanceVector = marker.gameObject.transform.position - GameObject.FindWithTag("Player").transform.position;
+                var distanceVector = marker.gameObject.transform.position - player.position;
                 var distance = distanceVector.sqrMagnitude;
 
                 marker.Image.rectTransform.anchoredPosition = getPosOnCompass(marker);
@@ -96,8 +100,8 @@ namespace Members.Carlos.Scripts.Compass
 
         Vector2 getPosOnCompass(QuestMarker marker)
         {
-            Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.z);
-            Vector2 playerFwd = new Vector2(player.transform.forward.x, player.transform.forward.z);
+            Vector2 playerPos = new Vector2(camera.transform.position.x, camera.transform.position.z);
+            Vector2 playerFwd = new Vector2(camera.transform.forward.x, camera.transform.forward.z);
 
             float angle = Vector2.SignedAngle(marker.position - playerPos, playerFwd);
 

@@ -9,9 +9,11 @@ public class CollectablesSpawner : MonoBehaviour
     //[SerializeField] private GameObject collectablePrefab_GO;
     [Header("--- SPAWNER ---")]
     [SerializeField] private GameObject spawnCollectables_GO;
-    [SerializeField] private List<GameObject> _spawnCollectables_L;
+    [SerializeField] private List<GameObject> _carSpawnCollectables_L;
+    [SerializeField] private List<GameObject> _planeSpawnCollectables_L;
 
-    public List<GameObject> SpawnCollectablesL => _spawnCollectables_L;
+    public List<GameObject> CarSpawnCollectablesL => _carSpawnCollectables_L;
+    public List<GameObject> PlaneSpawnCollectablesL => _planeSpawnCollectables_L;
 
     private void Awake()
     {
@@ -22,15 +24,34 @@ public class CollectablesSpawner : MonoBehaviour
     {
         foreach (Transform child in spawnCollectables_GO.transform)
         {
-            _spawnCollectables_L.Add(child.gameObject);
+            if (child.CompareTag("CarToken"))
+            {
+                _carSpawnCollectables_L.Add(child.gameObject);
+            }
+        }
+
+        foreach (Transform child in spawnCollectables_GO.transform)
+        {
+            if (child.CompareTag("PlaneToken"))
+            {
+                _planeSpawnCollectables_L.Add(child.gameObject);
+            }
         }
     }
 
-    private void CarCollectablesCompleted()
+    public void CollectablesCompleted()
     {
-        if (_spawnCollectables_L.Count.Equals(0))
+        if (_carSpawnCollectables_L.Count.Equals(0))
         {
             //LO Q SEA;
+            Debug.Log("Todos los coleccionables de coche copmletados");
+        }
+        else if (_planeSpawnCollectables_L.Count.Equals(0))
+        {
+            //LO Q SEA;
+            Debug.Log("Todos los coleccionables de avion copmletados");
         }
     }
+    
+    
 }

@@ -61,8 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle: 0
   time: 0
-  newPoint: {fileID: 5057582056734950915}
-  token: {fileID: 6675819055087673224}
+  newPoint: {fileID: 5131876314464851101}
+  token: {fileID: 7580978863919478662}
   isUp: 0
 --- !u!1 &5131876314464851101
 GameObject:

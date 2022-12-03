@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 26990618}
   m_Layer: 0
   m_Name: PlayerCharacters
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8659,6 +8659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenCoin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 640546421404669594, guid: f9e80f1398cecbe4fb713763c6318122, type: 3}
+      propertyPath: m_TagString
+      value: PlaneToken
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9e80f1398cecbe4fb713763c6318122, type: 3}
 --- !u!4 &1011613948 stripped
@@ -9064,7 +9068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnCollectables_GO: {fileID: 0}
-  _spawnCollectables_L: []
+  _carSpawnCollectables_L: []
+  _planeSpawnCollectables_L: []
 --- !u!1 &1074811131
 GameObject:
   m_ObjectHideFlags: 0
@@ -12915,6 +12920,10 @@ PrefabInstance:
     - target: {fileID: 640546421404669594, guid: f9e80f1398cecbe4fb713763c6318122, type: 3}
       propertyPath: m_Name
       value: TokenCoin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 640546421404669594, guid: f9e80f1398cecbe4fb713763c6318122, type: 3}
+      propertyPath: m_TagString
+      value: PlaneToken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9e80f1398cecbe4fb713763c6318122, type: 3}
@@ -30484,7 +30493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178002457410101125, guid: 73cb57edfc8dbea47a0339d94fa2be00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000072717667
+      value: -0.000007778406
       objectReference: {fileID: 0}
     - target: {fileID: 3178002457410101125, guid: 73cb57edfc8dbea47a0339d94fa2be00, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30492,7 +30501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178002457410101125, guid: 73cb57edfc8dbea47a0339d94fa2be00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2199316
+      value: -1.2199297
       objectReference: {fileID: 0}
     - target: {fileID: 3178002457410101125, guid: 73cb57edfc8dbea47a0339d94fa2be00, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31604,6 +31613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 3686559665329542539, guid: 3a6d69eeb2fe2b1459f50269f00a61a6, type: 3}
+      propertyPath: m_TagString
+      value: Plane
+      objectReference: {fileID: 0}
     - target: {fileID: 4062980062686760753, guid: 3a6d69eeb2fe2b1459f50269f00a61a6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -31839,7 +31852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &2053813601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32547,6 +32560,10 @@ PrefabInstance:
     - target: {fileID: 640546421404669594, guid: f9e80f1398cecbe4fb713763c6318122, type: 3}
       propertyPath: m_Name
       value: TokenCoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 640546421404669594, guid: f9e80f1398cecbe4fb713763c6318122, type: 3}
+      propertyPath: m_TagString
+      value: CarToken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9e80f1398cecbe4fb713763c6318122, type: 3}

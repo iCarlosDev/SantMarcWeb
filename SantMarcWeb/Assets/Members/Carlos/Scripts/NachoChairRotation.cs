@@ -19,9 +19,8 @@ public class NachoChairRotation : MonoBehaviour
 
     private void Awake()
     {
-        nachoAnimator = GameObject.Find("NPC_NACHO").GetComponent<Animator>();
-        monitor = GameObject.Find("Monitor").transform;
-        silla = GameObject.Find("SillaProfes_Mid_Jnt").transform;
+        //monitor = GameObject.Find("Monitor").transform;
+        //silla = GameObject.Find("SillaProfes_Mid_Jnt").transform;
         player = FindObjectOfType<PlayerController>().gameObject.transform;
     }
 
