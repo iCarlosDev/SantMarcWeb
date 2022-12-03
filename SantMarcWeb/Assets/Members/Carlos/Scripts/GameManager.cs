@@ -32,6 +32,9 @@ namespace Members.Carlos.Scripts
         [Space(10)]
         [SerializeField] private GameObject player;
         [SerializeField] private GameObject playerCamera;
+        public int ModelajeScore = 0;
+        public int TexturizadoScore = 0;
+        public int ProgramacionScore = 0;
 
         [Header("--- CAR ---")] 
         [Space(10)] 

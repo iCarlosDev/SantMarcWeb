@@ -39,6 +39,50 @@ public class CinemachineSwitcher : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
     
+    public void ActivarPCTexturizado()
+    {
+        GM.isDialogue = true;
+        ThirdPersonCamera.m_XAxis.m_InputAxisName = string.Empty;
+        ThirdPersonCamera.m_YAxis.m_InputAxisName = string.Empty;
+        ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;
+        ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
+        PCTexturizado1Camera.Priority = 11;
+        StartCoroutine("ActivarSnakeCanvas");
+        
+    }
+    
+    public void DesactivarPCTexturizado()
+    {
+        StartCoroutine("DesactivarSnakeCanvas");
+        PCTexturizado1Camera.Priority = 1;
+        SnakeCanvas.SetActive(false);
+        NormalCanvas.SetActive(true);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    
+    public void ActivarPCProgramacion()
+    {
+        GM.isDialogue = true;
+        ThirdPersonCamera.m_XAxis.m_InputAxisName = string.Empty;
+        ThirdPersonCamera.m_YAxis.m_InputAxisName = string.Empty;
+        ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;
+        ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
+        PCProgramacion1Camera.Priority = 11;
+        StartCoroutine("ActivarSnakeCanvas");
+        
+    }
+    
+    public void DesactivarPCProgramacion()
+    {
+        StartCoroutine("DesactivarSnakeCanvas");
+        PCProgramacion1Camera.Priority = 1;
+        SnakeCanvas.SetActive(false);
+        NormalCanvas.SetActive(true);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    
     private IEnumerator ActivarSnakeCanvas()
     {
         yield return new WaitForSeconds(2);

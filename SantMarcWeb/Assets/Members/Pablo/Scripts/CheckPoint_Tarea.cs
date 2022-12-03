@@ -9,8 +9,6 @@ using UnityEngine.SceneManagement;
 
 public class CheckPoint_Tarea : MonoBehaviour
 {
-    public GameObject SnakeCanvas;
-    
     private TareaDisplay _display;
 
     private CinemachineSwitcher _cinemachine;
@@ -25,13 +23,7 @@ public class CheckPoint_Tarea : MonoBehaviour
         _display = FindObjectOfType<TareaDisplay>();
         _cinemachine = FindObjectOfType<CinemachineSwitcher>();
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
