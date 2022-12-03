@@ -15,6 +15,7 @@ TagManager:
   - CarToken
   - PlaneToken
   - Plane
+  - Door
   layers:
   - Default
   - TransparentFX

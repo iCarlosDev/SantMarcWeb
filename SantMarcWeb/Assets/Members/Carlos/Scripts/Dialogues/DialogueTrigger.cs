@@ -3,7 +3,6 @@ using Members.Carlos.Scripts.Compass;
 using Members.Carlos.Scripts.Tasks;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Members.Carlos.Scripts.Dialogues
 {
@@ -54,10 +53,13 @@ namespace Members.Carlos.Scripts.Dialogues
 
                     if (!taskManager.teacherFound1Vz)
                     {
-                        foreach (QuestMarker compass_ in compass.QuestMarkers)
+                        if (CompareTag("Door1") || CompareTag("Door") || name.Equals("NPC_NACHO"))
                         {
-                            Destroy(compass_.gameObject.GetComponent<Outline>());
-                            Destroy(compass_.Image.gameObject);
+                            foreach (QuestMarker compass_ in compass.QuestMarkers)
+                            {
+                                Destroy(compass_.gameObject.GetComponent<Outline>());
+                                Destroy(compass_.Image.gameObject);
+                            }
                         }
                     }
                     
@@ -74,10 +76,12 @@ namespace Members.Carlos.Scripts.Dialogues
 
                     if (taskManager.exit2Checked && !taskManager.teacherFound)
                     {
-                        taskManager.teacherFound = true;
-                        
-                        compass.QuestMarkers.Clear();
-                        compass.AddQuestMarker(compass.Modeling);
+                        if (name.Equals("NPC_NACHO"))
+                        {
+                            taskManager.teacherFound = true;
+                            compass.QuestMarkers.Clear();
+                            compass.AddQuestMarker(compass.Modeling);
+                        }
                     }
                 }
             }
@@ -97,7 +101,7 @@ namespace Members.Carlos.Scripts.Dialogues
             {
                 _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[1].InteracionString;
             }
-            else if (name.Equals("NPC_NACHO"))
+            else if (name.Equals("NPC_NACHO") || name.Equals("NPC_RUBEN") || name.Equals("NPC_JORDI"))
             {
                 _display.checkpointUI.GetComponentInChildren<TextMeshProUGUI>().text = "Presiona E para " + taskManager.task[1].InteracionString;
             }

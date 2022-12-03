@@ -30,24 +30,11 @@ public class TokensCollectables : MonoBehaviour
     {
         var CollectableSpawner = GetComponentInParent<CollectablesSpawner>();
         
-        if (other.CompareTag("Car"))
+        if (other.CompareTag("Car") || other.CompareTag("Plane") || other.CompareTag("Player"))
         {
-            if (gameObject.CompareTag("CarToken"))
-            {
-                CollectableSpawner.CarSpawnCollectablesL.Remove(gameObject);
-                CollectableSpawner.CollectablesCompleted();
-                Destroy(gameObject);
-            }
-        }
-
-        if (other.CompareTag("Plane"))
-        {
-            if (gameObject.CompareTag("PlaneToken"))
-            {
-                CollectableSpawner.PlaneSpawnCollectablesL.Remove(gameObject);
-                CollectableSpawner.CollectablesCompleted();
-                Destroy(gameObject);
-            }
+            CollectableSpawner.SpawnCollectablesL.Remove(gameObject);
+            CollectableSpawner.CollectablesCompleted();
+            Destroy(gameObject);
         }
     }
 }

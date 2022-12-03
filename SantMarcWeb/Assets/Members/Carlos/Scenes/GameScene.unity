@@ -1318,6 +1318,7 @@ MonoBehaviour:
   iconPrefab: {fileID: 1283472975777272389, guid: e592945eae6f291439c5b3b420456cf0, type: 3}
   questMarkers: []
   compassImage: {fileID: 128875242}
+  camera: {fileID: 0}
   player: {fileID: 775677458}
   compassUnit: 0
   door1: {fileID: 0}
@@ -9068,8 +9069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnCollectables_GO: {fileID: 0}
-  _carSpawnCollectables_L: []
-  _planeSpawnCollectables_L: []
+  _spawnCollectables_L: []
 --- !u!1 &1074811131
 GameObject:
   m_ObjectHideFlags: 0
