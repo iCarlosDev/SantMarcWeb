@@ -50,28 +50,31 @@ public class Snake : MonoBehaviour
         Debug.Log("STARTED");
     }
 
-    void Update()
+    private void Update()
     {
         if (Preview)
         {
             Position = _rectTransform.localPosition;
-            //Debug.Log(Position);
-
+            
             if (Position == new Vector3(-425.0f, 425.0f, 0.0f))
             {
                 actualizarPreview(Vector2.down);
+                Debug.Log(Position);
             }
-            else if (Position == new Vector3(-425.0f, -425.0f, 0.0f))
+            if (Position == new Vector3(-425.0f, -425.0f, 0.0f))
             {
                 actualizarPreview(Vector2.right);
+                Debug.Log("RIGHT"+ Vector2.right);
             }
-            else if (Position == new Vector3(425.0f, -425.0f, 0.0f))
+            if (Position == new Vector3(425.0f, -425.0f, 0.0f))
             {
                 actualizarPreview(Vector2.up);
+                Debug.Log(Position);
             }
-            else if (Position == new Vector3(425.0f, 425.0f, 0.0f))
+            if (Position == new Vector3(425.0f, 425.0f, 0.0f))
             {
                 actualizarPreview(Vector2.left);
+                Debug.Log(Position);
             }
         }
 
@@ -95,7 +98,7 @@ public class Snake : MonoBehaviour
             Mathf.Round(_rectTransform.localPosition.x)  + _direction.x * 50,
             Mathf.Round(_rectTransform.localPosition.y) + _direction.y * 50,
             0.0f);
-        
+        Debug.Log(_rectTransform.localPosition);
         canChangeDirection = true;
     }
 
@@ -139,6 +142,7 @@ public class Snake : MonoBehaviour
     private void actualizarPreview(Vector2 direccion)
     {
         _direction = direccion;
+        Debug.Log(_direction);
     }
     
     private void Grow()
@@ -195,14 +199,6 @@ public class Snake : MonoBehaviour
             this._rectTransform.localPosition = Vector3.zero;
         }
 
-        //CORREGIR ERROR CON LA ARRAY AL CAMBIAR DE CANVAS
-        /*for (int i = 0; i < SnakeCanvasParent.transform.childCount; i++)
-        {
-            Destroy(SnakeCanvasParent.transform.GetChild(i).gameObject);
-        }*/
-        
-        
-        
         for (int i = 1; i < _segments.Count; i++)
         {
             Destroy(_segments[i].gameObject);

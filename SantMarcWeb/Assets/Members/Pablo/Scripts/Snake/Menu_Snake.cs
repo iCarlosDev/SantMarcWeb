@@ -28,6 +28,10 @@ public class Menu_Snake : MonoBehaviour
     public bool Texturizado;
     public bool Programación;
 
+    [Header("--- SNAKE ---")] [Space(10)] 
+    public Snake SnakeMenu;
+    public Snake SnakeRety;
+    public Snake SnakeGamePlay;
 
     private void Awake()
     {
@@ -42,18 +46,6 @@ public class Menu_Snake : MonoBehaviour
             ResetStars();
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            var randomScore = Random.Range(0, 37);
-            RetryMenu(randomScore);
-            Debug.Log(""+ randomScore);
-        }
-    }
-
     public void ResetStars()
     {
         var star1Color = Star1.color;
@@ -74,17 +66,17 @@ public class Menu_Snake : MonoBehaviour
     }
     public void RetryMenu(int puntuacion)
     {
-        if (RetryMenuPanel.activeSelf)
-        {
-            ResetStars();
-        }
-        
         Score = puntuacion;
         Cursor.visible = true;
         
         MainMenuPanel.SetActive(false);
         GamePanel.SetActive(false);
         RetryMenuPanel.SetActive(true);
+        
+        if (RetryMenuPanel.activeSelf)
+        {
+            ResetStars();
+        }
         
         if (puntuacion >= 0 && puntuacion <= 17)
         {
@@ -137,11 +129,25 @@ public class Menu_Snake : MonoBehaviour
     }
     public void PressRetryBttn()
     {
+        for (int i = 1; i < SnakeRety._segments.Count; i++)
+        {
+            Destroy(SnakeRety._segments[i].gameObject);
+        }
         MainMenuPanel.SetActive(false);
         GamePanel.SetActive(true);
         RetryMenuPanel.SetActive(false);
     }
-    
+    public void PressStartBttn()
+    {
+        for (int i = 1; i < SnakeMenu._segments.Count; i++)
+        {
+            Destroy(SnakeMenu._segments[i].gameObject);
+        }
+        
+        MainMenuPanel.SetActive(false);
+        GamePanel.SetActive(true);
+        RetryMenuPanel.SetActive(false);
+    }
     public void PressContinueBttn()
     {
         MainMenuPanel.SetActive(false);
@@ -151,10 +157,26 @@ public class Menu_Snake : MonoBehaviour
         if (Modelaje)
         {
             ModelajeScore = Score;
+            CMS.GM.ModelajeScore = ModelajeScore;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCModelaje();
         }
+        else if (Texturizado)
+        {
+            TexturizadoScore = Score;
+            CMS.GM.TexturizadoScore = TexturizadoScore;
+            Score = 0;
+            ResetStars();
+            CMS.DesactivarPCTexturizado();
+        }
+        else if (Programación)
+        {
+            ProgramacionScore = Score;
+            CMS.GM.ProgramacionScore = ProgramacionScore;
+            Score = 0;
+            ResetStars();
+            CMS.DesactivarPCProgramacion();
+        }
     }
-    
 }
