@@ -52,6 +52,7 @@ namespace Members.Carlos.Scripts
         [Header("--- CONTROLS MENU ---")] 
         [Space(10)] 
         public bool controlsMenuOpen;
+        public bool snakeOpen;
 
         [SerializeField] private TextMeshProUGUI titleControlsMenu;
         

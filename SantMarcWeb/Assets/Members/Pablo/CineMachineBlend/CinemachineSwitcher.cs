@@ -20,6 +20,7 @@ public class CinemachineSwitcher : MonoBehaviour
     public void ActivarPCModelaje()
     {
         GM.isDialogue = true;
+        GM.snakeOpen = true;
         ThirdPersonCamera.m_XAxis.m_InputAxisName = string.Empty;
         ThirdPersonCamera.m_YAxis.m_InputAxisName = string.Empty;
         ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;
@@ -37,11 +38,13 @@ public class CinemachineSwitcher : MonoBehaviour
         NormalCanvas.SetActive(true);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GM.isDialogue = false;
     }
     
     public void ActivarPCTexturizado()
     {
         GM.isDialogue = true;
+        GM.snakeOpen = true;
         ThirdPersonCamera.m_XAxis.m_InputAxisName = string.Empty;
         ThirdPersonCamera.m_YAxis.m_InputAxisName = string.Empty;
         ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;
@@ -96,6 +99,7 @@ public class CinemachineSwitcher : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         GM.isDialogue = false;
+        GM.snakeOpen = false;
         ThirdPersonCamera.m_XAxis.m_InputAxisName = "Mouse X";
         ThirdPersonCamera.m_YAxis.m_InputAxisName = "Mouse Y";
         ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;

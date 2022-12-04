@@ -253,6 +253,7 @@ public class Snake : MonoBehaviour
             {
                 _menuSnake.RetryMenu(Score);
                 Debug.Log("HAS PERDIDO FR:" + Score);
+                _menuSnake.CMS.GM.isDialogue = true;
             }
             ResetGame();
         }

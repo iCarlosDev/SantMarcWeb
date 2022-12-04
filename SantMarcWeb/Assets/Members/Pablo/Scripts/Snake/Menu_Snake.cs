@@ -8,7 +8,10 @@ using Random = UnityEngine.Random;
 
 public class Menu_Snake : MonoBehaviour
 {
-    private CinemachineSwitcher CMS;
+    public CinemachineSwitcher CMS;
+    [SerializeField] private CheckPoint_Tarea _checkPointTarea_M;
+    [SerializeField] private CheckPoint_Tarea _checkPointTarea_T;
+    [SerializeField] private CheckPoint_Tarea _checkPointTarea_P;
     
     [Header("--- MenuVariables ---")]
     [SerializeField]private int Score = 0;
@@ -22,12 +25,7 @@ public class Menu_Snake : MonoBehaviour
     public GameObject MainMenuPanel;
     public GameObject GamePanel;
     public GameObject RetryMenuPanel;
-
-    [Header("--- PRUEBA ---")] [Space(10)] 
-    public bool Modelaje;
-    public bool Texturizado;
-    public bool Programación;
-
+    
     [Header("--- SNAKE ---")] [Space(10)] 
     public Snake SnakeMenu;
     public Snake SnakeRety;
@@ -154,15 +152,16 @@ public class Menu_Snake : MonoBehaviour
         GamePanel.SetActive(false);
         RetryMenuPanel.SetActive(false);
 
-        if (Modelaje)
+        if (_checkPointTarea_M.Modelaje)
         {
             ModelajeScore = Score;
             CMS.GM.ModelajeScore = ModelajeScore;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCModelaje();
+            _checkPointTarea_M.CompletarTarea(false);
         }
-        else if (Texturizado)
+        else if (_checkPointTarea_T.Texturizado)
         {
             TexturizadoScore = Score;
             CMS.GM.TexturizadoScore = TexturizadoScore;
@@ -170,7 +169,7 @@ public class Menu_Snake : MonoBehaviour
             ResetStars();
             CMS.DesactivarPCTexturizado();
         }
-        else if (Programación)
+        else if (_checkPointTarea_P.Programación)
         {
             ProgramacionScore = Score;
             CMS.GM.ProgramacionScore = ProgramacionScore;
