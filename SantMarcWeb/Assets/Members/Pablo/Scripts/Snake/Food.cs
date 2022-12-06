@@ -6,19 +6,13 @@ using Random = UnityEngine.Random;
 
 public class Food : MonoBehaviour
 {
-    private RectTransform _rectTransform;
-    private Snake _snake;
+    [SerializeField] private RectTransform _rectTransform;
+    [SerializeField] private Snake _snake;
 
     public bool Preview;
 
     private Vector3 Position;
-
-    private void Awake()
-    {
-        _rectTransform = GetComponent<RectTransform>();
-        _snake = FindObjectOfType<Snake>();
-    }
-
+    
     private void Start()
     {
         if (!Preview)
@@ -42,9 +36,6 @@ public class Food : MonoBehaviour
         int Xdecimal = Random.Range(0, 2);
         int Ydecimal = Random.Range(0, 2);
         
-        //Debug.Log("Xdecimal = " + Xdecimal);
-        //Debug.Log("Ydecimal = " + Ydecimal);
-
         Mathf.Round(x);
         Mathf.Round(y);
 
@@ -86,9 +77,6 @@ public class Food : MonoBehaviour
         
         _rectTransform.localPosition = new Vector3(x * 50 + Xdecimal, y * 50 + Ydecimal, 0.0f);
         
-        //Debug.Log("X = " + x);
-        //Debug.Log("Y = " + y);
-
         foreach (RectTransform _snake in _snake._segments)
         {
             if (_rectTransform.localPosition == _snake.localPosition)

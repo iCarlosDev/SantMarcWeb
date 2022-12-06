@@ -15,11 +15,7 @@ public class CheckPoint_Tarea : MonoBehaviour
    
     public bool checkpoint;
     
-    [Header("--- PRUEBA ---")] [Space(10)] 
-    public bool Modelaje;
-    public bool Texturizado;
-    public bool Programación;
-
+    [Header("--- PRUEBA ---")] [Space(10)]
     private bool playerOnRange;
     
     private void Awake()
@@ -51,6 +47,16 @@ public class CheckPoint_Tarea : MonoBehaviour
             {
                 _display.checkpointUI.SetActive(false);
                 _cinemachine.ActivarPCModelaje();
+            }
+            else if (_display.tarea == _display.ArrayDeTareas[1])
+            {
+                _display.checkpointUI.SetActive(false);
+                _cinemachine.ActivarPCTexturizado();
+            }
+            else if (_display.tarea == _display.ArrayDeTareas[2])
+            {
+                _display.checkpointUI.SetActive(false);
+                _cinemachine.ActivarPCProgramacion();
             }
         }
         else

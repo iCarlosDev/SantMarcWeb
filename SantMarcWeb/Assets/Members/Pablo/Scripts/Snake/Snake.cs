@@ -9,6 +9,7 @@ public class Snake : MonoBehaviour
 {
     [Header("--- PREVIEW ---")]
     public bool Preview;
+    public int stepCounter = 0;
 
     [Header("--- STATS ---")]
     [Space(10)]
@@ -52,32 +53,6 @@ public class Snake : MonoBehaviour
 
     private void Update()
     {
-        if (Preview)
-        {
-            Position = _rectTransform.localPosition;
-            
-            if (Position == new Vector3(-425.0f, 425.0f, 0.0f))
-            {
-                actualizarPreview(Vector2.down);
-                Debug.Log(Position);
-            }
-            if (Position == new Vector3(-425.0f, -425.0f, 0.0f))
-            {
-                actualizarPreview(Vector2.right);
-                Debug.Log("RIGHT"+ Vector2.right);
-            }
-            if (Position == new Vector3(425.0f, -425.0f, 0.0f))
-            {
-                actualizarPreview(Vector2.up);
-                Debug.Log(Position);
-            }
-            if (Position == new Vector3(425.0f, 425.0f, 0.0f))
-            {
-                actualizarPreview(Vector2.left);
-                Debug.Log(Position);
-            }
-        }
-
         if (!Preview)
         {
             if (canChangeDirection)
@@ -98,8 +73,36 @@ public class Snake : MonoBehaviour
             Mathf.Round(_rectTransform.localPosition.x)  + _direction.x * 50,
             Mathf.Round(_rectTransform.localPosition.y) + _direction.y * 50,
             0.0f);
-        Debug.Log(_rectTransform.localPosition);
+
+        if (Preview)
+        {
+            stepCounter++;
+        }
         canChangeDirection = true;
+        
+        if (stepCounter == 17)
+        {
+            if (Preview)
+            {
+                stepCounter = 0;
+                if (_direction == Vector2.down)
+                {
+                    actualizarPreview(Vector2.right);
+                }
+                else if (_direction == Vector2.right)
+                {
+                    actualizarPreview(Vector2.up);
+                }
+                else if (_direction == Vector2.up)
+                {
+                    actualizarPreview(Vector2.left);
+                }
+                else if (_direction == Vector2.left)
+                {
+                    actualizarPreview(Vector2.down);
+                }
+            }
+        }
     }
 
     private void ChangeDirection()
@@ -192,7 +195,7 @@ public class Snake : MonoBehaviour
         
     }
     
-    private void ResetGame()
+    public void ResetGame()
     {
         if (!Preview)
         {
@@ -227,16 +230,6 @@ public class Snake : MonoBehaviour
         QuaretersActive = 0;
         fixedDeltaTime = 0.1f;
         Time.fixedDeltaTime = fixedDeltaTime;
-
-        if (!Preview)
-        {
-            Debug.Log("HAS PERDIDO FR");
-        }
-        else
-        {
-            Debug.Log("HAS PERDIDO PREVIEW");
-        }
-
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -248,12 +241,10 @@ public class Snake : MonoBehaviour
         
         if (other.CompareTag("Obstacle"))
         {
-            
             if (!Preview)
             {
                 _menuSnake.RetryMenu(Score);
                 Debug.Log("HAS PERDIDO FR:" + Score);
-                _menuSnake.CMS.GM.isDialogue = true;
             }
             ResetGame();
         }

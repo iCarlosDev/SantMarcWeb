@@ -127,32 +127,25 @@ public class Menu_Snake : MonoBehaviour
     }
     public void PressRetryBttn()
     {
-        for (int i = 1; i < SnakeRety._segments.Count; i++)
-        {
-            Destroy(SnakeRety._segments[i].gameObject);
-        }
         MainMenuPanel.SetActive(false);
         GamePanel.SetActive(true);
         RetryMenuPanel.SetActive(false);
+        SnakeRety.ResetGame();
     }
     public void PressStartBttn()
     {
-        for (int i = 1; i < SnakeMenu._segments.Count; i++)
-        {
-            Destroy(SnakeMenu._segments[i].gameObject);
-        }
-        
         MainMenuPanel.SetActive(false);
         GamePanel.SetActive(true);
         RetryMenuPanel.SetActive(false);
+        SnakeMenu.ResetGame();
     }
     public void PressContinueBttn()
     {
-        MainMenuPanel.SetActive(false);
+        MainMenuPanel.SetActive(true);
         GamePanel.SetActive(false);
         RetryMenuPanel.SetActive(false);
 
-        if (_checkPointTarea_M.Modelaje)
+        if (_checkPointTarea_M != null)
         {
             ModelajeScore = Score;
             CMS.GM.ModelajeScore = ModelajeScore;
@@ -161,21 +154,23 @@ public class Menu_Snake : MonoBehaviour
             CMS.DesactivarPCModelaje();
             _checkPointTarea_M.CompletarTarea(false);
         }
-        else if (_checkPointTarea_T.Texturizado)
+        else if (_checkPointTarea_T != null)
         {
             TexturizadoScore = Score;
             CMS.GM.TexturizadoScore = TexturizadoScore;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCTexturizado();
+            _checkPointTarea_T.CompletarTarea(false);
         }
-        else if (_checkPointTarea_P.Programación)
+        else if (_checkPointTarea_P != null)
         {
             ProgramacionScore = Score;
             CMS.GM.ProgramacionScore = ProgramacionScore;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCProgramacion();
+            _checkPointTarea_P.CompletarTarea(false);
         }
     }
 }

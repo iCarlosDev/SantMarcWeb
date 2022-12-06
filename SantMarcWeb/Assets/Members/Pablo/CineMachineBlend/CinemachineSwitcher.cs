@@ -57,11 +57,12 @@ public class CinemachineSwitcher : MonoBehaviour
     public void DesactivarPCTexturizado()
     {
         StartCoroutine("DesactivarSnakeCanvas");
-        PCTexturizado1Camera.Priority = 1;
+        PCTexturizado1Camera.Priority = 1;        
         SnakeCanvas.SetActive(false);
         NormalCanvas.SetActive(true);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GM.isDialogue = false;
     }
     
     public void ActivarPCProgramacion()
@@ -84,6 +85,7 @@ public class CinemachineSwitcher : MonoBehaviour
         NormalCanvas.SetActive(true);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GM.isDialogue = false;
     }
     
     private IEnumerator ActivarSnakeCanvas()
