@@ -16,6 +16,8 @@ TagManager:
   - PlaneToken
   - Plane
   - Door
+  - ExitPoint
+  - ExitPoint2
   layers:
   - Default
   - TransparentFX

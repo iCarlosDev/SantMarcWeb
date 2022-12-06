@@ -64,39 +64,32 @@ public class CheckPoint_Tarea : MonoBehaviour
             _display.CompletarCheckpoint();
             checkpoint = true; 
             _display.checkpointUI.SetActive(false); 
+            
+            if (_display.tarea == _display.ArrayDeTareas[0])
+            {
+                Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
+                Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
+                Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
+                Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.Texture);
+            }
+            else if (_display.tarea == _display.ArrayDeTareas[1])
+            {
+                Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
+                Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
+                Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
+                Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.Programming);
+            }
+            else if (_display.tarea == _display.ArrayDeTareas[2])
+            {
+                Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
+                Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
+                Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
+                Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.PlayVR);
+
+                Time.fixedDeltaTime = 0.02f;
+            }
+            
             Destroy(this);
-        }
-            
-        if (!TaskManager.instance.task1Done)
-        {
-            TaskManager.instance.task1Done = true;
-
-            Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
-            Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
-            Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
-            Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.Texture);
-            return;
-        }
-
-        if (TaskManager.instance.task1Done && !TaskManager.instance.task2Done)
-        {
-            TaskManager.instance.task2Done = true;
-            
-            Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
-            Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
-            Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
-            Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.Programming);
-            return;
-        }
-
-        if (TaskManager.instance.task2Done && !TaskManager.instance.task3Done)
-        {
-            TaskManager.instance.task3Done = true;
-            Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].gameObject.GetComponent<Outline>());
-            Destroy(Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers[0].Image.gameObject);
-            Members.Carlos.Scripts.Compass.Compass.instance.QuestMarkers.Clear();
-            Members.Carlos.Scripts.Compass.Compass.instance.AddQuestMarker(Members.Carlos.Scripts.Compass.Compass.instance.PlayVR);
-            return;
         }
 
         if (tarea == _display.ArrayDeTareas[3])

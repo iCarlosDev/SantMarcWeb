@@ -63,7 +63,7 @@ namespace Members.Carlos.Scripts.Compass
                 AddQuestMarker(door1);
                 AddQuestMarker(door2);
             }
-            else
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 AddQuestMarker(Exit);
             }

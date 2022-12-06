@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectablesSpawner : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class CollectablesSpawner : MonoBehaviour
         {
             //LO Q SEA;
             Debug.Log("Todos los coleccionables copmletados");
+            SceneManager.LoadScene(2);
         }
     }
     

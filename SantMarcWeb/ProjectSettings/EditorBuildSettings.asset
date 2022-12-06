@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Members/Carlos/Scenes/Level1.unity
+    path: Assets/Members/Carlos/Scenes/Level1_Scene.unity
     guid: 4ccd9117c0731a24f8253171a31f28d6
   - enabled: 1
-    path: Assets/Members/Carlos/Scenes/GameScene.unity
+    path: Assets/Members/Carlos/Scenes/Game_Scene.unity
     guid: 8f7003ad1acbe7a4ba85318f00f8404a
+  - enabled: 1
+    path: Assets/Members/Carlos/Scenes/Final_Scene.unity
+    guid: cfe6b316a8b1f504eaecc7ec366ec710
   m_configObjects: {}

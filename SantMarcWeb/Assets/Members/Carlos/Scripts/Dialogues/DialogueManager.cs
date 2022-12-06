@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Members.Carlos.Scripts.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Members.Carlos.Scripts.Dialogues
@@ -87,19 +88,22 @@ namespace Members.Carlos.Scripts.Dialogues
             gameManager.isDialogue = false;
             dialogueAnimator.SetBool(DialogueIsOn, false);
 
-            taskManager.TasksBoolCheck();
+            if (SceneManager.GetActiveScene().buildIndex != 2)
+            {
+                taskManager.TasksBoolCheck();
         
-            if (taskManager.teacherFound && !taskManager.teacherFound1Vz)
-            {
-                FindObjectOfType<TareaDisplay>().CambiarTarea(0);
-                taskManager.teacherFound1Vz = true;
-                StartDialogue(dialogueObjects[0]);
-                return;
-            }
+                if (taskManager.teacherFound && !taskManager.teacherFound1Vz)
+                {
+                    FindObjectOfType<TareaDisplay>().CambiarTarea(0);
+                    taskManager.teacherFound1Vz = true;
+                    StartDialogue(dialogueObjects[0]);
+                    return;
+                }
 
-            if (taskManager.teacherFound1Vz)
-            {
-                GameObject.FindWithTag("Profe").GetComponent<DialogueTrigger>().dialogueObject = dialogueObjects[1];
+                if (taskManager.teacherFound1Vz)
+                {
+                    GameObject.FindWithTag("Profe").GetComponent<DialogueTrigger>().dialogueObject = dialogueObjects[1];
+                } 
             }
         }
     }

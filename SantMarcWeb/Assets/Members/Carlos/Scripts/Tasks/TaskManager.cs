@@ -30,12 +30,7 @@ namespace Members.Carlos.Scripts.Tasks
         [Space(10)]
         public bool teacherFound;
         public bool teacherFound1Vz;
-    
-        [Header("--- ACT 4 ---")]
-        [Space(10)]
-        public bool task1Done;
-        public bool task2Done;
-        public bool task3Done;
+        
         private static readonly int TaskIsOn = Animator.StringToHash("TaskIsOn");
 
         private void Awake()
