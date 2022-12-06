@@ -14,6 +14,7 @@ public class Snake : MonoBehaviour
     [Header("--- STATS ---")]
     [Space(10)]
     public float fixedDeltaTime;
+    public float fixedDeltaTimeAgument;
     public int initialSize = 4;
     
     [Header("--- VARIABLES ---")]

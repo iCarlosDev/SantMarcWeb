@@ -27,7 +27,6 @@ public class CinemachineSwitcher : MonoBehaviour
         ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
         PCModelaje1Camera.Priority = 11;
         StartCoroutine("ActivarSnakeCanvas");
-        
     }
     
     public void DesactivarPCModelaje()
@@ -51,7 +50,6 @@ public class CinemachineSwitcher : MonoBehaviour
         ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
         PCTexturizado1Camera.Priority = 11;
         StartCoroutine("ActivarSnakeCanvas");
-        
     }
     
     public void DesactivarPCTexturizado()
@@ -68,13 +66,13 @@ public class CinemachineSwitcher : MonoBehaviour
     public void ActivarPCProgramacion()
     {
         GM.isDialogue = true;
+        GM.snakeOpen = true;
         ThirdPersonCamera.m_XAxis.m_InputAxisName = string.Empty;
         ThirdPersonCamera.m_YAxis.m_InputAxisName = string.Empty;
         ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;
         ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
         PCProgramacion1Camera.Priority = 11;
         StartCoroutine("ActivarSnakeCanvas");
-        
     }
     
     public void DesactivarPCProgramacion()
