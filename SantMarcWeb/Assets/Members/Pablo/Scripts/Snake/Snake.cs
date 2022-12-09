@@ -14,7 +14,7 @@ public class Snake : MonoBehaviour
     [Header("--- STATS ---")]
     [Space(10)]
     public float fixedDeltaTime;
-    public float fixedDeltaTimeAgument;
+    public float fixedDeltaTimeDecrease;
     public int initialSize = 4;
     
     [Header("--- VARIABLES ---")]
@@ -27,10 +27,14 @@ public class Snake : MonoBehaviour
 
     [Header("--- SCORE ---")]
     [Space(10)]
-    public TextMeshProUGUI ScoreTMP;
     private int Score = 0;
-    public Image[] QuarterImages;
-    private int QuaretersActive = 0;
+    
+    public Image Star1;
+    public Image Star2;
+    public Image Star3;
+    
+    public Image[] EnProcesoImages;
+    private int EnProcesoImagesActive = 0;
     public Image[] FinalImage;
     private int FinalImageActive = 0;
     private Vector3 Position;
@@ -48,7 +52,7 @@ public class Snake : MonoBehaviour
     private void Start()
     {
         ResetGame();
-        actualizarPreview(Vector2.down);
+        actualizarPreview(Vector2.left);
         Debug.Log("STARTED");
     }
 
@@ -104,6 +108,21 @@ public class Snake : MonoBehaviour
                 }
             }
         }
+    }
+    
+    public void ResetStars()
+    {
+        var star1Color = Star1.color;
+        star1Color.a = 0f;
+        Star1.color = star1Color;
+        
+        var star2Color = Star2.color;
+        star2Color.a = 0f;
+        Star2.color = star2Color;
+        
+        var star3Color = Star3.color;
+        star3Color.a = 0f;
+        Star3.color = star3Color;
     }
 
     private void ChangeDirection()
@@ -164,43 +183,92 @@ public class Snake : MonoBehaviour
         if (!Preview)
         {
             Score++;
-            ScoreTMP.text = "SCORE : " + Score;
+            if (Score >= 9 && Score <= 17)
+            {
+                var star1Color = Star1.color;
+                star1Color.a = 255f;
+                Star1.color = star1Color;
+            }
+            else if (Score >= 18 && Score <= 26)
+            {
+                var star1Color = Star1.color;
+                star1Color.a = 255f;
+                Star1.color = star1Color;
+            
+                var star2Color = Star2.color;
+                star2Color.a = 255f;
+                Star2.color = star2Color;
+            }
+            else if (Score == 27)
+            {
+                var star1Color = Star1.color;
+                star1Color.a = 255f;
+                Star1.color = star1Color;
+            
+                var star2Color = Star2.color;
+                star2Color.a = 255f;
+                Star2.color = star2Color;
+
+                var star3Color = Star3.color;
+                star3Color.a = 255f;
+                Star3.color = star3Color;
+            }
         }
         
-        if (QuaretersActive < 3)
+        if (EnProcesoImagesActive < 26)
         {
-            QuaretersActive++;
-            for (int i = 0; i < QuaretersActive; i++)
+            EnProcesoImagesActive++;
+            for (int i = 0; i < EnProcesoImagesActive; i++)
             {
-                QuarterImages[i].enabled = true;
+                EnProcesoImages[i].enabled = true;
+            }
+
+            if (EnProcesoImagesActive == 9 || EnProcesoImagesActive == 18 || EnProcesoImagesActive == 27)
+            {
+                //Cuarto Completado
+                FinalImageActive++;
+                fixedDeltaTime -= fixedDeltaTimeDecrease;
+                Time.fixedDeltaTime = fixedDeltaTime;
+                
+                for (int i = 0; i < EnProcesoImagesActive; i++)
+                {
+                    EnProcesoImages[i].color = new Color(EnProcesoImages[i].color.r, EnProcesoImages[i].color.g, EnProcesoImages[i].color.b, 0.6f);
+                    Debug.Log("" + EnProcesoImages[i].color.a);
+                }
+                
+                for (int i = 0; i < FinalImageActive; i++)
+                {
+                    FinalImage[i].enabled = true;
+                }
             }
         }
         else
         {
-            //Cuarto Completado
-            QuaretersActive = 0;
-            FinalImageActive++;
-            fixedDeltaTime -= 0.005f;
-            Time.fixedDeltaTime = fixedDeltaTime;
-            
-            for (int i = 0; i < 4; i++)
+            if (Preview)
             {
-                QuarterImages[i].enabled = false;
+                ResetGame();
             }
-            
-            for (int i = 0; i < FinalImageActive; i++)
+            else
             {
-                FinalImage[i].enabled = true;
+                _menuSnake.RetryMenu(Score);
             }
+            //WIN
+            
         }
         
     }
     
     public void ResetGame()
     {
+        for (int i = 0; i < EnProcesoImagesActive; i++)
+        {
+            EnProcesoImages[i].color = new Color(EnProcesoImages[i].color.r, EnProcesoImages[i].color.g, EnProcesoImages[i].color.b, 1f);
+            Debug.Log("" + EnProcesoImages[i].color.a);
+        }
         if (!Preview)
         {
             this._rectTransform.localPosition = Vector3.zero;
+            ResetStars();
         }
 
         for (int i = 1; i < _segments.Count; i++)
@@ -216,19 +284,18 @@ public class Snake : MonoBehaviour
             _segments.Add(Instantiate(segmentPrefab, SnakeCanvasParent.transform));
         }
         
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < EnProcesoImages.Length; i++)
         {
-            QuarterImages[i].enabled = false;
+            EnProcesoImages[i].enabled = false;
         }
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < FinalImage.Length; i++)
         {
             FinalImage[i].enabled = false;
         }
         
         Score = 0;
-        ScoreTMP.text = "SCORE : " + Score;
         FinalImageActive = 0;
-        QuaretersActive = 0;
+        EnProcesoImagesActive = 0;
         fixedDeltaTime = 0.1f;
         Time.fixedDeltaTime = fixedDeltaTime;
     }
@@ -245,7 +312,6 @@ public class Snake : MonoBehaviour
             if (!Preview)
             {
                 _menuSnake.RetryMenu(Score);
-                Debug.Log("HAS PERDIDO FR:" + Score);
             }
             ResetGame();
         }

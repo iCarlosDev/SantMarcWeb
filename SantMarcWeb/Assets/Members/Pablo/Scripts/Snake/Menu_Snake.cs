@@ -18,13 +18,17 @@ public class Menu_Snake : MonoBehaviour
     [SerializeField]private int ModelajeScore = 0;
     [SerializeField]private int TexturizadoScore = 0;
     [SerializeField]private int ProgramacionScore = 0;
+    
     public Image Star1;
     public Image Star2;
     public Image Star3;
-    public Image Star4;
+    
     public GameObject MainMenuPanel;
     public GameObject GamePanel;
     public GameObject RetryMenuPanel;
+    public GameObject Bttns1;
+    public GameObject Bttns2;
+    public GameObject Bttns3;
     
     [Header("--- SNAKE ---")] [Space(10)] 
     public Snake SnakeMenu;
@@ -43,6 +47,9 @@ public class Menu_Snake : MonoBehaviour
         {
             ResetStars();
         }
+        MainMenuPanel.SetActive(true);
+        GamePanel.SetActive(false);
+        RetryMenuPanel.SetActive(false);
     }
     public void ResetStars()
     {
@@ -57,10 +64,6 @@ public class Menu_Snake : MonoBehaviour
         var star3Color = Star3.color;
         star3Color.a = 0f;
         Star3.color = star3Color;
-        
-        var star4Color = Star4.color;
-        star4Color.a = 0f;
-        Star4.color = star4Color;
     }
     public void RetryMenu(int puntuacion)
     {
@@ -76,7 +79,7 @@ public class Menu_Snake : MonoBehaviour
             ResetStars();
         }
         
-        if (puntuacion >= 0 && puntuacion <= 17)
+        if (puntuacion >= 9 && puntuacion <= 17)
         {
             var star1Color = Star1.color;
             star1Color.a = 255f;
@@ -92,7 +95,7 @@ public class Menu_Snake : MonoBehaviour
             star2Color.a = 255f;
             Star2.color = star2Color;
         }
-        else if (puntuacion >= 27 && puntuacion <= 35)
+        else if (puntuacion == 27)
         {
             var star1Color = Star1.color;
             star1Color.a = 255f;
@@ -106,23 +109,24 @@ public class Menu_Snake : MonoBehaviour
             star3Color.a = 255f;
             Star3.color = star3Color;
         }
-        else if (puntuacion > 35)
+        
+        if (puntuacion < 9)
         {
-            var star1Color = Star1.color;
-            star1Color.a = 255f;
-            Star1.color = star1Color;
-            
-            var star2Color = Star2.color;
-            star2Color.a = 255f;
-            Star2.color = star2Color;
-            
-            var star3Color = Star3.color;
-            star3Color.a = 255f;
-            Star3.color = star3Color;
-            
-            var star4Color = Star4.color;
-            star4Color.a = 255f;
-            Star4.color = star4Color;
+            Bttns1.SetActive(true);
+            Bttns2.SetActive(false);
+            Bttns3.SetActive(false);
+        }
+        else if (puntuacion >= 9 && puntuacion < 27)
+        {
+            Bttns1.SetActive(false);
+            Bttns2.SetActive(true);
+            Bttns3.SetActive(false);
+        }
+        else if (puntuacion == 27)
+        {
+            Bttns1.SetActive(false);
+            Bttns2.SetActive(false);
+            Bttns3.SetActive(true);
         }
     }
     public void PressRetryBttn()
