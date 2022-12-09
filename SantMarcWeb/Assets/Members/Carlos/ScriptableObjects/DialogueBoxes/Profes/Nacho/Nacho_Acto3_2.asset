@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameTxt: Nacho
   sentenceTxt:
-  - Otra vez?!
-  - "Que te quedes por ah\xED!!!"
-  - Tontolava
+  - "\xBFQu\xE9 m\xE1s quieres?"
+  - "Ahora ir\xE9 a buscar las llaves"
+  - Entretente en la clase de ciclos
   spriteImg: {fileID: 21300000, guid: b8d9a67996edc5945bea0024c6e6426d, type: 3}

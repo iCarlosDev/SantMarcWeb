@@ -17,7 +17,9 @@ public class CheckPoint_Tarea : MonoBehaviour
     
     [Header("--- PRUEBA ---")] [Space(10)]
     private bool playerOnRange;
-    
+
+    private static readonly int FadeIn = Animator.StringToHash("FadeIn");
+
     private void Awake()
     {
         _display = FindObjectOfType<TareaDisplay>();
@@ -94,7 +96,7 @@ public class CheckPoint_Tarea : MonoBehaviour
 
         if (tarea == _display.ArrayDeTareas[3])
         {
-            SceneManager.LoadScene(1);
+            FadeIn_FadeOut_Manager.instance.Animator.SetBool(FadeIn, true);
         }
     }
     

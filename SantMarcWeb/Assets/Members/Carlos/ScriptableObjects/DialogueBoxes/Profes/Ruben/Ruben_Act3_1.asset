@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameTxt: "Rub\xE9n"
   sentenceTxt:
-  - YEEEEPAAAAAA
+  - "\xA1Buenas!, no s\xE9 si has visto a Jordi"
+  - Igualmente... Diga lo que te diga...
+  - "\xA1\xA1Unity es lo mejor!!"
   spriteImg: {fileID: 21300000, guid: ff5690a82b627a6438e422ce780b4ae7, type: 3}

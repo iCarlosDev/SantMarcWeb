@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e006d602f4387e6469f78bdd84a28793, type: 3}
-  m_Name: Jordi_ACT3_1
+  m_Name: Nacho_Game_Act
   m_EditorClassIdentifier: 
-  nameTxt: Jordi
+  nameTxt: Nacho
   sentenceTxt:
-  - "\xA1Hola Chaval\xEDn! \xBFQue tal?"
-  - "\xA1A ver si alg\xFAn a\xF1o te veo por ciclos!"
-  - "\xA1Seguro que Unreal Engine te flipa!"
-  spriteImg: {fileID: 21300000, guid: e171d09c86264d848a71ce988d4562e8, type: 3}
+  - Psstt... Psstt... Oye!
+  - Que va a empezar la clase, ya te he abierto la puerta
+  spriteImg: {fileID: 21300000, guid: b8d9a67996edc5945bea0024c6e6426d, type: 3}
