@@ -32,6 +32,7 @@ namespace Members.Carlos.Scripts
         [Space(10)]
         [SerializeField] private GameObject player;
         [SerializeField] private GameObject playerCamera;
+        [SerializeField] private bool canNotMove;
         public int ModelajeScore = 0;
         public int TexturizadoScore = 0;
         public int ProgramacionScore = 0;
@@ -80,6 +81,12 @@ namespace Members.Carlos.Scripts
         private static readonly int Y = Animator.StringToHash("Y");
         private static readonly int DialogueIsOn = Animator.StringToHash("DialogueIsOn");
 
+        public bool CanNotMove
+        {
+            get => canNotMove;
+            set => canNotMove = value;
+        }
+
         private void Awake()
         {
             instance = this;
@@ -93,6 +100,18 @@ namespace Members.Carlos.Scripts
 
         private void Update()
         {
+            if (canNotMove)
+            {
+                playerController.enabled = false;
+                playerController.horizontal = 0;
+                playerController.vertical = 0;
+                playerController.playerAnimator.SetFloat(X, 0);
+                playerController.playerAnimator.SetFloat(Y, 0);
+                playerController.Speed = 1;
+                playerController.playerAnimator.SetFloat("WalkToSprint", 0.3f);
+                playerController.playerAnimator.SetBool("IsSprinting", false);
+            }
+            
             ButtonsAnimations();
             
             //////////////////////////////////////////////////////

@@ -11,6 +11,8 @@ namespace Members.Carlos.Scripts.Dialogues
 {
     public class DialogueManager : MonoBehaviour
     {
+        public static DialogueManager instance;
+        
         [SerializeField] private GameManager gameManager;
         [SerializeField] private TaskManager taskManager;
 
@@ -26,18 +28,26 @@ namespace Members.Carlos.Scripts.Dialogues
         private Queue<string> _sentences;
         private static readonly int DialogueIsOn = Animator.StringToHash("DialogueIsOn");
 
+        public DialogueObject FirstDialogueObject => firstDialogueObject;
+
+        private void Awake()
+        {
+            instance = this;
+        }
+
         void Start()
         {
             _sentences = new Queue<string>();
-
-            StartDialogue(firstDialogueObject);
         }
 
         private void Update()
         {
-            if (Input.GetButtonDown("Fire1") && !gameManager.controlsMenuOpen && !gameManager.snakeOpen)
+            if (gameManager.isDialogue)
             {
-                DisplayNextSentence();
+                if (Input.GetButtonDown("Fire1") && !gameManager.controlsMenuOpen && !gameManager.snakeOpen)
+                {
+                    DisplayNextSentence();
+                }
             }
         }
 
@@ -88,7 +98,7 @@ namespace Members.Carlos.Scripts.Dialogues
             gameManager.isDialogue = false;
             dialogueAnimator.SetBool(DialogueIsOn, false);
 
-            if (SceneManager.GetActiveScene().buildIndex != 2)
+            if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 taskManager.TasksBoolCheck();
         
@@ -103,7 +113,11 @@ namespace Members.Carlos.Scripts.Dialogues
                 if (taskManager.teacherFound1Vz)
                 {
                     GameObject.FindWithTag("Profe").GetComponent<DialogueTrigger>().dialogueObject = dialogueObjects[1];
-                } 
+                }
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                SceneManager.LoadScene(2);
             }
         }
     }

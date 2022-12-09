@@ -31,7 +31,7 @@ namespace Members.Carlos.Scripts.Compass
         [SerializeField] private QuestMarker texture;
         [SerializeField] private QuestMarker programming;
         [SerializeField] private QuestMarker playVR;
-        [SerializeField] private QuestMarker Exit;
+        [SerializeField] private QuestMarker exit;
 
         public List<QuestMarker> QuestMarkers
         {
@@ -44,6 +44,7 @@ namespace Members.Carlos.Scripts.Compass
         public QuestMarker Texture => texture;
         public QuestMarker Programming => programming;
         public QuestMarker PlayVR => playVR;
+        public QuestMarker Exit => exit;
 
 
         private void Awake()
@@ -65,7 +66,7 @@ namespace Members.Carlos.Scripts.Compass
             }
             else if (SceneManager.GetActiveScene().buildIndex == 2)
             {
-                AddQuestMarker(Exit);
+                AddQuestMarker(exit);
             }
         }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Members.Carlos.Scripts.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,13 +28,36 @@ public class CollectablesSpawner : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (_spawnCollectables_L != null)
+        {
+            if (Input.GetKey(KeyCode.Tab))
+            {
+                foreach (var coins in _spawnCollectables_L)
+                {
+                    coins.GetComponent<Outline>().enabled = true;
+                }
+            }
+            else
+            {
+                foreach (var coins in _spawnCollectables_L)
+                {
+                    coins.GetComponent<Outline>().enabled = false;
+                }
+            }
+        }
+    }
+
     public void CollectablesCompleted()
     {
         if (_spawnCollectables_L.Count.Equals(0))
         {
             //LO Q SEA;
             Debug.Log("Todos los coleccionables copmletados");
-            SceneManager.LoadScene(2);
+            TaskManager.instance.CoinsCollected = true;
+            TaskManager.instance.TasksBoolCheck();
+            FadeIn_FadeOut_Manager.instance.StartCoroutine(FadeIn_FadeOut_Manager.instance.WaitToChangeFinalLevel());
         }
     }
     

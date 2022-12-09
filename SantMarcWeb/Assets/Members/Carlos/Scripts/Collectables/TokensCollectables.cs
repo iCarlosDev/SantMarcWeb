@@ -32,6 +32,7 @@ public class TokensCollectables : MonoBehaviour
         
         if (other.CompareTag("Car") || other.CompareTag("Plane") || other.CompareTag("Player"))
         {
+            AudioManager.instance.Play("Coins");
             CollectableSpawner.SpawnCollectablesL.Remove(gameObject);
             CollectableSpawner.CollectablesCompleted();
             Destroy(gameObject);
