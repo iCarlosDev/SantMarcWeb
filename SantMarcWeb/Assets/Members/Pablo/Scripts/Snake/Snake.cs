@@ -34,8 +34,16 @@ public class Snake : MonoBehaviour
     public Image Star3;
     
     public Image[] EnProcesoImages;
+    public Image[] EnProcesoImages_T_Pocho;
+    public Image[] EnProcesoImages_T_Mid;
+    public Image[] EnProcesoImages_T_Top;
+    public Image[] EnProcesoImages_P;
     private int EnProcesoImagesActive = 0;
     public Image[] FinalImage;
+    public Image[] FinalImage_T_Pocho;
+    public Image[] FinalImage_T_Mid;
+    public Image[] FinalImage_T_Top;
+    public Image[] FinalImage_P;
     private int FinalImageActive = 0;
     private Vector3 Position;
     private bool canChangeDirection;
@@ -214,48 +222,179 @@ public class Snake : MonoBehaviour
                 Star3.color = star3Color;
             }
         }
-        
-        if (EnProcesoImagesActive < 26)
-        {
-            EnProcesoImagesActive++;
-            for (int i = 0; i < EnProcesoImagesActive; i++)
-            {
-                EnProcesoImages[i].enabled = true;
-            }
 
-            if (EnProcesoImagesActive == 9 || EnProcesoImagesActive == 18 || EnProcesoImagesActive == 27)
+        if (_menuSnake._checkPointTarea_M != null)
+        {
+            if (EnProcesoImagesActive < 26)
             {
-                //Cuarto Completado
-                FinalImageActive++;
-                fixedDeltaTime -= fixedDeltaTimeDecrease;
-                Time.fixedDeltaTime = fixedDeltaTime;
-                
+                EnProcesoImagesActive++;
                 for (int i = 0; i < EnProcesoImagesActive; i++)
                 {
-                    EnProcesoImages[i].color = new Color(EnProcesoImages[i].color.r, EnProcesoImages[i].color.g, EnProcesoImages[i].color.b, 0.6f);
-                    Debug.Log("" + EnProcesoImages[i].color.a);
+                    EnProcesoImages[i].enabled = true;
                 }
-                
-                for (int i = 0; i < FinalImageActive; i++)
+
+                if (EnProcesoImagesActive == 9 || EnProcesoImagesActive == 18 || EnProcesoImagesActive == 27)
                 {
-                    FinalImage[i].enabled = true;
+                    //Cuarto Completado
+                    FinalImageActive++;
+                    fixedDeltaTime -= fixedDeltaTimeDecrease;
+                    Time.fixedDeltaTime = fixedDeltaTime;
+                
+                    for (int i = 0; i < EnProcesoImagesActive; i++)
+                    {
+                        EnProcesoImages[i].color = new Color(EnProcesoImages[i].color.r, EnProcesoImages[i].color.g, EnProcesoImages[i].color.b, 0.6f);
+                        Debug.Log("" + EnProcesoImages[i].color.a);
+                    }
+                
+                    for (int i = 0; i < FinalImageActive; i++)
+                    {
+                        FinalImage[i].enabled = true;
+                    }
                 }
-            }
-        }
-        else
-        {
-            if (Preview)
-            {
-                ResetGame();
             }
             else
             {
-                _menuSnake.RetryMenu(Score);
-            }
-            //WIN
+                if (Preview)
+                {
+                    ResetGame();
+                }
+                else
+                {
+                    _menuSnake.RetryMenu(Score);
+                }
+                //WIN
             
+            }
         }
-        
+        else if (_menuSnake._checkPointTarea_T != null)
+        {
+            if (_menuSnake.ModelajeStasAmount == 1)
+            {
+                if (EnProcesoImagesActive < 26)
+                {
+                    EnProcesoImagesActive++;
+                    for (int i = 0; i < EnProcesoImagesActive; i++)
+                    {
+                        EnProcesoImages_T_Pocho[i].enabled = true;
+                    }
+
+                    if (EnProcesoImagesActive == 9 || EnProcesoImagesActive == 18 || EnProcesoImagesActive == 27)
+                    {
+                        //Cuarto Completado
+                        FinalImageActive++;
+                        fixedDeltaTime -= fixedDeltaTimeDecrease;
+                        Time.fixedDeltaTime = fixedDeltaTime;
+                
+                        for (int i = 0; i < EnProcesoImagesActive; i++)
+                        {
+                            EnProcesoImages_T_Pocho[i].color = new Color(EnProcesoImages_T_Pocho[i].color.r, EnProcesoImages_T_Pocho[i].color.g, EnProcesoImages_T_Pocho[i].color.b, 0.6f);
+                        }
+                
+                        for (int i = 0; i < FinalImageActive; i++)
+                        {
+                            FinalImage_T_Pocho[i].enabled = true;
+                        }
+                    }
+                }
+                else
+                {
+                    if (Preview)
+                    {
+                        ResetGame();
+                    }
+                    else
+                    {
+                        //WIN
+                        _menuSnake.RetryMenu(Score);
+                        ResetGame();
+                    }
+                }
+            }
+            else if (_menuSnake.ModelajeStasAmount == 2)
+            {
+                if (EnProcesoImagesActive < 26)
+                {
+                    EnProcesoImagesActive++;
+                    for (int i = 0; i < EnProcesoImagesActive; i++)
+                    {
+                        EnProcesoImages_T_Mid[i].enabled = true;
+                    }
+
+                    if (EnProcesoImagesActive == 9 || EnProcesoImagesActive == 18 || EnProcesoImagesActive == 27)
+                    {
+                        //Cuarto Completado
+                        FinalImageActive++;
+                        fixedDeltaTime -= fixedDeltaTimeDecrease;
+                        Time.fixedDeltaTime = fixedDeltaTime;
+                
+                        for (int i = 0; i < EnProcesoImagesActive; i++)
+                        {
+                            EnProcesoImages_T_Mid[i].color = new Color(EnProcesoImages_T_Mid[i].color.r, EnProcesoImages_T_Mid[i].color.g, EnProcesoImages_T_Mid[i].color.b, 0.6f);
+                        }
+                
+                        for (int i = 0; i < FinalImageActive; i++)
+                        {
+                            FinalImage_T_Mid[i].enabled = true;
+                        }
+                    }
+                }
+                else
+                {
+                    if (Preview)
+                    {
+                        ResetGame();
+                    }
+                    else
+                    {
+                        //WIN
+                        _menuSnake.RetryMenu(Score);
+                        ResetGame();
+                    }
+                }
+            }
+            else if (_menuSnake.ModelajeStasAmount == 3)
+            {
+                if (EnProcesoImagesActive < 26)
+                {
+                    EnProcesoImagesActive++;
+                    for (int i = 0; i < EnProcesoImagesActive; i++)
+                    {
+                        EnProcesoImages_T_Top[i].enabled = true;
+                    }
+
+                    if (EnProcesoImagesActive == 9 || EnProcesoImagesActive == 18 || EnProcesoImagesActive == 27)
+                    {
+                        //Cuarto Completado
+                        FinalImageActive++;
+                        fixedDeltaTime -= fixedDeltaTimeDecrease;
+                        Time.fixedDeltaTime = fixedDeltaTime;
+                
+                        for (int i = 0; i < EnProcesoImagesActive; i++)
+                        {
+                            EnProcesoImages_T_Top[i].color = new Color(EnProcesoImages_T_Top[i].color.r, EnProcesoImages_T_Top[i].color.g, EnProcesoImages_T_Top[i].color.b, 0.6f);
+                        }
+                
+                        for (int i = 0; i < FinalImageActive; i++)
+                        {
+                            FinalImage_T_Top[i].enabled = true;
+                        }
+                    }
+                }
+                else
+                {
+                    if (Preview)
+                    {
+                        ResetGame();
+                    }
+                    else
+                    {
+                        //WIN
+                        _menuSnake.RetryMenu(Score);
+                        ResetGame();
+                    }
+                }
+            }
+        }
     }
     
     public void ResetGame()
@@ -263,6 +402,10 @@ public class Snake : MonoBehaviour
         for (int i = 0; i < EnProcesoImagesActive; i++)
         {
             EnProcesoImages[i].color = new Color(EnProcesoImages[i].color.r, EnProcesoImages[i].color.g, EnProcesoImages[i].color.b, 1f);
+            EnProcesoImages_P[i].color = new Color(EnProcesoImages_P[i].color.r, EnProcesoImages_P[i].color.g, EnProcesoImages_P[i].color.b, 1f);
+            EnProcesoImages_T_Pocho[i].color = new Color(EnProcesoImages_T_Pocho[i].color.r, EnProcesoImages_T_Pocho[i].color.g, EnProcesoImages_T_Pocho[i].color.b, 1f);
+            EnProcesoImages_T_Mid[i].color = new Color(EnProcesoImages_T_Mid[i].color.r, EnProcesoImages_T_Mid[i].color.g, EnProcesoImages_T_Mid[i].color.b, 1f);
+            EnProcesoImages_T_Top[i].color = new Color(EnProcesoImages_T_Top[i].color.r, EnProcesoImages_T_Top[i].color.g, EnProcesoImages_T_Top[i].color.b, 1f);
             Debug.Log("" + EnProcesoImages[i].color.a);
         }
         if (!Preview)
@@ -287,10 +430,18 @@ public class Snake : MonoBehaviour
         for (int i = 0; i < EnProcesoImages.Length; i++)
         {
             EnProcesoImages[i].enabled = false;
+            EnProcesoImages_P[i].enabled = false;
+            EnProcesoImages_T_Pocho[i].enabled = false;
+            EnProcesoImages_T_Mid[i].enabled = false;
+            EnProcesoImages_T_Top[i].enabled = false;
         }
         for (int i = 0; i < FinalImage.Length; i++)
         {
             FinalImage[i].enabled = false;
+            FinalImage_P[i].enabled = false;
+            FinalImage_T_Pocho[i].enabled = false;
+            FinalImage_T_Mid[i].enabled = false;
+            FinalImage_T_Top[i].enabled = false;
         }
         
         Score = 0;

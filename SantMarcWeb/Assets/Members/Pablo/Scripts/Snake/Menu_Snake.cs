@@ -9,15 +9,15 @@ using Random = UnityEngine.Random;
 public class Menu_Snake : MonoBehaviour
 {
     public CinemachineSwitcher CMS;
-    [SerializeField] private CheckPoint_Tarea _checkPointTarea_M;
-    [SerializeField] private CheckPoint_Tarea _checkPointTarea_T;
-    [SerializeField] private CheckPoint_Tarea _checkPointTarea_P;
+    [SerializeField] public CheckPoint_Tarea _checkPointTarea_M;
+    [SerializeField] public CheckPoint_Tarea _checkPointTarea_T;
+    [SerializeField] public CheckPoint_Tarea _checkPointTarea_P;
     
     [Header("--- MenuVariables ---")]
     [SerializeField]private int Score = 0;
-    [SerializeField]private int ModelajeScore = 0;
-    [SerializeField]private int TexturizadoScore = 0;
-    [SerializeField]private int ProgramacionScore = 0;
+    [SerializeField]public int ModelajeStasAmount = 0;
+    [SerializeField]public int TexturizadoStasAmount = 0;
+    [SerializeField]public int ProgramacionStasAmount = 0;
     
     public Image Star1;
     public Image Star2;
@@ -67,7 +67,6 @@ public class Menu_Snake : MonoBehaviour
     }
     public void RetryMenu(int puntuacion)
     {
-        Score = puntuacion;
         Cursor.visible = true;
         
         MainMenuPanel.SetActive(false);
@@ -81,12 +80,14 @@ public class Menu_Snake : MonoBehaviour
         
         if (puntuacion >= 9 && puntuacion <= 17)
         {
+            Score = 1;
             var star1Color = Star1.color;
             star1Color.a = 255f;
             Star1.color = star1Color;
         }
         else if (puntuacion >= 18 && puntuacion <= 26)
         {
+            Score = 2;
             var star1Color = Star1.color;
             star1Color.a = 255f;
             Star1.color = star1Color;
@@ -97,6 +98,7 @@ public class Menu_Snake : MonoBehaviour
         }
         else if (puntuacion == 27)
         {
+            Score = 3;
             var star1Color = Star1.color;
             star1Color.a = 255f;
             Star1.color = star1Color;
@@ -112,14 +114,14 @@ public class Menu_Snake : MonoBehaviour
         
         if (puntuacion < 9)
         {
-            Bttns1.SetActive(true);
-            Bttns2.SetActive(false);
+            Bttns1.SetActive(false);
+            Bttns2.SetActive(true);
             Bttns3.SetActive(false);
         }
         else if (puntuacion >= 9 && puntuacion < 27)
         {
-            Bttns1.SetActive(false);
-            Bttns2.SetActive(true);
+            Bttns1.SetActive(true);
+            Bttns2.SetActive(false);
             Bttns3.SetActive(false);
         }
         else if (puntuacion == 27)
@@ -151,8 +153,8 @@ public class Menu_Snake : MonoBehaviour
 
         if (_checkPointTarea_M != null)
         {
-            ModelajeScore = Score;
-            CMS.GM.ModelajeScore = ModelajeScore;
+            ModelajeStasAmount = Score;
+            CMS.GM.ModelajeStarsAmount = ModelajeStasAmount;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCModelaje();
@@ -160,8 +162,8 @@ public class Menu_Snake : MonoBehaviour
         }
         else if (_checkPointTarea_T != null)
         {
-            TexturizadoScore = Score;
-            CMS.GM.TexturizadoScore = TexturizadoScore;
+            TexturizadoStasAmount = Score;
+            CMS.GM.TexturizadoStarsAmount = TexturizadoStasAmount;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCTexturizado();
@@ -169,8 +171,8 @@ public class Menu_Snake : MonoBehaviour
         }
         else if (_checkPointTarea_P != null)
         {
-            ProgramacionScore = Score;
-            CMS.GM.ProgramacionScore = ProgramacionScore;
+            ProgramacionStasAmount = Score;
+            CMS.GM.ProgramacionStarsAmount = ProgramacionStasAmount;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCProgramacion();
