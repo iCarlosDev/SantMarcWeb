@@ -28,6 +28,7 @@ public class Snake : MonoBehaviour
     [Header("--- SCORE ---")]
     [Space(10)]
     private int Score = 0;
+    private int TempScore = 0;
     
     public Image Star1;
     public Image Star2;
@@ -38,7 +39,7 @@ public class Snake : MonoBehaviour
     public Image[] EnProcesoImages_T_Mid;
     public Image[] EnProcesoImages_T_Top;
     public Image[] EnProcesoImages_P;
-    private int EnProcesoImagesActive = 0;
+    public int EnProcesoImagesActive = 0;
     public Image[] FinalImage;
     public Image[] FinalImage_T_Pocho;
     public Image[] FinalImage_T_Mid;
@@ -268,8 +269,10 @@ public class Snake : MonoBehaviour
         }
         else if (_menuSnake._checkPointTarea_T != null)
         {
+            Debug.Log("ENTRO EN _checkPointTarea_T != NULL");
             if (_menuSnake.ModelajeStasAmount == 1)
             {
+                Debug.Log("ENTRO EN _menuSnake.ModelajeStasAmount == 1");
                 if (EnProcesoImagesActive < 26)
                 {
                     EnProcesoImagesActive++;
@@ -305,8 +308,9 @@ public class Snake : MonoBehaviour
                     else
                     {
                         //WIN
-                        _menuSnake.RetryMenu(Score);
                         ResetGame();
+                        _menuSnake.RetryMenu(TempScore);
+                        TempScore = 0;
                     }
                 }
             }
@@ -399,21 +403,23 @@ public class Snake : MonoBehaviour
     
     public void ResetGame()
     {
-        for (int i = 0; i < EnProcesoImagesActive; i++)
-        {
-            EnProcesoImages[i].color = new Color(EnProcesoImages[i].color.r, EnProcesoImages[i].color.g, EnProcesoImages[i].color.b, 1f);
-            EnProcesoImages_P[i].color = new Color(EnProcesoImages_P[i].color.r, EnProcesoImages_P[i].color.g, EnProcesoImages_P[i].color.b, 1f);
-            EnProcesoImages_T_Pocho[i].color = new Color(EnProcesoImages_T_Pocho[i].color.r, EnProcesoImages_T_Pocho[i].color.g, EnProcesoImages_T_Pocho[i].color.b, 1f);
-            EnProcesoImages_T_Mid[i].color = new Color(EnProcesoImages_T_Mid[i].color.r, EnProcesoImages_T_Mid[i].color.g, EnProcesoImages_T_Mid[i].color.b, 1f);
-            EnProcesoImages_T_Top[i].color = new Color(EnProcesoImages_T_Top[i].color.r, EnProcesoImages_T_Top[i].color.g, EnProcesoImages_T_Top[i].color.b, 1f);
-            Debug.Log("" + EnProcesoImages[i].color.a);
-        }
         if (!Preview)
         {
             this._rectTransform.localPosition = Vector3.zero;
             ResetStars();
+            TempScore = Score;
         }
-
+        
+        for (int i = 0; i < EnProcesoImagesActive; i++)
+        {
+            EnProcesoImages[i].color = new Color(EnProcesoImages[i].color.r, EnProcesoImages[i].color.g, EnProcesoImages[i].color.b, 1f);
+            //EnProcesoImages_P[i].color = new Color(EnProcesoImages_P[i].color.r, EnProcesoImages_P[i].color.g, EnProcesoImages_P[i].color.b, 1f);
+            EnProcesoImages_T_Pocho[i].color = new Color(EnProcesoImages_T_Pocho[i].color.r, EnProcesoImages_T_Pocho[i].color.g, EnProcesoImages_T_Pocho[i].color.b, 1f);
+            //EnProcesoImages_T_Mid[i].color = new Color(EnProcesoImages_T_Mid[i].color.r, EnProcesoImages_T_Mid[i].color.g, EnProcesoImages_T_Mid[i].color.b, 1f);
+            //EnProcesoImages_T_Top[i].color = new Color(EnProcesoImages_T_Top[i].color.r, EnProcesoImages_T_Top[i].color.g, EnProcesoImages_T_Top[i].color.b, 1f);
+            Debug.Log("" + EnProcesoImages[i].color.a);
+        }
+        
         for (int i = 1; i < _segments.Count; i++)
         {
             Destroy(_segments[i].gameObject);
@@ -430,18 +436,18 @@ public class Snake : MonoBehaviour
         for (int i = 0; i < EnProcesoImages.Length; i++)
         {
             EnProcesoImages[i].enabled = false;
-            EnProcesoImages_P[i].enabled = false;
+            //EnProcesoImages_P[i].enabled = false;
             EnProcesoImages_T_Pocho[i].enabled = false;
-            EnProcesoImages_T_Mid[i].enabled = false;
-            EnProcesoImages_T_Top[i].enabled = false;
+           // EnProcesoImages_T_Mid[i].enabled = false;
+            //EnProcesoImages_T_Top[i].enabled = false;
         }
         for (int i = 0; i < FinalImage.Length; i++)
         {
             FinalImage[i].enabled = false;
-            FinalImage_P[i].enabled = false;
+           // FinalImage_P[i].enabled = false;
             FinalImage_T_Pocho[i].enabled = false;
-            FinalImage_T_Mid[i].enabled = false;
-            FinalImage_T_Top[i].enabled = false;
+           // FinalImage_T_Mid[i].enabled = false;
+           // FinalImage_T_Top[i].enabled = false;
         }
         
         Score = 0;
@@ -460,11 +466,12 @@ public class Snake : MonoBehaviour
         
         if (other.CompareTag("Obstacle"))
         {
+            ResetGame();
             if (!Preview)
             {
-                _menuSnake.RetryMenu(Score);
+                _menuSnake.RetryMenu(TempScore);
+                TempScore = 0;
             }
-            ResetGame();
         }
     }
 }

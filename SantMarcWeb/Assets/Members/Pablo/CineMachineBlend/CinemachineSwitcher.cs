@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -12,10 +13,16 @@ public class CinemachineSwitcher : MonoBehaviour
     public CinemachineFreeLook PCTexturizado1Camera;
     public CinemachineFreeLook PCProgramacion1Camera;
     public GameManager GM;
+    public AudioManager AudioManager;
     
     public GameObject SnakeCanvas;
     public GameObject NormalCanvas;
 
+
+    private void Awake()
+    {
+        AudioManager = FindObjectOfType<AudioManager>();
+    }
 
     public void ActivarPCModelaje()
     {

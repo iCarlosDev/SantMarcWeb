@@ -8,6 +8,10 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private Sound[] sounds;
     public static AudioManager instance;
+    
+    public int ModelajeStarsAmount = 0;
+    public int TexturizadoStarsAmount = 0;
+    public int ProgramacionStarsAmount = 0;
 
     private void Awake()
     {

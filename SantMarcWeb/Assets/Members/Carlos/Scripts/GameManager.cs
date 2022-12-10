@@ -33,9 +33,6 @@ namespace Members.Carlos.Scripts
         [SerializeField] private GameObject player;
         [SerializeField] private GameObject playerCamera;
         [SerializeField] private bool canNotMove;
-        public int ModelajeStarsAmount = 0;
-        public int TexturizadoStarsAmount = 0;
-        public int ProgramacionStarsAmount = 0;
 
         [Header("--- CAR ---")] 
         [Space(10)] 

@@ -45373,7 +45373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1888078527}
-  tarea: {fileID: 11400000, guid: f1c5cfd377ad5c947ba31f264fc20e00, type: 2}
+  tarea: {fileID: 0}
   ArrayDeTareas:
   - {fileID: 11400000, guid: f1c5cfd377ad5c947ba31f264fc20e00, type: 2}
   - {fileID: 11400000, guid: cc65efb8c5aff93499c885a9c20a144a, type: 2}
@@ -51462,7 +51462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1301464932
 MonoBehaviour:
   m_ObjectHideFlags: 0

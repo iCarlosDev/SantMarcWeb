@@ -150,20 +150,27 @@ public class Menu_Snake : MonoBehaviour
         MainMenuPanel.SetActive(true);
         GamePanel.SetActive(false);
         RetryMenuPanel.SetActive(false);
+        
+        SnakeMenu.EnProcesoImagesActive = 0;
+        SnakeRety.EnProcesoImagesActive = 0;
+        SnakeGamePlay.EnProcesoImagesActive = 0;
+        Debug.Log("HE ENTRADO EN CONTINUE");
 
         if (_checkPointTarea_M != null)
         {
             ModelajeStasAmount = Score;
-            CMS.GM.ModelajeStarsAmount = ModelajeStasAmount;
+            CMS.AudioManager.ModelajeStarsAmount = ModelajeStasAmount;
             Score = 0;
+            Debug.Log("HE ENTRADO EN CheckPoint");
             ResetStars();
             CMS.DesactivarPCModelaje();
             _checkPointTarea_M.CompletarTarea(false);
+            Debug.Log("HE SALIDOOOOO");
         }
         else if (_checkPointTarea_T != null)
         {
             TexturizadoStasAmount = Score;
-            CMS.GM.TexturizadoStarsAmount = TexturizadoStasAmount;
+            CMS.AudioManager.TexturizadoStarsAmount = TexturizadoStasAmount;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCTexturizado();
@@ -172,7 +179,7 @@ public class Menu_Snake : MonoBehaviour
         else if (_checkPointTarea_P != null)
         {
             ProgramacionStasAmount = Score;
-            CMS.GM.ProgramacionStarsAmount = ProgramacionStasAmount;
+            CMS.AudioManager.ProgramacionStarsAmount = ProgramacionStasAmount;
             Score = 0;
             ResetStars();
             CMS.DesactivarPCProgramacion();
