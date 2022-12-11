@@ -84927,6 +84927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bb1db725afb5c46b9c394ab16996db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Player: {fileID: 0}
   taskAnimator: {fileID: 956008487}
   task:
   - {fileID: 11400000, guid: 571eaeec4094882499bd67585c32b798, type: 2}
@@ -99633,6 +99634,7 @@ MonoBehaviour:
   isGrounded: 0
   isGroundedAnimator: 0
   playerAnimator: {fileID: 5866666021918143814}
+  CompletarTareaVFX: {fileID: 7026975586691204647, guid: e10c92766b161cd428cb92b9c4b7da00, type: 3}
 --- !u!1 &934883529617172890
 GameObject:
   m_ObjectHideFlags: 0

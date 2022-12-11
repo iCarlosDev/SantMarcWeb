@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -49,6 +50,10 @@ namespace Members.Carlos.Scripts
         private static readonly int IsJumping = Animator.StringToHash("IsJumping");
         private static readonly int Grounded = Animator.StringToHash("Grounded");
 
+        [Header("--- VFX ---")] [Space(10)] 
+        public GameObject CompletarTareaVFX;
+        private GameObject TEMP_CompletarTareaVFX;
+        
         private void Awake()
         {
             if (SceneManager.GetActiveScene().buildIndex == 0)
@@ -134,6 +139,17 @@ namespace Members.Carlos.Scripts
             {
                 playerAnimator.SetBool(Grounded,true);
             }
+        }
+
+        public void VFXCompletarTarea()
+        {
+            TEMP_CompletarTareaVFX = Instantiate(CompletarTareaVFX, this.transform);
+            StartCoroutine(DestroyVFX());
+        }
+        public IEnumerator DestroyVFX()
+        {
+            yield return new WaitForSeconds(2);
+            Destroy(TEMP_CompletarTareaVFX);
         }
 
         public void Jump()

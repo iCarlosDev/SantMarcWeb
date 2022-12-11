@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Members.Carlos.Scripts;
 using Members.Carlos.Scripts.Tasks;
 using TMPro;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class CheckPoint_Tarea : MonoBehaviour
 {
     private TareaDisplay _display;
     private CinemachineSwitcher _cinemachine;
+    private PlayerController player;
     public Tarea tarea;
    
     public bool checkpoint;
@@ -24,6 +26,7 @@ public class CheckPoint_Tarea : MonoBehaviour
     {
         _display = FindObjectOfType<TareaDisplay>();
         _cinemachine = FindObjectOfType<CinemachineSwitcher>();
+        player = FindObjectOfType<PlayerController>();
     }
     
     // Update is called once per frame
@@ -90,6 +93,7 @@ public class CheckPoint_Tarea : MonoBehaviour
 
                 Time.fixedDeltaTime = 0.02f;
             }
+            player.VFXCompletarTarea();
             Destroy(this);
         }
 

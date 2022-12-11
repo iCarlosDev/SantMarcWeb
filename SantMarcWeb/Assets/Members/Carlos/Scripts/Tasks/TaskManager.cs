@@ -11,6 +11,7 @@ namespace Members.Carlos.Scripts.Tasks
     {
         //Variables
         public static TaskManager instance;
+        public PlayerController _Player;
         
         [Header("-------- TASKS --------")]
         [Space(10)]
@@ -48,6 +49,7 @@ namespace Members.Carlos.Scripts.Tasks
         private void Awake()
         {
             instance = this;
+            _Player = FindObjectOfType<PlayerController>();
         }
 
         private void Start()
@@ -100,6 +102,7 @@ namespace Members.Carlos.Scripts.Tasks
 
         public void SwapTaskAnimation()
         {
+            _Player.VFXCompletarTarea();
             taskAnimator.SetBool(TaskIsOn, false);
             StartCoroutine(TaskAnimatorTransition());
         }
