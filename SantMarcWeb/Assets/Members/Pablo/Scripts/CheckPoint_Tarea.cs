@@ -90,7 +90,6 @@ public class CheckPoint_Tarea : MonoBehaviour
 
                 Time.fixedDeltaTime = 0.02f;
             }
-            
             Destroy(this);
         }
 

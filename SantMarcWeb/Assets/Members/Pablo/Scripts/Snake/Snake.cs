@@ -50,12 +50,14 @@ public class Snake : MonoBehaviour
     private bool canChangeDirection;
 
     private Menu_Snake _menuSnake;
+    private AudioManager audioManager;
     
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
         Time.fixedDeltaTime = fixedDeltaTime;
         _menuSnake = FindObjectOfType<Menu_Snake>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void Start()
@@ -251,6 +253,7 @@ public class Snake : MonoBehaviour
                     {
                         FinalImage[i].enabled = true;
                     }
+                    audioManager.Play("SnakeStar");
                 }
             }
             else
@@ -297,6 +300,7 @@ public class Snake : MonoBehaviour
                         {
                             FinalImage_T_Pocho[i].enabled = true;
                         }
+                        audioManager.Play("SnakeStar");
                     }
                 }
                 else
@@ -340,6 +344,7 @@ public class Snake : MonoBehaviour
                         {
                             FinalImage_T_Mid[i].enabled = true;
                         }
+                        audioManager.Play("SnakeStar");
                     }
                 }
                 else
@@ -382,6 +387,7 @@ public class Snake : MonoBehaviour
                         {
                             FinalImage_T_Top[i].enabled = true;
                         }
+                        audioManager.Play("SnakeStar");
                     }
                 }
                 else
@@ -393,12 +399,59 @@ public class Snake : MonoBehaviour
                     else
                     {
                         //WIN
-                        _menuSnake.RetryMenu(Score);
                         ResetGame();
+                        _menuSnake.RetryMenu(TempScore);
+                        TempScore = 0;
+                        
                     }
                 }
             }
         }
+        else if (_menuSnake._checkPointTarea_P != null)
+        {
+            if (EnProcesoImagesActive < 26)
+            {
+                EnProcesoImagesActive++;
+                for (int i = 0; i < EnProcesoImagesActive; i++)
+                {
+                    EnProcesoImages_P[i].enabled = true;
+                }
+
+                if (EnProcesoImagesActive == 9 || EnProcesoImagesActive == 18 || EnProcesoImagesActive == 27)
+                {
+                    //Cuarto Completado
+                    FinalImageActive++;
+                    fixedDeltaTime -= fixedDeltaTimeDecrease;
+                    Time.fixedDeltaTime = fixedDeltaTime;
+            
+                    for (int i = 0; i < EnProcesoImagesActive; i++)
+                    {
+                        EnProcesoImages_P[i].color = new Color(EnProcesoImages_P[i].color.r, EnProcesoImages_P[i].color.g, EnProcesoImages_P[i].color.b, 0.6f);
+                    }
+            
+                    for (int i = 0; i < FinalImageActive; i++)
+                    {
+                        FinalImage_P[i].enabled = true;
+                    }
+                    audioManager.Play("SnakeStar");
+                }
+            }
+            else
+            {
+                if (Preview)
+                {
+                    ResetGame();
+                }
+                else
+                {
+                    //WIN
+                    ResetGame();
+                    _menuSnake.RetryMenu(TempScore);
+                    TempScore = 0;
+                }
+            }
+        }
+        audioManager.Play("SnakeGrow");
     }
     
     public void ResetGame()
@@ -413,10 +466,10 @@ public class Snake : MonoBehaviour
         for (int i = 0; i < EnProcesoImagesActive; i++)
         {
             EnProcesoImages[i].color = new Color(EnProcesoImages[i].color.r, EnProcesoImages[i].color.g, EnProcesoImages[i].color.b, 1f);
-            //EnProcesoImages_P[i].color = new Color(EnProcesoImages_P[i].color.r, EnProcesoImages_P[i].color.g, EnProcesoImages_P[i].color.b, 1f);
+            EnProcesoImages_P[i].color = new Color(EnProcesoImages_P[i].color.r, EnProcesoImages_P[i].color.g, EnProcesoImages_P[i].color.b, 1f);
             EnProcesoImages_T_Pocho[i].color = new Color(EnProcesoImages_T_Pocho[i].color.r, EnProcesoImages_T_Pocho[i].color.g, EnProcesoImages_T_Pocho[i].color.b, 1f);
-            //EnProcesoImages_T_Mid[i].color = new Color(EnProcesoImages_T_Mid[i].color.r, EnProcesoImages_T_Mid[i].color.g, EnProcesoImages_T_Mid[i].color.b, 1f);
-            //EnProcesoImages_T_Top[i].color = new Color(EnProcesoImages_T_Top[i].color.r, EnProcesoImages_T_Top[i].color.g, EnProcesoImages_T_Top[i].color.b, 1f);
+            EnProcesoImages_T_Mid[i].color = new Color(EnProcesoImages_T_Mid[i].color.r, EnProcesoImages_T_Mid[i].color.g, EnProcesoImages_T_Mid[i].color.b, 1f);
+            EnProcesoImages_T_Top[i].color = new Color(EnProcesoImages_T_Top[i].color.r, EnProcesoImages_T_Top[i].color.g, EnProcesoImages_T_Top[i].color.b, 1f);
             Debug.Log("" + EnProcesoImages[i].color.a);
         }
         
@@ -436,18 +489,18 @@ public class Snake : MonoBehaviour
         for (int i = 0; i < EnProcesoImages.Length; i++)
         {
             EnProcesoImages[i].enabled = false;
-            //EnProcesoImages_P[i].enabled = false;
+            EnProcesoImages_P[i].enabled = false;
             EnProcesoImages_T_Pocho[i].enabled = false;
-           // EnProcesoImages_T_Mid[i].enabled = false;
-            //EnProcesoImages_T_Top[i].enabled = false;
+            EnProcesoImages_T_Mid[i].enabled = false;
+            EnProcesoImages_T_Top[i].enabled = false;
         }
         for (int i = 0; i < FinalImage.Length; i++)
         {
             FinalImage[i].enabled = false;
-           // FinalImage_P[i].enabled = false;
+            FinalImage_P[i].enabled = false;
             FinalImage_T_Pocho[i].enabled = false;
-           // FinalImage_T_Mid[i].enabled = false;
-           // FinalImage_T_Top[i].enabled = false;
+            FinalImage_T_Mid[i].enabled = false;
+            FinalImage_T_Top[i].enabled = false;
         }
         
         Score = 0;
@@ -469,6 +522,7 @@ public class Snake : MonoBehaviour
             ResetGame();
             if (!Preview)
             {
+                audioManager.Play("SnakeDie");
                 _menuSnake.RetryMenu(TempScore);
                 TempScore = 0;
             }

@@ -9,6 +9,8 @@ using Random = UnityEngine.Random;
 public class Menu_Snake : MonoBehaviour
 {
     public CinemachineSwitcher CMS;
+    public AudioManager AudioManager;
+    
     [SerializeField] public CheckPoint_Tarea _checkPointTarea_M;
     [SerializeField] public CheckPoint_Tarea _checkPointTarea_T;
     [SerializeField] public CheckPoint_Tarea _checkPointTarea_P;
@@ -26,9 +28,18 @@ public class Menu_Snake : MonoBehaviour
     public GameObject MainMenuPanel;
     public GameObject GamePanel;
     public GameObject RetryMenuPanel;
+    
     public GameObject Bttns1;
     public GameObject Bttns2;
     public GameObject Bttns3;
+    
+    public GameObject TitleText_M;
+    public GameObject TitleText_T;
+    public GameObject TitleText_P;
+    
+    public GameObject R_TitleText_M;
+    public GameObject R_TitleText_T;
+    public GameObject R_TitleText_P;
     
     [Header("--- SNAKE ---")] [Space(10)] 
     public Snake SnakeMenu;
@@ -38,6 +49,7 @@ public class Menu_Snake : MonoBehaviour
     private void Awake()
     {
         CMS = FindObjectOfType<CinemachineSwitcher>();
+        AudioManager = FindObjectOfType<AudioManager>();
     }
 
     // Start is called before the first frame update
@@ -137,6 +149,7 @@ public class Menu_Snake : MonoBehaviour
         GamePanel.SetActive(true);
         RetryMenuPanel.SetActive(false);
         SnakeRety.ResetGame();
+        AudioManager.Play("SnakeClick");
     }
     public void PressStartBttn()
     {
@@ -144,6 +157,7 @@ public class Menu_Snake : MonoBehaviour
         GamePanel.SetActive(true);
         RetryMenuPanel.SetActive(false);
         SnakeMenu.ResetGame();
+        AudioManager.Play("SnakeClick");
     }
     public void PressContinueBttn()
     {
@@ -166,6 +180,11 @@ public class Menu_Snake : MonoBehaviour
             CMS.DesactivarPCModelaje();
             _checkPointTarea_M.CompletarTarea(false);
             Debug.Log("HE SALIDOOOOO");
+            TitleText_M.SetActive(false);
+            R_TitleText_M.SetActive(false);
+            
+            TitleText_T.SetActive(true);
+            R_TitleText_T.SetActive(true);
         }
         else if (_checkPointTarea_T != null)
         {
@@ -175,6 +194,11 @@ public class Menu_Snake : MonoBehaviour
             ResetStars();
             CMS.DesactivarPCTexturizado();
             _checkPointTarea_T.CompletarTarea(false);
+            TitleText_T.SetActive(false);
+            R_TitleText_T.SetActive(false);
+            
+            TitleText_P.SetActive(true);
+            R_TitleText_P.SetActive(true);
         }
         else if (_checkPointTarea_P != null)
         {
@@ -185,5 +209,6 @@ public class Menu_Snake : MonoBehaviour
             CMS.DesactivarPCProgramacion();
             _checkPointTarea_P.CompletarTarea(false);
         }
+        AudioManager.Play("SnakeClick");
     }
 }

@@ -100,6 +100,8 @@ public class CinemachineSwitcher : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         SnakeCanvas.SetActive(true);
         NormalCanvas.SetActive(false);
+        AudioManager.Play("SnakeTheme");
+        AudioManager.Stop("Background");
     }
     
     private IEnumerator DesactivarSnakeCanvas()
@@ -111,5 +113,7 @@ public class CinemachineSwitcher : MonoBehaviour
         ThirdPersonCamera.m_YAxis.m_InputAxisName = "Mouse Y";
         ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;
         ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
+        AudioManager.Stop("SnakeTheme");
+        AudioManager.Play("Background");
     }
 }
