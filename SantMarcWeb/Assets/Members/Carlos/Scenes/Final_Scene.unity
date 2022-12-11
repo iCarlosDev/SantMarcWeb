@@ -2497,6 +2497,9 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  ModelajeStarsAmount: 0
+  TexturizadoStarsAmount: 0
+  ProgramacionStarsAmount: 0
 --- !u!1 &130668301
 GameObject:
   m_ObjectHideFlags: 0
@@ -5521,17 +5524,20 @@ MonoBehaviour:
   Preview: 0
   stepCounter: 0
   fixedDeltaTime: 0.1
-  fixedDeltaTimeAgument: 0
+  fixedDeltaTimeDecrease: 0
   initialSize: 4
   SnakeCanvasParent: {fileID: 311838541}
   _segments: []
   segmentPrefab: {fileID: 3279803106014637340, guid: a0445917bca67ee4eba41a03db1888ad, type: 3}
-  ScoreTMP: {fileID: 1794671925}
-  QuarterImages:
-  - {fileID: 1512657184}
-  - {fileID: 679313660}
-  - {fileID: 639552799}
-  - {fileID: 796705189}
+  Star1: {fileID: 0}
+  Star2: {fileID: 0}
+  Star3: {fileID: 0}
+  EnProcesoImages: []
+  EnProcesoImages_T_Pocho: []
+  EnProcesoImages_T_Mid: []
+  EnProcesoImages_T_Top: []
+  EnProcesoImages_P: []
+  EnProcesoImagesActive: 0
   FinalImage:
   - {fileID: 2069849000}
   - {fileID: 1477762611}
@@ -5542,6 +5548,10 @@ MonoBehaviour:
   - {fileID: 1294669977}
   - {fileID: 75860867}
   - {fileID: 1690233384}
+  FinalImage_T_Pocho: []
+  FinalImage_T_Mid: []
+  FinalImage_T_Top: []
+  FinalImage_P: []
 --- !u!114 &332967895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22908,9 +22918,7 @@ MonoBehaviour:
   canResetPlaneCam: 1
   player: {fileID: 919132149146547590}
   playerCamera: {fileID: 1423393649}
-  ModelajeScore: 0
-  TexturizadoScore: 0
-  ProgramacionScore: 0
+  canNotMove: 0
   carVehicle: {fileID: 642287923709325475}
   carSpawner: {fileID: 0}
   carVirtualCam: {fileID: 1383467801}
@@ -30542,6 +30550,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -8095588883509926863, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8062924126886199840, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -31277,6 +31289,10 @@ PrefabInstance:
     - target: {fileID: -4795037550088310434, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -4774307206923205255, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4761241337637442227, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_Layer
@@ -33270,6 +33286,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3533807234248373811, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3542244320108160497, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -33685,6 +33705,10 @@ PrefabInstance:
     - target: {fileID: 5638316920626080766, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686589547259469304, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5699938954549526437, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_Layer
@@ -34385,6 +34409,10 @@ PrefabInstance:
     - target: {fileID: 8254276455569289365, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274298689938450525, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8284969622958289978, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
       propertyPath: m_Layer
@@ -45312,16 +45340,18 @@ MonoBehaviour:
   _checkPointTarea_T: {fileID: 0}
   _checkPointTarea_P: {fileID: 0}
   Score: 0
-  ModelajeScore: 0
-  TexturizadoScore: 0
-  ProgramacionScore: 0
+  ModelajeStasAmount: 0
+  TexturizadoStasAmount: 0
+  ProgramacionStasAmount: 0
   Star1: {fileID: 0}
   Star2: {fileID: 0}
   Star3: {fileID: 0}
-  Star4: {fileID: 0}
   MainMenuPanel: {fileID: 0}
   GamePanel: {fileID: 0}
   RetryMenuPanel: {fileID: 0}
+  Bttns1: {fileID: 0}
+  Bttns2: {fileID: 0}
+  Bttns3: {fileID: 0}
   SnakeMenu: {fileID: 0}
   SnakeRety: {fileID: 0}
   SnakeGamePlay: {fileID: 0}
@@ -50789,17 +50819,20 @@ MonoBehaviour:
   Preview: 1
   stepCounter: 0
   fixedDeltaTime: 0.1
-  fixedDeltaTimeAgument: 0
+  fixedDeltaTimeDecrease: 0
   initialSize: 4
   SnakeCanvasParent: {fileID: 311838541}
   _segments: []
   segmentPrefab: {fileID: 3279803106014637340, guid: a0445917bca67ee4eba41a03db1888ad, type: 3}
-  ScoreTMP: {fileID: 1794671925}
-  QuarterImages:
-  - {fileID: 1512657184}
-  - {fileID: 679313660}
-  - {fileID: 639552799}
-  - {fileID: 796705189}
+  Star1: {fileID: 0}
+  Star2: {fileID: 0}
+  Star3: {fileID: 0}
+  EnProcesoImages: []
+  EnProcesoImages_T_Pocho: []
+  EnProcesoImages_T_Mid: []
+  EnProcesoImages_T_Top: []
+  EnProcesoImages_P: []
+  EnProcesoImagesActive: 0
   FinalImage:
   - {fileID: 2069849000}
   - {fileID: 1477762611}
@@ -50810,6 +50843,10 @@ MonoBehaviour:
   - {fileID: 1294669977}
   - {fileID: 75860867}
   - {fileID: 1690233384}
+  FinalImage_T_Pocho: []
+  FinalImage_T_Mid: []
+  FinalImage_T_Top: []
+  FinalImage_P: []
 --- !u!114 &1875915347
 MonoBehaviour:
   m_ObjectHideFlags: 0

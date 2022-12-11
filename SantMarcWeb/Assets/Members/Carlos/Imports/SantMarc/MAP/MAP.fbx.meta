@@ -72,6 +72,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Botella
+    second: {fileID: 2100000, guid: aebe4bdc383471a42ae988693de97031, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Botella2
+    second: {fileID: 2100000, guid: aebe4bdc383471a42ae988693de97031, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: CajaCarton_M
     second: {fileID: 2100000, guid: dbf84dbb6dca5294aa97482f3b6a9b3a, type: 2}
   - first:
@@ -192,6 +202,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: CuadroVirgen_M
+    second: {fileID: 2100000, guid: bf67f798c9f837a488cb2275ba11144f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: CuboBasura_M
     second: {fileID: 2100000, guid: 805c570f2e676d64e8318b06c03c0650, type: 2}
   - first:
@@ -282,6 +297,26 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Goma2_M
+    second: {fileID: 2100000, guid: 53ac43f87e72c4e4dabed444e3942cd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Goma2_M1
+    second: {fileID: 2100000, guid: 53ac43f87e72c4e4dabed444e3942cd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Goma_M
+    second: {fileID: 2100000, guid: 8f6b5cef8dd86bf4b8301564e0d655cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Goma_M1
+    second: {fileID: 2100000, guid: 8f6b5cef8dd86bf4b8301564e0d655cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: GuiaCables_M
     second: {fileID: 2100000, guid: 85f53c0b2e04dd34fb3bd9881a5acc22, type: 2}
   - first:
@@ -299,6 +334,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: LamparaLava_M
     second: {fileID: 2100000, guid: 92e22c839e0f8824ba99c233750583c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lapiz_M1
+    second: {fileID: 2100000, guid: a75b02bf9828af94cacbca3bedbb39aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lata_M
+    second: {fileID: 2100000, guid: 52f1d5ac149800a42bef2ea1c89cb7e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Libreta_M
+    second: {fileID: 2100000, guid: a2e5ee3784614f846843f5712740cf95, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -444,6 +494,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: ParedSalon_M
     second: {fileID: 2100000, guid: 2db91c1b8eb3d704a952a058f4ff94e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pelota_M
+    second: {fileID: 2100000, guid: a592a4941bf45d149881a4a224bddb12, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -612,6 +667,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Rejilla_M
+    second: {fileID: 2100000, guid: 7301009b0210bf045aee308f092686a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rejilla_M1
+    second: {fileID: 2100000, guid: 7301009b0210bf045aee308f092686a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Reloj_M
     second: {fileID: 2100000, guid: c95bbfcc98f59864299da6dd32f7b9d9, type: 2}
   - first:
@@ -659,6 +724,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: TV_M
     second: {fileID: 2100000, guid: 8ee62ad397bb23d449582d47ba2f02f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TaponBotella1
+    second: {fileID: 2100000, guid: 51f601eb68d875f4faf72ea65fe0adf0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -719,6 +789,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: WebCam_M
     second: {fileID: 2100000, guid: ae132413ddd83454482de18c207f9e8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 888eed0f8dabb274ea1cb5dd4344557b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
