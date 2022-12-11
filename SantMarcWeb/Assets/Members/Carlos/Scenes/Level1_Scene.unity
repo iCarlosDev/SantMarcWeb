@@ -12500,6 +12500,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309598965}
   m_CullTransparentMesh: 1
+--- !u!1 &312071038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 312071039}
+  m_Layer: 3
+  m_Name: VFX_Place
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &312071039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312071038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1586295156}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &314187842
 GameObject:
   m_ObjectHideFlags: 0
@@ -23195,6 +23225,36 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &583542947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 583542948}
+  m_Layer: 3
+  m_Name: VFX_Place (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &583542948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583542947}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1586294619}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &584110457
 GameObject:
   m_ObjectHideFlags: 0
@@ -28885,6 +28945,36 @@ RectTransform:
   m_AnchoredPosition: {x: -135.0001, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &727601195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727601196}
+  m_Layer: 3
+  m_Name: VFX_Place (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &727601196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727601195}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1586295132}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729058649
 GameObject:
   m_ObjectHideFlags: 0
@@ -69196,6 +69286,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -6262449845500575580, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
   m_PrefabInstance: {fileID: 1586294116}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1586294619 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5002084822076357574, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+  m_PrefabInstance: {fileID: 1586294116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1586294620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1185271645825077466, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
@@ -76274,6 +76369,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7163524557887635168, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+--- !u!4 &1586295132 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1151241078597446792, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+  m_PrefabInstance: {fileID: 1586294116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!64 &1586295133
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -76447,6 +76547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tarea: {fileID: 11400000, guid: f1c5cfd377ad5c947ba31f264fc20e00, type: 2}
+  VFX_Position: {fileID: 312071038}
+  CompletarTareaVFX: {fileID: 1970671266931256825, guid: 20f1e77d6eab43e458514abe510757c7, type: 3}
   checkpoint: 0
 --- !u!114 &1586295146
 MonoBehaviour:
@@ -76476,6 +76578,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tarea: {fileID: 11400000, guid: 117c6642db1f2784d8c1ec105ede57f6, type: 2}
+  VFX_Position: {fileID: 583542947}
+  CompletarTareaVFX: {fileID: 1970671266931256825, guid: 20f1e77d6eab43e458514abe510757c7, type: 3}
   checkpoint: 0
 --- !u!114 &1586295148
 MonoBehaviour:
@@ -76505,6 +76609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tarea: {fileID: 11400000, guid: 7d8f0a2845d2bf342846774ebf0ece6e, type: 2}
+  VFX_Position: {fileID: 0}
+  CompletarTareaVFX: {fileID: 0}
   checkpoint: 0
 --- !u!65 &1586295150
 BoxCollider:
@@ -76558,6 +76664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tarea: {fileID: 11400000, guid: cc65efb8c5aff93499c885a9c20a144a, type: 2}
+  VFX_Position: {fileID: 727601195}
+  CompletarTareaVFX: {fileID: 1970671266931256825, guid: 20f1e77d6eab43e458514abe510757c7, type: 3}
   checkpoint: 0
 --- !u!114 &1586295154
 MonoBehaviour:
@@ -76587,6 +76695,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.39, y: 0.05853986, z: 1.81}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1586295156 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1927743763427075537, guid: 544374d5ee8a04549978757a5df94b45, type: 3}
+  m_PrefabInstance: {fileID: 1586294116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1586296502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84934,10 +85047,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 98d3dd640b812254ca289c983e682816, type: 2}
   - {fileID: 11400000, guid: c919e127d6d8ff740afde3f37f79fda3, type: 2}
   tmpTaskSentence: {fileID: 2022745705}
-  firstDialogueCompleted: 0
-  exit1Checked: 0
-  exit2Checked: 0
-  exitsCompleted: 0
+  firstDialogueCompleted: 1
+  exit1Checked: 1
+  exit2Checked: 1
+  exitsCompleted: 1
   teacherFound: 0
   teacherFound1Vz: 0
   coinsCollected: 0
@@ -99634,7 +99747,6 @@ MonoBehaviour:
   isGrounded: 0
   isGroundedAnimator: 0
   playerAnimator: {fileID: 5866666021918143814}
-  CompletarTareaVFX: {fileID: 7026975586691204647, guid: e10c92766b161cd428cb92b9c4b7da00, type: 3}
 --- !u!1 &934883529617172890
 GameObject:
   m_ObjectHideFlags: 0

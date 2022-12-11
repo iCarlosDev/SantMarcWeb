@@ -102,7 +102,6 @@ namespace Members.Carlos.Scripts.Tasks
 
         public void SwapTaskAnimation()
         {
-            _Player.VFXCompletarTarea();
             taskAnimator.SetBool(TaskIsOn, false);
             StartCoroutine(TaskAnimatorTransition());
         }

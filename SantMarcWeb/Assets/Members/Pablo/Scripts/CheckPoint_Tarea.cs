@@ -14,6 +14,11 @@ public class CheckPoint_Tarea : MonoBehaviour
     private CinemachineSwitcher _cinemachine;
     private PlayerController player;
     public Tarea tarea;
+
+    [Header("--- VFX ---")] [Space(10)] 
+    public GameObject VFX_Position;
+    public GameObject CompletarTareaVFX;
+
    
     public bool checkpoint;
     
@@ -43,7 +48,13 @@ public class CheckPoint_Tarea : MonoBehaviour
             }
         }
     }
+    
+    public void VFXCompletarTarea()
+    {
+        Instantiate(CompletarTareaVFX, VFX_Position.transform.position, Quaternion.identity);
+    }
 
+    
     public void CompletarTarea(bool starting)
     {
         if (starting)
@@ -93,14 +104,22 @@ public class CheckPoint_Tarea : MonoBehaviour
 
                 Time.fixedDeltaTime = 0.02f;
             }
-            player.VFXCompletarTarea();
-            Destroy(this);
+
+            StartCoroutine("LanzarVFX");
+            
         }
 
         if (tarea == _display.ArrayDeTareas[3])
         {
             FadeIn_FadeOut_Manager.instance.Animator.SetBool(FadeIn, true);
         }
+    }
+
+    IEnumerator LanzarVFX()
+    {
+        yield return new WaitForSeconds(1.5f);
+        VFXCompletarTarea();
+        Destroy(this);
     }
     
     private void OnTriggerEnter(Collider other)
