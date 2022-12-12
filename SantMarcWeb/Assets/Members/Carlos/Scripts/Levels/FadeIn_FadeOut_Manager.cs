@@ -35,7 +35,7 @@ public class FadeIn_FadeOut_Manager : MonoBehaviour
 
    public IEnumerator WaitToChangeFinalLevel()
    {
-      yield return new WaitForSeconds(3);
+      yield return new WaitForSeconds(10);
       animator.SetBool(FadeIn, true);
    }
 
