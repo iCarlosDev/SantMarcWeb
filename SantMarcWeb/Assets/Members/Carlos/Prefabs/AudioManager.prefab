@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8393814691053724653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8393814691053724642}
+  - component: {fileID: 8393814691053724640}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8393814691053724642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393814691053724653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.051499, y: 5.1285763, z: -9.999955}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8393814691053724640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393814691053724653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d0fbf6920fef54eaf2cd91fda535f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Background
+    clip: {fileID: 8300000, guid: 8b53b3ea69713c1439e9f012f089b379, type: 3}
+    volume: 0.059
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Coins
+    clip: {fileID: 8300000, guid: 7544a4a1bf00d2d408e481e9075bc3eb, type: 3}
+    volume: 0.414
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SnakeClick
+    clip: {fileID: 8300000, guid: 48882d371690b7a43916a5f9108df910, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SnakeDie
+    clip: {fileID: 8300000, guid: 76b80da0dcc1e3f46b497c0e46278a40, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SnakeGrow
+    clip: {fileID: 8300000, guid: 693ddb1831a97334e90b6e6ee275a614, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SnakeTheme
+    clip: {fileID: 8300000, guid: 8abf1b8d39ca8fc428acc29de5785b0f, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: SnakeStar
+    clip: {fileID: 8300000, guid: 2075b49db434343459161d0877324379, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  ModelajeStarsAmount: 3
+  TexturizadoStarsAmount: 3
+  ProgramacionStarsAmount: 0
+  cocheTochoM: {fileID: 3969001303108765052, guid: 4493cec9f9ac26347b0000dfe2890330, type: 3}
+  cocheNormalM: {fileID: 4192036965721683733, guid: f5d88dbd8d75a3a41ba4876272c77871, type: 3}
+  cochePochoM: {fileID: 3878838599046343640, guid: 873994daf7dfa114092b5780e0efd642, type: 3}
+  currentCar: {fileID: 0}
+  TexturasCocheTocho:
+  - {fileID: 2100000, guid: 121cbb2a6ceb5cd45b65fda7ba48d433, type: 2}
+  - {fileID: 2100000, guid: 7fc2dc508b653b74b9dde91bd676bd45, type: 2}
+  - {fileID: 2100000, guid: b1a558350d082a54f99a93fec0979da5, type: 2}
+  TexturasCocheNormal:
+  - {fileID: 2100000, guid: 19153e595b624844db0ca35cf5e97337, type: 2}
+  - {fileID: 2100000, guid: a3e73aaa9fccce14d8e2e5d5b4e71167, type: 2}
+  - {fileID: 2100000, guid: 3903c03737c924c4f8e9bfc086e01b99, type: 2}
+  TexturasCochePocho:
+  - {fileID: 2100000, guid: e597bba070d82e341867b1f809edddd2, type: 2}
+  - {fileID: 2100000, guid: 2c9920b24bf030d4f88b51430ef1226e, type: 2}
+  - {fileID: 2100000, guid: a210b26c710ef38428e5d60d6699ba86, type: 2}
+  TexturasRuedaTocha:
+  - {fileID: 2100000, guid: 5e2d60af90f4ebc42abd5551c674caf3, type: 2}
+  - {fileID: 2100000, guid: f2efdb2ace9734445b38cec59279c772, type: 2}
+  - {fileID: 2100000, guid: 6d90a7b4cc380444685fedea375817cd, type: 2}
+  TexturasRuedaNormal:
+  - {fileID: 2100000, guid: b2045518c40346a4ab057f792f2f1f77, type: 2}
+  - {fileID: 2100000, guid: 9c160f26846581f4fa3efc7329919e0b, type: 2}
+  - {fileID: 2100000, guid: fac5dc5a916ef534da76e8233e5cfcd9, type: 2}
+  TexturasRuedaPocha:
+  - {fileID: 2100000, guid: 056b5aef4720d9b4b8bb6205c0278df6, type: 2}
+  - {fileID: 2100000, guid: d75a62ce26f3c55439982aa0d61440f0, type: 2}
+  - {fileID: 2100000, guid: 07617edb4adbdf34482b47bbd310ce66, type: 2}
+  avionTochoM: {fileID: 1543001817213497797, guid: 720f543f2f29cf742a33e91961e33c57, type: 3}
+  avionNormalM: {fileID: 2193323066987865208, guid: af6920c1b203ea84cba2e0c609d2e1cf, type: 3}
+  avionPochoM: {fileID: 3964535882577696741, guid: d1c1cc0484d26464fa16a85fc9ab9e93, type: 3}
+  currentAvion: {fileID: 0}
+  TexturasAvionTocho:
+  - {fileID: 2100000, guid: de3331d2f0a9da94ba0be80ed5d7f745, type: 2}
+  - {fileID: 2100000, guid: 274b19543d213eb4f9729abba8710142, type: 2}
+  - {fileID: 2100000, guid: 40870202197270e459719a63fd94dbd4, type: 2}
+  TexturasAvionNormal:
+  - {fileID: 2100000, guid: c1aa7a344bfe16e4297616290bdd712a, type: 2}
+  - {fileID: 2100000, guid: edfe36194be1ced44b6d83678c538dcc, type: 2}
+  - {fileID: 2100000, guid: edc5267ca408e414e8bc486a8eef5900, type: 2}
+  TexturasAvionPocho:
+  - {fileID: 2100000, guid: 82b74d644c99ffa46a6e88542d4787c8, type: 2}
+  - {fileID: 2100000, guid: bc2aff0a75ba0454aac9c8bd9b06ed2c, type: 2}
+  - {fileID: 2100000, guid: 0f2da54abe043124e9a63a9571d3acdb, type: 2}

@@ -3,17 +3,7 @@ guid: 9224dfd6c3fe40743b4e2d547de5decb
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Coche_M3
-    second: {fileID: 2100000, guid: 2c9920b24bf030d4f88b51430ef1226e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Rueda_M3
-    second: {fileID: 2100000, guid: 056b5aef4720d9b4b8bb6205c0278df6, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

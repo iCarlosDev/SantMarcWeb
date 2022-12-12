@@ -36,6 +36,8 @@ public class TokensCollectables : MonoBehaviour
             CollectableSpawner.SpawnCollectablesL.Remove(gameObject);
             CollectableSpawner.CollectablesCompleted();
             Destroy(gameObject);
+            CollectableSpawner.CurrentsTokensCollected ++;
+            CollectableSpawner.TokensCollectedTMP.text = $"{CollectableSpawner.CurrentsTokensCollected} / {CollectableSpawner.TotalTokens}";
         }
     }
 }

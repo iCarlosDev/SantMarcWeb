@@ -35,10 +35,13 @@ namespace Members.Carlos.Scripts.Vehicles.Plane
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Floor"))
+            if (gameManager != null)
             {
-                gameManager.changeToPlane = false;
-                gameManager.spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
+                if (collision.gameObject.CompareTag("Floor"))
+                {
+                    gameManager.changeToPlane = false;
+                    gameManager.spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Play();
+                }
             }
         }
     }

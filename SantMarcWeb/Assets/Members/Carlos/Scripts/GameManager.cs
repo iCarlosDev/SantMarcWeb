@@ -52,6 +52,13 @@ namespace Members.Carlos.Scripts
         public bool controlsMenuOpen;
         public bool snakeOpen;
 
+        /*[Header("--- PIEZAS COCHE ---")] 
+        [SerializeField] private GameObject carMesh;
+        [SerializeField] private GameObject carWheelFR;
+        [SerializeField] private GameObject carWheelFL;
+        [SerializeField] private GameObject carWheelBR;
+        [SerializeField] private GameObject carWheelBL;*/
+
         [SerializeField] private TextMeshProUGUI titleControlsMenu;
         
         [SerializeField] private GameObject controlsMenu;
@@ -69,6 +76,7 @@ namespace Members.Carlos.Scripts
         public GameObject spawnPlaneVFX;
         public GameObject teachersDoor;
         public GameObject studentsDoor;
+        [SerializeField] private GameObject characters;
     
         public bool changeToPlane;
         public bool changeToCar ;
@@ -90,15 +98,30 @@ namespace Members.Carlos.Scripts
             set => player = value;
         }
 
+        public GameObject Characters
+        {
+            get => characters;
+            set => characters = value;
+        }
+
         private void Awake()
         {
             instance = this;
+            characters = GameObject.Find("PlayerCharacters");
         }
 
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
             spawnPlaneVFX.GetComponentInChildren<ParticleSystem>().Stop();
+            
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                ElegirCoche();
+                ElegirTexturaCoche();
+                ElegirAvion();
+                ElegirTexturaAvion();
+            }
         }
 
         private void Update()
@@ -467,8 +490,230 @@ namespace Members.Carlos.Scripts
             carVehicle.transform.position = new Vector3(position.x, position.y + 1f, position.z);
             carVehicle.transform.rotation = rotation;
             
-            planeController.planeRigidbody.velocity *= 0f;
+            planeVehicle.GetComponent<PlaneController>().planeRigidbody.velocity *= 0f;
         }
         #endregion
+
+        private void ElegirCoche()
+        {
+            if (AudioManager.instance.ModelajeStarsAmount.Equals(1))
+            {
+                GameObject CarPocho = Instantiate(AudioManager.instance.cochePochoM, characters.transform);
+                AudioManager.instance.currentCar = CarPocho;
+            }
+            else if (AudioManager.instance.ModelajeStarsAmount.Equals(2))
+            {
+                GameObject CarNormal = Instantiate(AudioManager.instance.cocheNormalM, characters.transform);
+                AudioManager.instance.currentCar = CarNormal;
+            }
+            else
+            {
+                GameObject CarTocho = Instantiate(AudioManager.instance.cocheTochoM, characters.transform);
+                AudioManager.instance.currentCar = CarTocho;
+            }
+            
+            carVehicle = AudioManager.instance.currentCar;
+            carSpawner = AudioManager.instance.currentCar.GetComponentInChildren<GroundDetecter>().gameObject;
+            carVirtualCam.GetComponent<CinemachineVirtualCamera>().Follow = AudioManager.instance.currentCar.transform.GetChild(3);
+            carVirtualCam.GetComponent<CinemachineVirtualCamera>().LookAt = AudioManager.instance.currentCar.transform.GetChild(4);
+            carFreeLookCam.GetComponent<CinemachineFreeLook>().Follow = AudioManager.instance.currentCar.transform.GetChild(3);
+            carFreeLookCam.GetComponent<CinemachineFreeLook>().LookAt = AudioManager.instance.currentCar.transform.GetChild(4);
+        }
+
+        private void ElegirAvion()
+        {
+            if (AudioManager.instance.ModelajeStarsAmount.Equals(1))
+            {
+                GameObject AvionPocho = Instantiate(AudioManager.instance.avionPochoM, characters.transform);
+                AudioManager.instance.currentAvion = AvionPocho;
+            }
+            else if (AudioManager.instance.ModelajeStarsAmount.Equals(2))
+            {
+                GameObject AvionNormal = Instantiate(AudioManager.instance.avionNormalM, characters.transform);
+                AudioManager.instance.currentAvion = AvionNormal;
+            }
+            else
+            {
+                GameObject AvionTocho = Instantiate(AudioManager.instance.avionTochoM, characters.transform);
+                AudioManager.instance.currentAvion = AvionTocho;
+            }
+            
+            planeVehicle = AudioManager.instance.currentAvion;
+            planeController = AudioManager.instance.currentAvion.GetComponent<PlaneController>();
+            planeVirtualCam.GetComponent<CinemachineVirtualCamera>().Follow = AudioManager.instance.currentAvion.transform;
+            planeVirtualCam.GetComponent<CinemachineVirtualCamera>().LookAt = AudioManager.instance.currentAvion.transform.GetChild(0);
+            planeFreeLookCam.GetComponent<CinemachineFreeLook>().Follow = AudioManager.instance.currentAvion.transform;
+            planeFreeLookCam.GetComponent<CinemachineFreeLook>().LookAt = AudioManager.instance.currentAvion.transform.GetChild(0);
+        }
+
+        private void ElegirTexturaAvion()
+        {
+            if (AudioManager.instance.ModelajeStarsAmount.Equals(1))
+            {
+                if (AudioManager.instance.TexturizadoStarsAmount.Equals(1))
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionPocho[0];
+                    }
+                }
+                else if (AudioManager.instance.TexturizadoStarsAmount.Equals(2))
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionPocho[1];
+                    }
+                }
+                else
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionPocho[2];
+                    }
+                }
+            }
+            else if (AudioManager.instance.ModelajeStarsAmount.Equals(2))
+            {
+                if (AudioManager.instance.TexturizadoStarsAmount.Equals(1))
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionNormal[0];
+                    }
+                }
+                else if (AudioManager.instance.TexturizadoStarsAmount.Equals(2))
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionNormal[1];
+                    }
+                }
+                else
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionNormal[2];
+                    }
+                }
+            }
+            else
+            {
+                if (AudioManager.instance.TexturizadoStarsAmount.Equals(1))
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionTocho[0];
+                    }
+                }
+                else if (AudioManager.instance.TexturizadoStarsAmount.Equals(2))
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionTocho[1];
+                    }
+                }
+                else
+                {
+                    foreach (var material in AudioManager.instance.currentAvion.GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material =  AudioManager.instance.TexturasAvionTocho[2];
+                    }
+                }
+            }
+        }
+
+        private void ElegirTexturaCoche()
+        {
+            if (AudioManager.instance.ModelajeStarsAmount.Equals(1))
+            {
+                if (AudioManager.instance.TexturizadoStarsAmount.Equals(1))
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCochePocho[0];
+
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaPocha[0];
+                    }
+                }
+                else if (AudioManager.instance.TexturizadoStarsAmount.Equals(2))
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCochePocho[1];
+                    
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaPocha[1];
+                    }
+                }
+                else
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCochePocho[2];
+                    
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaPocha[2];
+                    }
+                }
+            }
+            else if (AudioManager.instance.ModelajeStarsAmount.Equals(2))
+            {
+                if (AudioManager.instance.TexturizadoStarsAmount.Equals(1))
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCocheNormal[0];
+
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaNormal[0];
+                    }
+                }
+                else if (AudioManager.instance.TexturizadoStarsAmount.Equals(2))
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCocheNormal[1];
+                    
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaNormal[1];
+                    }
+                }
+                else
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCocheNormal[2];
+                    
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaNormal[2];
+                    }
+                }
+            }
+            else
+            {
+                if (AudioManager.instance.TexturizadoStarsAmount.Equals(1))
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCocheTocho[0];
+
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaTocha[0];
+                    }
+                }
+                else if (AudioManager.instance.TexturizadoStarsAmount.Equals(2))
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCocheTocho[1];
+                    
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaTocha[1];
+                    }
+                }
+                else
+                {
+                    AudioManager.instance.currentCar.transform.GetChild(0).GetComponent<MeshRenderer>().material = AudioManager.instance.TexturasCocheTocho[2];
+                    
+                    foreach (var material in AudioManager.instance.currentCar.transform.GetChild(1).GetChild(0).GetComponentsInChildren<MeshRenderer>())
+                    {
+                        material.material = AudioManager.instance.TexturasRuedaTocha[2];
+                    }
+                }
+            }
+        }
     }
 }

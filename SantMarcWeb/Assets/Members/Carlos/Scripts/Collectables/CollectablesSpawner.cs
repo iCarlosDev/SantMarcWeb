@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Members.Carlos.Scripts.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,7 +14,26 @@ public class CollectablesSpawner : MonoBehaviour
     [SerializeField] private GameObject spawnCollectables_GO;
     [SerializeField] private List<GameObject> _spawnCollectables_L;
 
+    [Header("--- CANVAS ---")] 
+    [SerializeField] private TextMeshProUGUI tokensCollected_TMP;
+    [SerializeField] private int currentsTokensCollected;
+    [SerializeField] private int totalTokens;
+
     public List<GameObject> SpawnCollectablesL => _spawnCollectables_L;
+
+    public int CurrentsTokensCollected
+    {
+        get => currentsTokensCollected;
+        set => currentsTokensCollected = value;
+    }
+
+    public TextMeshProUGUI TokensCollectedTMP
+    {
+        get => tokensCollected_TMP;
+        set => tokensCollected_TMP = value;
+    }
+
+    public int TotalTokens => totalTokens;
 
     private void Awake()
     {
@@ -26,6 +46,9 @@ public class CollectablesSpawner : MonoBehaviour
         {
             _spawnCollectables_L.Add(child.gameObject);
         }
+
+        totalTokens = _spawnCollectables_L.Count;
+        tokensCollected_TMP.text = $"{currentsTokensCollected} / {totalTokens}";
     }
 
     private void Update()

@@ -8,15 +8,10 @@ public class Lava : MonoBehaviour
 {
     //Variables
     [Header("--- POINTS ---")] 
-    [SerializeField] private GameObject characters;
+    
     [SerializeField] private Transform point1;
     [SerializeField] private Transform point2;
     [SerializeField] private bool canTp;
-
-    private void Awake()
-    {
-        characters = GameObject.Find("PlayerCharacters");
-    }
 
     private void Update()
     {
@@ -31,18 +26,18 @@ public class Lava : MonoBehaviour
             
             if (Point1Dist < Point2Dist)
             {
-               characters.SetActive(false);
+                GameManager.instance.Characters.SetActive(false);
                playerPosition.transform.position = point1.position;
-               characters.SetActive(true);
+               GameManager.instance.Characters.SetActive(true);
                GameManager.instance.PlayerActive();
                canTp = false;
                FindObjectOfType<SpawnDetecter>().CanTransform = true;
             }
             else
             {
-                characters.SetActive(false);
+                GameManager.instance.Characters.SetActive(false);
                 playerPosition.transform.position = point2.position;
-                characters.SetActive(true);
+                GameManager.instance.Characters.SetActive(true);
                 GameManager.instance.PlayerActive();
                 canTp = false;
                 FindObjectOfType<SpawnDetecter>().CanTransform = true;

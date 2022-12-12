@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueObjects: []
   interactionString: entrar al Mundo Virtual
   nombre: "Acercate a la m\xE1quina VRSpecial"
-  descripcion: "Prueba el avi\xF3n que acabas de crear"
+  descripcion: Prueba el coche que acabas de crear
   minParaCompletarla: 3
   segParaCompletarla: 0
   Tiempo: 0
