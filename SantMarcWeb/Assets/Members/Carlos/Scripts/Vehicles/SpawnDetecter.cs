@@ -8,7 +8,11 @@ public class SpawnDetecter : MonoBehaviour
     //Variables
     [SerializeField] private bool canTransform;
 
-    public bool CanTransform => canTransform;
+    public bool CanTransform
+    {
+        get => canTransform;
+        set => canTransform = value;
+    }
 
     private void Awake()
     {

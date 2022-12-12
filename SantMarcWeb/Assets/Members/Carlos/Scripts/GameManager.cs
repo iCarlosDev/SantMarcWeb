@@ -84,6 +84,12 @@ namespace Members.Carlos.Scripts
             set => canNotMove = value;
         }
 
+        public GameObject Player
+        {
+            get => player;
+            set => player = value;
+        }
+
         private void Awake()
         {
             instance = this;
@@ -439,7 +445,7 @@ namespace Members.Carlos.Scripts
 
         #region - PLAYER -
     
-        private void PlayerActive()
+        public void PlayerActive()
         {
             player.SetActive(true);
             playerCamera.SetActive(true);

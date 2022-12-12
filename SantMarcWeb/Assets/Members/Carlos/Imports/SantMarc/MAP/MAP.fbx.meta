@@ -52,6 +52,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Barandilla_M1
+    second: {fileID: 2100000, guid: 0f0dcfbc2dac59b45ad52bb6220f6b9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: BasuraPared_M
     second: {fileID: 2100000, guid: 3076dda627c047d48bcadb2710a34225, type: 2}
   - first:

@@ -18,6 +18,7 @@ TagManager:
   - Door
   - ExitPoint
   - ExitPoint2
+  - Lava
   layers:
   - Default
   - TransparentFX
