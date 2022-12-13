@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 4434653}
   m_Layer: 3
   m_Name: LATA (80)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 4848210}
   m_Layer: 3
   m_Name: Goma (57)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 6389165}
   m_Layer: 3
   m_Name: LATA (103)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 17822324}
   m_Layer: 3
   m_Name: Lapiz (18)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 18409080}
   m_Layer: 3
   m_Name: Goma (33)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 21503480}
   m_Layer: 3
   m_Name: LATA (105)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1023,7 +1023,7 @@ GameObject:
   - component: {fileID: 23253037}
   m_Layer: 3
   m_Name: LATA (34)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1442,7 +1442,7 @@ GameObject:
   - component: {fileID: 34379540}
   m_Layer: 3
   m_Name: LATA (154)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1555,7 +1555,7 @@ GameObject:
   - component: {fileID: 34705410}
   m_Layer: 3
   m_Name: Goma (4)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 51117323}
   m_Layer: 3
   m_Name: Goma (13)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1873,7 +1873,7 @@ GameObject:
   - component: {fileID: 54499788}
   m_Layer: 3
   m_Name: Botella1 (24)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1987,7 +1987,7 @@ GameObject:
   - component: {fileID: 55298979}
   m_Layer: 3
   m_Name: Botella1 (7)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2137,7 +2137,7 @@ GameObject:
   - component: {fileID: 59621883}
   m_Layer: 3
   m_Name: LATA (28)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2311,7 +2311,7 @@ GameObject:
   - component: {fileID: 63985554}
   m_Layer: 3
   m_Name: LATA (17)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2424,7 +2424,7 @@ GameObject:
   - component: {fileID: 67506605}
   m_Layer: 3
   m_Name: Botella1 (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2666,7 +2666,7 @@ GameObject:
   - component: {fileID: 78028647}
   m_Layer: 3
   m_Name: Botella1 (14)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2880,7 +2880,7 @@ GameObject:
   - component: {fileID: 84534950}
   m_Layer: 3
   m_Name: Botella1 (34)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3148,7 +3148,7 @@ GameObject:
   - component: {fileID: 93186214}
   m_Layer: 3
   m_Name: LATA (51)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3490,7 +3490,7 @@ GameObject:
   - component: {fileID: 106652841}
   m_Layer: 3
   m_Name: LATA (132)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3701,7 +3701,7 @@ GameObject:
   - component: {fileID: 120393853}
   m_Layer: 3
   m_Name: LATA (84)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3875,7 +3875,7 @@ GameObject:
   - component: {fileID: 121664500}
   m_Layer: 3
   m_Name: LATA (71)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3988,7 +3988,7 @@ GameObject:
   - component: {fileID: 121929854}
   m_Layer: 3
   m_Name: Botella1 (21)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4102,7 +4102,7 @@ GameObject:
   - component: {fileID: 125452847}
   m_Layer: 3
   m_Name: Goma (3)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4449,7 +4449,7 @@ GameObject:
   - component: {fileID: 139134354}
   m_Layer: 3
   m_Name: LATA (31)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4623,7 +4623,7 @@ GameObject:
   - component: {fileID: 142082360}
   m_Layer: 3
   m_Name: LATA (162)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4736,7 +4736,7 @@ GameObject:
   - component: {fileID: 145082837}
   m_Layer: 3
   m_Name: LATA (136)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4849,7 +4849,7 @@ GameObject:
   - component: {fileID: 145867249}
   m_Layer: 3
   m_Name: LATA (106)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4967,7 +4967,7 @@ GameObject:
   - component: {fileID: 152948298}
   m_Layer: 3
   m_Name: Goma (8)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5079,7 +5079,7 @@ GameObject:
   - component: {fileID: 153903673}
   m_Layer: 3
   m_Name: Botella1 (20)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5234,7 +5234,7 @@ GameObject:
   - component: {fileID: 173768504}
   m_Layer: 3
   m_Name: Botella1 (13)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5501,7 +5501,7 @@ GameObject:
   - component: {fileID: 178346331}
   m_Layer: 3
   m_Name: Lapiz (24)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5597,7 +5597,7 @@ GameObject:
   - component: {fileID: 179704042}
   m_Layer: 3
   m_Name: LATA (14)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5710,7 +5710,7 @@ GameObject:
   - component: {fileID: 183004150}
   m_Layer: 3
   m_Name: LATA (158)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5823,7 +5823,7 @@ GameObject:
   - component: {fileID: 184650337}
   m_Layer: 3
   m_Name: Botella1 (41)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5937,7 +5937,7 @@ GameObject:
   - component: {fileID: 185525128}
   m_Layer: 3
   m_Name: Botella1 (43)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6190,7 +6190,7 @@ GameObject:
   - component: {fileID: 191064492}
   m_Layer: 3
   m_Name: LATA (156)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6303,7 +6303,7 @@ GameObject:
   - component: {fileID: 191488221}
   m_Layer: 3
   m_Name: LATA (96)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6527,7 +6527,7 @@ GameObject:
   - component: {fileID: 193332810}
   m_Layer: 3
   m_Name: LATA (42)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6640,7 +6640,7 @@ GameObject:
   - component: {fileID: 196494920}
   m_Layer: 3
   m_Name: LATA (70)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6846,7 +6846,7 @@ GameObject:
   - component: {fileID: 204164459}
   m_Layer: 3
   m_Name: Goma (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6988,7 +6988,7 @@ GameObject:
   - component: {fileID: 209880246}
   m_Layer: 3
   m_Name: LATA (143)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7221,7 +7221,7 @@ GameObject:
   - component: {fileID: 210853884}
   m_Layer: 3
   m_Name: LATA (91)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7334,7 +7334,7 @@ GameObject:
   - component: {fileID: 213746928}
   m_Layer: 3
   m_Name: LATA (159)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7608,7 +7608,7 @@ GameObject:
   - component: {fileID: 225032801}
   m_Layer: 3
   m_Name: LATA (40)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7721,7 +7721,7 @@ GameObject:
   - component: {fileID: 228867106}
   m_Layer: 3
   m_Name: Botella1 (9)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7957,7 +7957,7 @@ GameObject:
   - component: {fileID: 232214432}
   m_Layer: 3
   m_Name: Goma (68)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8069,7 +8069,7 @@ GameObject:
   - component: {fileID: 234013381}
   m_Layer: 3
   m_Name: LATA (99)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8182,7 +8182,7 @@ GameObject:
   - component: {fileID: 237204535}
   m_Layer: 3
   m_Name: LATA (127)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8295,7 +8295,7 @@ GameObject:
   - component: {fileID: 240260411}
   m_Layer: 3
   m_Name: LATA (165)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8408,7 +8408,7 @@ GameObject:
   - component: {fileID: 243060815}
   m_Layer: 3
   m_Name: LATA (128)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8582,7 +8582,7 @@ GameObject:
   - component: {fileID: 268863076}
   m_Layer: 3
   m_Name: Goma (28)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8787,7 +8787,7 @@ GameObject:
   - component: {fileID: 272849650}
   m_Layer: 3
   m_Name: Goma (46)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8937,7 +8937,7 @@ GameObject:
   - component: {fileID: 284892292}
   m_Layer: 3
   m_Name: Goma (61)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9049,7 +9049,7 @@ GameObject:
   - component: {fileID: 289498886}
   m_Layer: 3
   m_Name: LATA (77)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9162,7 +9162,7 @@ GameObject:
   - component: {fileID: 290068722}
   m_Layer: 3
   m_Name: Goma (32)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9274,7 +9274,7 @@ GameObject:
   - component: {fileID: 291690293}
   m_Layer: 3
   m_Name: LATA (122)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9472,7 +9472,7 @@ GameObject:
   - component: {fileID: 305942409}
   m_Layer: 3
   m_Name: LATA (11)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9646,7 +9646,7 @@ GameObject:
   - component: {fileID: 313557686}
   m_Layer: 3
   m_Name: Goma (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9758,7 +9758,7 @@ GameObject:
   - component: {fileID: 318277435}
   m_Layer: 3
   m_Name: LATA (124)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9871,7 +9871,7 @@ GameObject:
   - component: {fileID: 320879690}
   m_Layer: 3
   m_Name: LATA (49)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10356,7 +10356,7 @@ GameObject:
   - component: {fileID: 344514298}
   m_Layer: 3
   m_Name: Lapiz (4)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10452,7 +10452,7 @@ GameObject:
   - component: {fileID: 345803286}
   m_Layer: 3
   m_Name: Goma (72)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10564,7 +10564,7 @@ GameObject:
   - component: {fileID: 349411456}
   m_Layer: 3
   m_Name: LATA (64)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10770,7 +10770,7 @@ GameObject:
   - component: {fileID: 358410680}
   m_Layer: 3
   m_Name: LATA (21)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10883,7 +10883,7 @@ GameObject:
   - component: {fileID: 365027761}
   m_Layer: 3
   m_Name: LATA (108)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11285,7 +11285,7 @@ GameObject:
   - component: {fileID: 386954708}
   m_Layer: 3
   m_Name: Botella1 (39)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11399,7 +11399,7 @@ GameObject:
   - component: {fileID: 389555818}
   m_Layer: 3
   m_Name: LATA (113)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11623,7 +11623,7 @@ GameObject:
   - component: {fileID: 391225088}
   m_Layer: 3
   m_Name: Goma2 (4)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11780,7 +11780,7 @@ GameObject:
   - component: {fileID: 400939900}
   m_Layer: 3
   m_Name: LATA (131)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11923,7 +11923,7 @@ GameObject:
   - component: {fileID: 405675058}
   m_Layer: 3
   m_Name: Botella1 (11)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12037,7 +12037,7 @@ GameObject:
   - component: {fileID: 406431497}
   m_Layer: 3
   m_Name: LATA (130)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12284,7 +12284,7 @@ GameObject:
   - component: {fileID: 416507017}
   m_Layer: 3
   m_Name: Botella1 (18)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12398,7 +12398,7 @@ GameObject:
   - component: {fileID: 419944068}
   m_Layer: 3
   m_Name: LATA (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12701,7 +12701,7 @@ GameObject:
   - component: {fileID: 426535827}
   m_Layer: 3
   m_Name: LATA (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12813,7 +12813,7 @@ GameObject:
   - component: {fileID: 432887469}
   m_Layer: 3
   m_Name: Lapiz (14)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12945,7 +12945,7 @@ GameObject:
   - component: {fileID: 437366873}
   m_Layer: 3
   m_Name: LATA (140)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13089,7 +13089,7 @@ GameObject:
   - component: {fileID: 441191230}
   m_Layer: 3
   m_Name: Goma (30)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13335,7 +13335,7 @@ GameObject:
   - component: {fileID: 445793608}
   m_Layer: 3
   m_Name: Botella1 (17)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13449,7 +13449,7 @@ GameObject:
   - component: {fileID: 446458678}
   m_Layer: 3
   m_Name: LATA (164)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13655,7 +13655,7 @@ GameObject:
   - component: {fileID: 447903494}
   m_Layer: 3
   m_Name: LATA (60)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13968,7 +13968,7 @@ GameObject:
   - component: {fileID: 457913072}
   m_Layer: 3
   m_Name: Goma (69)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14085,7 +14085,7 @@ GameObject:
   - component: {fileID: 460906619}
   m_Layer: 3
   m_Name: LATA (4)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14198,7 +14198,7 @@ GameObject:
   - component: {fileID: 461859492}
   m_Layer: 3
   m_Name: Botella1 (35)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14550,7 +14550,7 @@ GameObject:
   - component: {fileID: 465977822}
   m_Layer: 3
   m_Name: Botella1 (49)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14730,7 +14730,7 @@ GameObject:
   - component: {fileID: 490974806}
   m_Layer: 3
   m_Name: LATA (109)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14848,7 +14848,7 @@ GameObject:
   - component: {fileID: 492567829}
   m_Layer: 3
   m_Name: LATA (67)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14966,7 +14966,7 @@ GameObject:
   - component: {fileID: 495577310}
   m_Layer: 3
   m_Name: Botella1 (40)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15080,7 +15080,7 @@ GameObject:
   - component: {fileID: 498844836}
   m_Layer: 3
   m_Name: LATA (78)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15193,7 +15193,7 @@ GameObject:
   - component: {fileID: 503144783}
   m_Layer: 3
   m_Name: LATA (151)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15535,7 +15535,7 @@ GameObject:
   - component: {fileID: 512783857}
   m_Layer: 3
   m_Name: Botella1 (26)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15995,7 +15995,7 @@ GameObject:
   - component: {fileID: 530257815}
   m_Layer: 3
   m_Name: Goma2 (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16152,7 +16152,7 @@ GameObject:
   - component: {fileID: 534197495}
   m_Layer: 3
   m_Name: LATA (85)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16265,7 +16265,7 @@ GameObject:
   - component: {fileID: 536116275}
   m_Layer: 3
   m_Name: LATA (39)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16454,7 +16454,7 @@ GameObject:
   - component: {fileID: 547662579}
   m_Layer: 3
   m_Name: LATA (110)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16572,7 +16572,7 @@ GameObject:
   - component: {fileID: 561295444}
   m_Layer: 3
   m_Name: Goma (67)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16684,7 +16684,7 @@ GameObject:
   - component: {fileID: 562171519}
   m_Layer: 3
   m_Name: Goma (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16801,7 +16801,7 @@ GameObject:
   - component: {fileID: 567813200}
   m_Layer: 3
   m_Name: LATA (92)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16914,7 +16914,7 @@ GameObject:
   - component: {fileID: 568627141}
   m_Layer: 3
   m_Name: Goma (41)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17109,7 +17109,7 @@ GameObject:
   - component: {fileID: 577121164}
   m_Layer: 3
   m_Name: Botella1 (15)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17222,7 +17222,7 @@ GameObject:
   - component: {fileID: 578299083}
   m_Layer: 3
   m_Name: LIBRETA (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17371,7 +17371,7 @@ GameObject:
   - component: {fileID: 598862157}
   m_Layer: 3
   m_Name: Botella1 (44)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17582,7 +17582,7 @@ GameObject:
   - component: {fileID: 610544270}
   m_Layer: 3
   m_Name: LATA (7)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17695,7 +17695,7 @@ GameObject:
   - component: {fileID: 611417577}
   m_Layer: 3
   m_Name: LATA (19)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17844,7 +17844,7 @@ GameObject:
   - component: {fileID: 621451208}
   m_Layer: 3
   m_Name: LATA (54)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18017,7 +18017,7 @@ GameObject:
   - component: {fileID: 622763898}
   m_Layer: 3
   m_Name: Lapiz (17)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18266,7 +18266,7 @@ GameObject:
   - component: {fileID: 627900897}
   m_Layer: 3
   m_Name: LATA (87)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18683,7 +18683,7 @@ GameObject:
   - component: {fileID: 653242363}
   m_Layer: 3
   m_Name: Goma (26)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18795,7 +18795,7 @@ GameObject:
   - component: {fileID: 654179539}
   m_Layer: 3
   m_Name: LATA (160)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18908,7 +18908,7 @@ GameObject:
   - component: {fileID: 656035937}
   m_Layer: 3
   m_Name: Goma (53)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19086,7 +19086,7 @@ GameObject:
   - component: {fileID: 680464706}
   m_Layer: 3
   m_Name: Goma (45)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19456,7 +19456,7 @@ GameObject:
   - component: {fileID: 694056933}
   m_Layer: 3
   m_Name: Goma (52)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19796,7 +19796,7 @@ GameObject:
   - component: {fileID: 697168470}
   m_Layer: 3
   m_Name: LATA (104)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20032,7 +20032,7 @@ GameObject:
   - component: {fileID: 700245937}
   m_Layer: 3
   m_Name: LATA (69)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20405,7 +20405,7 @@ GameObject:
   - component: {fileID: 711742573}
   m_Layer: 3
   m_Name: Lapiz (12)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20501,7 +20501,7 @@ GameObject:
   - component: {fileID: 713058022}
   m_Layer: 3
   m_Name: Goma (64)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20612,7 +20612,7 @@ GameObject:
   - component: {fileID: 717052190}
   m_Layer: 3
   m_Name: Lapiz (9)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20811,7 +20811,7 @@ GameObject:
   - component: {fileID: 733590406}
   m_Layer: 3
   m_Name: LATA (141)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20924,7 +20924,7 @@ GameObject:
   - component: {fileID: 735433845}
   m_Layer: 3
   m_Name: LATA (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21037,7 +21037,7 @@ GameObject:
   - component: {fileID: 737863062}
   m_Layer: 3
   m_Name: Botella1 (47)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21319,7 +21319,7 @@ GameObject:
   - component: {fileID: 748463543}
   m_Layer: 3
   m_Name: Lapiz (23)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21425,7 +21425,7 @@ GameObject:
   - component: {fileID: 753674490}
   m_Layer: 3
   m_Name: Botella1 (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21539,7 +21539,7 @@ GameObject:
   - component: {fileID: 758444433}
   m_Layer: 3
   m_Name: LATA (145)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21752,7 +21752,7 @@ GameObject:
   - component: {fileID: 771581780}
   m_Layer: 3
   m_Name: LATA (22)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22254,7 +22254,7 @@ GameObject:
   - component: {fileID: 795528899}
   m_Layer: 3
   m_Name: Goma (37)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22525,7 +22525,7 @@ GameObject:
   - component: {fileID: 806102495}
   m_Layer: 3
   m_Name: LATA (47)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22638,7 +22638,7 @@ GameObject:
   - component: {fileID: 807317144}
   m_Layer: 3
   m_Name: LATA (142)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22751,7 +22751,7 @@ GameObject:
   - component: {fileID: 808312702}
   m_Layer: 3
   m_Name: LATA (114)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22864,7 +22864,7 @@ GameObject:
   - component: {fileID: 827945183}
   m_Layer: 3
   m_Name: Botella1 (25)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23044,7 +23044,7 @@ GameObject:
   - component: {fileID: 831514064}
   m_Layer: 3
   m_Name: Goma (24)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23309,7 +23309,7 @@ GameObject:
   - component: {fileID: 834019991}
   m_Layer: 3
   m_Name: LATA (135)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23514,7 +23514,7 @@ GameObject:
   - component: {fileID: 842128403}
   m_Layer: 3
   m_Name: Botella1 (42)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23666,7 +23666,7 @@ GameObject:
   - component: {fileID: 850452418}
   m_Layer: 3
   m_Name: Lapiz (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23855,7 +23855,7 @@ GameObject:
   - component: {fileID: 856974071}
   m_Layer: 3
   m_Name: LATA (118)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24256,7 +24256,7 @@ GameObject:
   - component: {fileID: 877067025}
   m_Layer: 3
   m_Name: Lapiz (20)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24352,7 +24352,7 @@ GameObject:
   - component: {fileID: 878528238}
   m_Layer: 3
   m_Name: Botella1 (48)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24573,7 +24573,7 @@ GameObject:
   - component: {fileID: 888319340}
   m_Layer: 3
   m_Name: LATA (147)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24779,7 +24779,7 @@ GameObject:
   - component: {fileID: 890996544}
   m_Layer: 3
   m_Name: LATA (3)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25162,7 +25162,7 @@ GameObject:
   - component: {fileID: 896191545}
   m_Layer: 3
   m_Name: LATA (41)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25445,7 +25445,7 @@ GameObject:
   - component: {fileID: 908001420}
   m_Layer: 3
   m_Name: LATA (20)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25833,7 +25833,7 @@ GameObject:
   - component: {fileID: 915260008}
   m_Layer: 3
   m_Name: Goma (70)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25949,7 +25949,7 @@ GameObject:
   - component: {fileID: 920081044}
   m_Layer: 3
   m_Name: Goma2 (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26045,7 +26045,7 @@ GameObject:
   - component: {fileID: 920381503}
   m_Layer: 3
   m_Name: Goma (29)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26409,7 +26409,7 @@ GameObject:
   - component: {fileID: 929306944}
   m_Layer: 3
   m_Name: LATA (32)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26522,7 +26522,7 @@ GameObject:
   - component: {fileID: 932111088}
   m_Layer: 3
   m_Name: LATA (101)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26634,7 +26634,7 @@ GameObject:
   - component: {fileID: 932194478}
   m_Layer: 3
   m_Name: Goma2 (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26933,7 +26933,7 @@ GameObject:
   - component: {fileID: 938322861}
   m_Layer: 3
   m_Name: LATA (112)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27104,7 +27104,7 @@ GameObject:
   - component: {fileID: 941100105}
   m_Layer: 3
   m_Name: Goma (31)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27309,7 +27309,7 @@ GameObject:
   - component: {fileID: 946555811}
   m_Layer: 3
   m_Name: LATA (155)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27480,7 +27480,7 @@ GameObject:
   - component: {fileID: 948521568}
   m_Layer: 3
   m_Name: Goma (14)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27592,7 +27592,7 @@ GameObject:
   - component: {fileID: 957781483}
   m_Layer: 3
   m_Name: LATA (111)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27803,7 +27803,7 @@ GameObject:
   - component: {fileID: 964413676}
   m_Layer: 3
   m_Name: Goma (25)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27951,7 +27951,7 @@ GameObject:
   - component: {fileID: 972464943}
   m_Layer: 3
   m_Name: Goma (43)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28124,7 +28124,7 @@ GameObject:
   - component: {fileID: 975547620}
   m_Layer: 3
   m_Name: LATA (44)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28237,7 +28237,7 @@ GameObject:
   - component: {fileID: 977405937}
   m_Layer: 3
   m_Name: LATA (23)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28416,7 +28416,7 @@ GameObject:
   - component: {fileID: 986185237}
   m_Layer: 3
   m_Name: LATA (79)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28534,7 +28534,7 @@ GameObject:
   - component: {fileID: 990015448}
   m_Layer: 3
   m_Name: LATA (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28646,7 +28646,7 @@ GameObject:
   - component: {fileID: 991956517}
   m_Layer: 3
   m_Name: LIBRETA (3)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28742,7 +28742,7 @@ GameObject:
   - component: {fileID: 996853730}
   m_Layer: 3
   m_Name: LATA (107)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28855,7 +28855,7 @@ GameObject:
   - component: {fileID: 1000284320}
   m_Layer: 3
   m_Name: LATA (137)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28968,7 +28968,7 @@ GameObject:
   - component: {fileID: 1001614795}
   m_Layer: 3
   m_Name: LATA (100)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29080,7 +29080,7 @@ GameObject:
   - component: {fileID: 1007741718}
   m_Layer: 3
   m_Name: Lapiz (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29364,7 +29364,7 @@ GameObject:
   - component: {fileID: 1020369735}
   m_Layer: 3
   m_Name: Botella1 (19)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29478,7 +29478,7 @@ GameObject:
   - component: {fileID: 1021917462}
   m_Layer: 3
   m_Name: LATA (153)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29591,7 +29591,7 @@ GameObject:
   - component: {fileID: 1022018373}
   m_Layer: 3
   m_Name: Goma (17)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29703,7 +29703,7 @@ GameObject:
   - component: {fileID: 1022820264}
   m_Layer: 3
   m_Name: LATA (30)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29850,7 +29850,7 @@ GameObject:
   - component: {fileID: 1034058815}
   m_Layer: 3
   m_Name: LIBRETA (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29946,7 +29946,7 @@ GameObject:
   - component: {fileID: 1035642949}
   m_Layer: 3
   m_Name: LATA (121)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30120,7 +30120,7 @@ GameObject:
   - component: {fileID: 1039280097}
   m_Layer: 3
   m_Name: Goma (71)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30232,7 +30232,7 @@ GameObject:
   - component: {fileID: 1040442960}
   m_Layer: 3
   m_Name: LATA (62)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30345,7 +30345,7 @@ GameObject:
   - component: {fileID: 1042509419}
   m_Layer: 3
   m_Name: LATA (115)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30458,7 +30458,7 @@ GameObject:
   - component: {fileID: 1043953316}
   m_Layer: 3
   m_Name: LATA (83)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30761,7 +30761,7 @@ GameObject:
   - component: {fileID: 1054261258}
   m_Layer: 3
   m_Name: LATA (149)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31066,7 +31066,7 @@ GameObject:
   - component: {fileID: 1071543327}
   m_Layer: 3
   m_Name: LATA (161)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31179,7 +31179,7 @@ GameObject:
   - component: {fileID: 1072496894}
   m_Layer: 3
   m_Name: LATA (93)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31433,7 +31433,7 @@ GameObject:
   - component: {fileID: 1074750387}
   m_Layer: 3
   m_Name: LATA (138)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31639,7 +31639,7 @@ GameObject:
   - component: {fileID: 1083193489}
   m_Layer: 3
   m_Name: LATA (68)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31937,7 +31937,7 @@ GameObject:
   - component: {fileID: 1090847962}
   m_Layer: 3
   m_Name: Lapiz (19)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32126,7 +32126,7 @@ GameObject:
   - component: {fileID: 1095272665}
   m_Layer: 3
   m_Name: Botella1 (12)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32245,7 +32245,7 @@ GameObject:
   - component: {fileID: 1101676119}
   m_Layer: 3
   m_Name: LATA (125)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32357,7 +32357,7 @@ GameObject:
   - component: {fileID: 1101807998}
   m_Layer: 3
   m_Name: Lapiz (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32581,7 +32581,7 @@ GameObject:
   - component: {fileID: 1105987167}
   m_Layer: 3
   m_Name: Botella1 (27)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32695,7 +32695,7 @@ GameObject:
   - component: {fileID: 1108140578}
   m_Layer: 3
   m_Name: Goma (18)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33120,7 +33120,7 @@ GameObject:
   - component: {fileID: 1133461112}
   m_Layer: 3
   m_Name: LATA (12)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33233,7 +33233,7 @@ GameObject:
   - component: {fileID: 1141159811}
   m_Layer: 3
   m_Name: Botella1 (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33388,7 +33388,7 @@ GameObject:
   - component: {fileID: 1153326988}
   m_Layer: 3
   m_Name: LATA (168)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33655,7 +33655,7 @@ GameObject:
   - component: {fileID: 1156639861}
   m_Layer: 3
   m_Name: LATA (97)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33907,7 +33907,7 @@ GameObject:
   - component: {fileID: 1167253318}
   m_Layer: 3
   m_Name: LATA (134)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34020,7 +34020,7 @@ GameObject:
   - component: {fileID: 1167645334}
   m_Layer: 3
   m_Name: LATA (33)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34133,7 +34133,7 @@ GameObject:
   - component: {fileID: 1171720217}
   m_Layer: 3
   m_Name: Goma (63)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34306,7 +34306,7 @@ GameObject:
   - component: {fileID: 1175077537}
   m_Layer: 3
   m_Name: LATA (102)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34419,7 +34419,7 @@ GameObject:
   - component: {fileID: 1182470049}
   m_Layer: 3
   m_Name: LATA (15)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34532,7 +34532,7 @@ GameObject:
   - component: {fileID: 1182748346}
   m_Layer: 3
   m_Name: LATA (29)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34645,7 +34645,7 @@ GameObject:
   - component: {fileID: 1187131695}
   m_Layer: 3
   m_Name: Goma (42)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34823,7 +34823,7 @@ GameObject:
   - component: {fileID: 1195051475}
   m_Layer: 3
   m_Name: Botella1 (10)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34937,7 +34937,7 @@ GameObject:
   - component: {fileID: 1202084537}
   m_Layer: 3
   m_Name: Botella1 (38)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35122,7 +35122,7 @@ GameObject:
   - component: {fileID: 1213523631}
   m_Layer: 3
   m_Name: Goma (54)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35234,7 +35234,7 @@ GameObject:
   - component: {fileID: 1220571989}
   m_Layer: 3
   m_Name: LATA (58)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35347,7 +35347,7 @@ GameObject:
   - component: {fileID: 1224634652}
   m_Layer: 3
   m_Name: Goma (27)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35459,7 +35459,7 @@ GameObject:
   - component: {fileID: 1225180737}
   m_Layer: 3
   m_Name: Botella1 (4)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35573,7 +35573,7 @@ GameObject:
   - component: {fileID: 1225912874}
   m_Layer: 3
   m_Name: Goma (11)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35812,7 +35812,7 @@ GameObject:
   - component: {fileID: 1235260948}
   m_Layer: 3
   m_Name: Goma (34)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36037,7 +36037,7 @@ GameObject:
   - component: {fileID: 1242810660}
   m_Layer: 3
   m_Name: LATA (116)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36243,7 +36243,7 @@ GameObject:
   - component: {fileID: 1244569458}
   m_Layer: 3
   m_Name: LATA (48)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36356,7 +36356,7 @@ GameObject:
   - component: {fileID: 1246321093}
   m_Layer: 3
   m_Name: LATA (129)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36469,7 +36469,7 @@ GameObject:
   - component: {fileID: 1251226958}
   m_Layer: 3
   m_Name: Botella1 (3)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36588,7 +36588,7 @@ GameObject:
   - component: {fileID: 1260915695}
   m_Layer: 3
   m_Name: Goma (66)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36834,7 +36834,7 @@ GameObject:
   - component: {fileID: 1267047930}
   m_Layer: 3
   m_Name: Botella1 (6)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37148,7 +37148,7 @@ GameObject:
   - component: {fileID: 1272512307}
   m_Layer: 3
   m_Name: LATA (66)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37297,7 +37297,7 @@ GameObject:
   - component: {fileID: 1278700441}
   m_Layer: 3
   m_Name: LATA (98)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37415,7 +37415,7 @@ GameObject:
   - component: {fileID: 1293858782}
   m_Layer: 3
   m_Name: Goma (50)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37588,7 +37588,7 @@ GameObject:
   - component: {fileID: 1298854691}
   m_Layer: 3
   m_Name: LATA (133)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37737,7 +37737,7 @@ GameObject:
   - component: {fileID: 1301999000}
   m_Layer: 3
   m_Name: LATA (46)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37850,7 +37850,7 @@ GameObject:
   - component: {fileID: 1303383938}
   m_Layer: 3
   m_Name: LATA (148)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38028,7 +38028,7 @@ GameObject:
   - component: {fileID: 1317409766}
   m_Layer: 3
   m_Name: Lapiz (16)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38192,7 +38192,7 @@ GameObject:
   - component: {fileID: 1326307325}
   m_Layer: 3
   m_Name: Goma (58)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38304,7 +38304,7 @@ GameObject:
   - component: {fileID: 1326359757}
   m_Layer: 3
   m_Name: LATA (171)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38417,7 +38417,7 @@ GameObject:
   - component: {fileID: 1328209540}
   m_Layer: 3
   m_Name: LATA (76)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38543,7 +38543,7 @@ GameObject:
   - component: {fileID: 1331516591}
   m_Layer: 3
   m_Name: Botella1 (16)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38754,7 +38754,7 @@ GameObject:
   - component: {fileID: 1343248723}
   m_Layer: 3
   m_Name: Lapiz (2)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38930,7 +38930,7 @@ GameObject:
   - component: {fileID: 1347984902}
   m_Layer: 3
   m_Name: LATA (119)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39104,7 +39104,7 @@ GameObject:
   - component: {fileID: 1353299773}
   m_Layer: 3
   m_Name: Botella1 (32)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39218,7 +39218,7 @@ GameObject:
   - component: {fileID: 1359607416}
   m_Layer: 3
   m_Name: Goma (49)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39330,7 +39330,7 @@ GameObject:
   - component: {fileID: 1363772762}
   m_Layer: 3
   m_Name: LATA (89)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39443,7 +39443,7 @@ GameObject:
   - component: {fileID: 1368871619}
   m_Layer: 3
   m_Name: LATA (61)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39556,7 +39556,7 @@ GameObject:
   - component: {fileID: 1371940048}
   m_Layer: 3
   m_Name: Botella1 (8)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39670,7 +39670,7 @@ GameObject:
   - component: {fileID: 1372971112}
   m_Layer: 3
   m_Name: LATA (157)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39788,7 +39788,7 @@ GameObject:
   - component: {fileID: 1388541138}
   m_Layer: 3
   m_Name: Goma (38)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40229,7 +40229,7 @@ GameObject:
   - component: {fileID: 1399314783}
   m_Layer: 3
   m_Name: LATA (72)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40403,7 +40403,7 @@ GameObject:
   - component: {fileID: 1411997821}
   m_Layer: 3
   m_Name: Goma (9)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40639,7 +40639,7 @@ GameObject:
   - component: {fileID: 1415027507}
   m_Layer: 3
   m_Name: Botella1 (31)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40874,7 +40874,7 @@ GameObject:
   - component: {fileID: 1421135770}
   m_Layer: 3
   m_Name: Goma2 (3)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40970,7 +40970,7 @@ GameObject:
   - component: {fileID: 1425485855}
   m_Layer: 3
   m_Name: Goma (51)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41205,7 +41205,7 @@ GameObject:
   - component: {fileID: 1428677768}
   m_Layer: 3
   m_Name: Goma (15)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41317,7 +41317,7 @@ GameObject:
   - component: {fileID: 1429388687}
   m_Layer: 3
   m_Name: LATA (8)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41748,7 +41748,7 @@ GameObject:
   - component: {fileID: 1461196123}
   m_Layer: 3
   m_Name: LATA (146)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41861,7 +41861,7 @@ GameObject:
   - component: {fileID: 1462399322}
   m_Layer: 3
   m_Name: Botella1 (22)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41975,7 +41975,7 @@ GameObject:
   - component: {fileID: 1469539793}
   m_Layer: 3
   m_Name: Goma (48)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42179,7 +42179,7 @@ GameObject:
   - component: {fileID: 1471694112}
   m_Layer: 3
   m_Name: pPlane1 (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294
@@ -42275,7 +42275,7 @@ GameObject:
   - component: {fileID: 1472913796}
   m_Layer: 3
   m_Name: Goma (56)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42387,7 +42387,7 @@ GameObject:
   - component: {fileID: 1475596353}
   m_Layer: 3
   m_Name: LATA (120)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42538,7 +42538,7 @@ GameObject:
   - component: {fileID: 1485859147}
   m_Layer: 3
   m_Name: LATA (75)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42651,7 +42651,7 @@ GameObject:
   - component: {fileID: 1487369167}
   m_Layer: 3
   m_Name: LATA (9)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42857,7 +42857,7 @@ GameObject:
   - component: {fileID: 1491263815}
   m_Layer: 3
   m_Name: LATA (63)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42970,7 +42970,7 @@ GameObject:
   - component: {fileID: 1494326601}
   m_Layer: 3
   m_Name: LATA (117)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43114,7 +43114,7 @@ GameObject:
   - component: {fileID: 1496517820}
   m_Layer: 3
   m_Name: Goma (21)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43398,7 +43398,7 @@ GameObject:
   - component: {fileID: 1519301753}
   m_Layer: 3
   m_Name: LATA (45)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43516,7 +43516,7 @@ GameObject:
   - component: {fileID: 1527610791}
   m_Layer: 3
   m_Name: Botella1 (23)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43630,7 +43630,7 @@ GameObject:
   - component: {fileID: 1528410375}
   m_Layer: 3
   m_Name: LATA (38)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43743,7 +43743,7 @@ GameObject:
   - component: {fileID: 1528616841}
   m_Layer: 3
   m_Name: Goma (60)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44178,7 +44178,7 @@ GameObject:
   - component: {fileID: 1545176250}
   m_Layer: 3
   m_Name: LATA (152)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44291,7 +44291,7 @@ GameObject:
   - component: {fileID: 1552376440}
   m_Layer: 3
   m_Name: LATA (50)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44542,7 +44542,7 @@ GameObject:
   - component: {fileID: 1556122144}
   m_Layer: 3
   m_Name: Lapiz (8)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -44638,7 +44638,7 @@ GameObject:
   - component: {fileID: 1561822716}
   m_Layer: 3
   m_Name: LATA (163)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45077,7 +45077,7 @@ GameObject:
   - component: {fileID: 1573349600}
   m_Layer: 3
   m_Name: Botella1 (36)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45376,7 +45376,7 @@ GameObject:
   - component: {fileID: 1589937875}
   m_Layer: 3
   m_Name: Goma (19)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45488,7 +45488,7 @@ GameObject:
   - component: {fileID: 1597769341}
   m_Layer: 3
   m_Name: Botella1 (45)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45606,7 +45606,7 @@ GameObject:
   - component: {fileID: 1605692669}
   m_Layer: 3
   m_Name: Lapiz (10)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -45800,7 +45800,7 @@ GameObject:
   - component: {fileID: 1613881371}
   m_Layer: 3
   m_Name: Goma (22)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45917,7 +45917,7 @@ GameObject:
   - component: {fileID: 1622820151}
   m_Layer: 3
   m_Name: Goma (62)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46034,7 +46034,7 @@ GameObject:
   - component: {fileID: 1632442947}
   m_Layer: 3
   m_Name: Botella1 (37)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46148,7 +46148,7 @@ GameObject:
   - component: {fileID: 1635113006}
   m_Layer: 3
   m_Name: LATA (26)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46451,7 +46451,7 @@ GameObject:
   - component: {fileID: 1647082122}
   m_Layer: 3
   m_Name: LATA (53)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46640,7 +46640,7 @@ GameObject:
   - component: {fileID: 1660120261}
   m_Layer: 3
   m_Name: LATA (56)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46875,7 +46875,7 @@ GameObject:
   - component: {fileID: 1668919735}
   m_Layer: 3
   m_Name: LATA (55)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46987,7 +46987,7 @@ GameObject:
   - component: {fileID: 1669176315}
   m_Layer: 3
   m_Name: Goma2 (5)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -47083,7 +47083,7 @@ GameObject:
   - component: {fileID: 1670898949}
   m_Layer: 3
   m_Name: Botella1 (33)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47197,7 +47197,7 @@ GameObject:
   - component: {fileID: 1674006049}
   m_Layer: 3
   m_Name: Goma (35)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47314,7 +47314,7 @@ GameObject:
   - component: {fileID: 1679318318}
   m_Layer: 3
   m_Name: LATA (88)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47427,7 +47427,7 @@ GameObject:
   - component: {fileID: 1679575891}
   m_Layer: 3
   m_Name: Goma (39)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47539,7 +47539,7 @@ GameObject:
   - component: {fileID: 1681803810}
   m_Layer: 3
   m_Name: Botella1 (30)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47653,7 +47653,7 @@ GameObject:
   - component: {fileID: 1682513465}
   m_Layer: 3
   m_Name: LATA (81)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47893,7 +47893,7 @@ GameObject:
   - component: {fileID: 1692460958}
   m_Layer: 3
   m_Name: LATA (36)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48138,7 +48138,7 @@ GameObject:
   - component: {fileID: 1715485485}
   m_Layer: 3
   m_Name: Goma (36)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48250,7 +48250,7 @@ GameObject:
   - component: {fileID: 1722475784}
   m_Layer: 3
   m_Name: LATA (13)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48363,7 +48363,7 @@ GameObject:
   - component: {fileID: 1734884752}
   m_Layer: 3
   m_Name: Goma (23)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48568,7 +48568,7 @@ GameObject:
   - component: {fileID: 1738204448}
   m_Layer: 3
   m_Name: LATA (16)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48681,7 +48681,7 @@ GameObject:
   - component: {fileID: 1741435806}
   m_Layer: 3
   m_Name: Botella1 (28)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48997,7 +48997,7 @@ GameObject:
   - component: {fileID: 1752667174}
   m_Layer: 3
   m_Name: LATA (167)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49109,7 +49109,7 @@ GameObject:
   - component: {fileID: 1754142071}
   m_Layer: 3
   m_Name: Lapiz (21)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -49266,7 +49266,7 @@ GameObject:
   - component: {fileID: 1765428785}
   m_Layer: 3
   m_Name: LATA (25)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49379,7 +49379,7 @@ GameObject:
   - component: {fileID: 1770105988}
   m_Layer: 3
   m_Name: Goma (44)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49491,7 +49491,7 @@ GameObject:
   - component: {fileID: 1774099129}
   m_Layer: 3
   m_Name: Botella1 (29)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49698,7 +49698,7 @@ GameObject:
   - component: {fileID: 1775976812}
   m_Layer: 3
   m_Name: LATA (95)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50346,7 +50346,7 @@ GameObject:
   - component: {fileID: 1808406516}
   m_Layer: 3
   m_Name: LATA (18)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50459,7 +50459,7 @@ GameObject:
   - component: {fileID: 1817177253}
   m_Layer: 3
   m_Name: Goma (12)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50571,7 +50571,7 @@ GameObject:
   - component: {fileID: 1817443018}
   m_Layer: 3
   m_Name: LATA (27)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50748,7 +50748,7 @@ GameObject:
   - component: {fileID: 1826126268}
   m_Layer: 3
   m_Name: LATA (169)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50861,7 +50861,7 @@ GameObject:
   - component: {fileID: 1827742475}
   m_Layer: 3
   m_Name: LATA (59)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51180,7 +51180,7 @@ GameObject:
   - component: {fileID: 1845342830}
   m_Layer: 3
   m_Name: Lapiz (13)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -51276,7 +51276,7 @@ GameObject:
   - component: {fileID: 1849112585}
   m_Layer: 3
   m_Name: Goma (47)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51388,7 +51388,7 @@ GameObject:
   - component: {fileID: 1852886145}
   m_Layer: 3
   m_Name: LATA (144)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51501,7 +51501,7 @@ GameObject:
   - component: {fileID: 1853802802}
   m_Layer: 3
   m_Name: LATA (150)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51614,7 +51614,7 @@ GameObject:
   - component: {fileID: 1858108742}
   m_Layer: 3
   m_Name: LATA (90)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51885,7 +51885,7 @@ GameObject:
   - component: {fileID: 1864844375}
   m_Layer: 3
   m_Name: Goma (20)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52223,7 +52223,7 @@ GameObject:
   - component: {fileID: 1869753799}
   m_Layer: 3
   m_Name: Goma (16)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52471,7 +52471,7 @@ GameObject:
   - component: {fileID: 1877212531}
   m_Layer: 3
   m_Name: Goma (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59859,7 +59859,7 @@ GameObject:
   - component: {fileID: 1877523679}
   m_Layer: 3
   m_Name: Lapiz (7)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -59954,7 +59954,7 @@ GameObject:
   - component: {fileID: 1879502428}
   m_Layer: 3
   m_Name: Lapiz (15)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -60050,7 +60050,7 @@ GameObject:
   - component: {fileID: 1881190487}
   m_Layer: 3
   m_Name: Goma (40)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60162,7 +60162,7 @@ GameObject:
   - component: {fileID: 1882241412}
   m_Layer: 3
   m_Name: LATA (35)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60527,7 +60527,7 @@ GameObject:
   - component: {fileID: 1900593714}
   m_Layer: 3
   m_Name: LATA (57)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60706,7 +60706,7 @@ GameObject:
   - component: {fileID: 1908143673}
   m_Layer: 3
   m_Name: LATA (74)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60819,7 +60819,7 @@ GameObject:
   - component: {fileID: 1909517490}
   m_Layer: 3
   m_Name: Goma (10)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60931,7 +60931,7 @@ GameObject:
   - component: {fileID: 1909650304}
   m_Layer: 3
   m_Name: LATA (170)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61209,7 +61209,7 @@ GameObject:
   - component: {fileID: 1928028288}
   m_Layer: 3
   m_Name: LATA (73)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61643,7 +61643,7 @@ GameObject:
   - component: {fileID: 1931613516}
   m_Layer: 3
   m_Name: LATA (10)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61760,7 +61760,7 @@ GameObject:
   - component: {fileID: 1937082208}
   m_Layer: 3
   m_Name: Lapiz (3)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -62051,7 +62051,7 @@ GameObject:
   - component: {fileID: 1942818711}
   m_Layer: 3
   m_Name: LATA (86)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62195,7 +62195,7 @@ GameObject:
   - component: {fileID: 1948430360}
   m_Layer: 3
   m_Name: Goma (55)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62307,7 +62307,7 @@ GameObject:
   - component: {fileID: 1949690349}
   m_Layer: 3
   m_Name: LATA (166)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62542,7 +62542,7 @@ GameObject:
   - component: {fileID: 1961567780}
   m_Layer: 3
   m_Name: LATA (43)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62794,7 +62794,7 @@ GameObject:
   - component: {fileID: 1979052038}
   m_Layer: 3
   m_Name: LATA (82)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63300,7 +63300,7 @@ GameObject:
   - component: {fileID: 2009789277}
   m_Layer: 3
   m_Name: Goma (59)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63582,7 +63582,7 @@ GameObject:
   - component: {fileID: 2012983904}
   m_Layer: 3
   m_Name: Lapiz (11)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -63678,7 +63678,7 @@ GameObject:
   - component: {fileID: 2014837654}
   m_Layer: 3
   m_Name: LATA (24)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63930,7 +63930,7 @@ GameObject:
   - component: {fileID: 2038348908}
   m_Layer: 3
   m_Name: LATA (123)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64103,7 +64103,7 @@ GameObject:
   - component: {fileID: 2048077513}
   m_Layer: 3
   m_Name: Lapiz (26)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -64412,7 +64412,7 @@ GameObject:
   - component: {fileID: 2069314747}
   m_Layer: 3
   m_Name: LATA (37)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64525,7 +64525,7 @@ GameObject:
   - component: {fileID: 2070650518}
   m_Layer: 3
   m_Name: LATA (94)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64704,7 +64704,7 @@ GameObject:
   - component: {fileID: 2081421551}
   m_Layer: 3
   m_Name: LATA (52)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64816,7 +64816,7 @@ GameObject:
   - component: {fileID: 2092796049}
   m_Layer: 3
   m_Name: Lapiz (22)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -65012,7 +65012,7 @@ GameObject:
   - component: {fileID: 2094407362}
   m_Layer: 3
   m_Name: Goma (65)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65124,7 +65124,7 @@ GameObject:
   - component: {fileID: 2097350884}
   m_Layer: 3
   m_Name: LATA (65)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65273,7 +65273,7 @@ GameObject:
   - component: {fileID: 2104133836}
   m_Layer: 3
   m_Name: Goma (7)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65451,7 +65451,7 @@ GameObject:
   - component: {fileID: 2109090954}
   m_Layer: 3
   m_Name: Botella1 (46)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65630,7 +65630,7 @@ GameObject:
   - component: {fileID: 2116385561}
   m_Layer: 3
   m_Name: Lapiz (25)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -65833,7 +65833,7 @@ GameObject:
   - component: {fileID: 2128979302}
   m_Layer: 3
   m_Name: LATA (139)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66070,7 +66070,7 @@ GameObject:
   - component: {fileID: 2141810952}
   m_Layer: 3
   m_Name: LATA (126)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70061,7 +70061,7 @@ GameObject:
   - component: {fileID: 1877306768}
   m_Layer: 3
   m_Name: pPlane5
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294
@@ -75549,7 +75549,7 @@ GameObject:
   - component: {fileID: 6056379730018334707}
   m_Layer: 3
   m_Name: Botella3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -79073,7 +79073,7 @@ GameObject:
   - component: {fileID: 1104951189}
   m_Layer: 3
   m_Name: LATA
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -82064,7 +82064,7 @@ GameObject:
   - component: {fileID: 1877306769}
   m_Layer: 3
   m_Name: pPlane4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294
@@ -82371,7 +82371,7 @@ GameObject:
   - component: {fileID: 120837340167852434}
   m_Layer: 3
   m_Name: LIBRETA
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -85011,7 +85011,7 @@ GameObject:
   - component: {fileID: 1877306792}
   m_Layer: 3
   m_Name: pPlane2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294
@@ -85581,7 +85581,7 @@ GameObject:
   - component: {fileID: 1877306793}
   m_Layer: 3
   m_Name: pPlane1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294
@@ -88253,7 +88253,7 @@ GameObject:
   - component: {fileID: 1329709474}
   m_Layer: 3
   m_Name: Goma
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -89346,7 +89346,7 @@ GameObject:
   - component: {fileID: 5340789529121939171}
   m_Layer: 3
   m_Name: Goma2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -92891,7 +92891,7 @@ GameObject:
   - component: {fileID: 8679476112826418102}
   m_Layer: 3
   m_Name: Lapiz
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -99536,7 +99536,7 @@ GameObject:
   - component: {fileID: 1877306791}
   m_Layer: 3
   m_Name: pPlane3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294

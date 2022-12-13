@@ -54,6 +54,7 @@ namespace Members.Carlos.Scripts.Dialogues
         public void StartDialogue(DialogueObject dialogueObject)
         {
             gameManager.isDialogue = true;
+            gameManager.CloseControlsMenu();
      
             dialogueAnimator.SetBool(DialogueIsOn, true);
 

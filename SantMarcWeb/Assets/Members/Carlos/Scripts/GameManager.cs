@@ -51,13 +51,7 @@ namespace Members.Carlos.Scripts
         [Space(10)] 
         public bool controlsMenuOpen;
         public bool snakeOpen;
-
-        /*[Header("--- PIEZAS COCHE ---")] 
-        [SerializeField] private GameObject carMesh;
-        [SerializeField] private GameObject carWheelFR;
-        [SerializeField] private GameObject carWheelFL;
-        [SerializeField] private GameObject carWheelBR;
-        [SerializeField] private GameObject carWheelBL;*/
+        public bool canOpenControls;
 
         [SerializeField] private TextMeshProUGUI titleControlsMenu;
         
@@ -147,7 +141,7 @@ namespace Members.Carlos.Scripts
                 ChangeCharacter();
             }
 
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && !isDialogue && canOpenControls)
             {
                 PlayerControlsMenu();
             }

@@ -29,6 +29,14 @@ public class CinemachineSwitcher : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (gameObject.activeSelf)
+        {
+            GM.canOpenControls = false;
+        }
+    }
+
     public void ActivarPCModelaje()
     {
         GM.isDialogue = true;
@@ -114,6 +122,7 @@ public class CinemachineSwitcher : MonoBehaviour
         yield return new WaitForSeconds(2);
         GM.isDialogue = false;
         GM.snakeOpen = false;
+        GM.canOpenControls = true;
         ThirdPersonCamera.m_XAxis.m_InputAxisName = "Mouse X";
         ThirdPersonCamera.m_YAxis.m_InputAxisName = "Mouse Y";
         ThirdPersonCamera.m_XAxis.m_InputAxisValue = 0;

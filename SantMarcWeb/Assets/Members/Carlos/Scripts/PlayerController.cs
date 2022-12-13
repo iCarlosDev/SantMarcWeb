@@ -54,7 +54,7 @@ namespace Members.Carlos.Scripts
         {
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
-                playerAnimator.SetBool(Grounded,true);
+                isGroundedAnimator = true;
             }
         }
 
@@ -134,6 +134,10 @@ namespace Members.Carlos.Scripts
             if (isGroundedAnimator)
             {
                 playerAnimator.SetBool(Grounded,true);
+            }
+            else
+            {
+                playerAnimator.SetBool(Grounded,false);
             }
         }
         

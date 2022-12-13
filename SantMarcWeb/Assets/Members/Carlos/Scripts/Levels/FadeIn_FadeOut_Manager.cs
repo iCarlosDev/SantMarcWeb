@@ -70,4 +70,15 @@ public class FadeIn_FadeOut_Manager : MonoBehaviour
          DialogueManager.instance.StartDialogue(DialogueManager.instance.FirstDialogueObject);
       }
    }
+
+   public void CanOpenControlsMenu()
+   {
+      GameManager.instance.canOpenControls = true;
+   }
+
+   public void CanNotOpenControlsMenu()
+   {
+      GameManager.instance.canOpenControls = false;
+      GameManager.instance.CloseControlsMenu();
+   }
 }
