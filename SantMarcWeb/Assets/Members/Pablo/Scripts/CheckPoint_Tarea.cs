@@ -62,16 +62,19 @@ public class CheckPoint_Tarea : MonoBehaviour
             if (_display.tarea == _display.ArrayDeTareas[0])
             {
                 _display.checkpointUI.SetActive(false);
+                _cinemachine.gameObject.SetActive(true);
                 _cinemachine.ActivarPCModelaje();
             }
             else if (_display.tarea == _display.ArrayDeTareas[1])
             {
                 _display.checkpointUI.SetActive(false);
+                _cinemachine.gameObject.SetActive(true);
                 _cinemachine.ActivarPCTexturizado();
             }
             else if (_display.tarea == _display.ArrayDeTareas[2])
             {
                 _display.checkpointUI.SetActive(false);
+                _cinemachine.gameObject.SetActive(true);
                 _cinemachine.ActivarPCProgramacion();
             }
         }

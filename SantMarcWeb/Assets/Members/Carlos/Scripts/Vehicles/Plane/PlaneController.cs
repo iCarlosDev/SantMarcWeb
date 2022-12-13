@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Members.Carlos.Scripts.Vehicles.Plane
@@ -13,9 +14,8 @@ namespace Members.Carlos.Scripts.Vehicles.Plane
         [SerializeField] private float verticalInput;
     
         public Rigidbody planeRigidbody;
-    
-// Use this for initialization
-        void Start ()
+
+        private void Awake()
         {
             planeRigidbody = GetComponent<Rigidbody>();
             gameManager = FindObjectOfType<GameManager>();

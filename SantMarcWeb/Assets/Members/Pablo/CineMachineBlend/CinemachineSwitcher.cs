@@ -24,6 +24,11 @@ public class CinemachineSwitcher : MonoBehaviour
         AudioManager = FindObjectOfType<AudioManager>();
     }
 
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
+
     public void ActivarPCModelaje()
     {
         GM.isDialogue = true;
@@ -115,5 +120,7 @@ public class CinemachineSwitcher : MonoBehaviour
         ThirdPersonCamera.m_YAxis.m_InputAxisValue = 0;
         AudioManager.Stop("SnakeTheme");
         AudioManager.Play("Background");
+        
+        gameObject.SetActive(false);
     }
 }
