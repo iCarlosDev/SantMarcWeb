@@ -264,7 +264,9 @@ public class Snake : MonoBehaviour
                 }
                 else
                 {
-                    _menuSnake.RetryMenu(Score);
+                    ResetGame();
+                    _menuSnake.RetryMenu(TempScore);
+                    TempScore = 0;
                 }
                 //WIN
             
@@ -356,8 +358,9 @@ public class Snake : MonoBehaviour
                     else
                     {
                         //WIN
-                        _menuSnake.RetryMenu(Score);
                         ResetGame();
+                        _menuSnake.RetryMenu(TempScore);
+                        TempScore = 0;
                     }
                 }
             }
