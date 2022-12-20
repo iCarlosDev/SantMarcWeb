@@ -33,6 +33,16 @@ public class FadeIn_FadeOut_Manager : MonoBehaviour
       StartCoroutine(WaitToFade());
    }
 
+   private void Update()
+   {
+      if (SceneManager.GetActiveScene().buildIndex == 1 && Input.GetKeyDown(KeyCode.P))
+      {
+         TaskManager.instance.CoinsCollected = true;
+         TaskManager.instance.TasksBoolCheck();
+         StartCoroutine(WaitToChangeFinalLevel());
+      }
+   }
+
    public IEnumerator WaitToChangeFinalLevel()
    {
       yield return new WaitForSeconds(10);

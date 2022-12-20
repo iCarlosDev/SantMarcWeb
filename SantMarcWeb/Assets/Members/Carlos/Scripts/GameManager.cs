@@ -23,6 +23,7 @@ namespace Members.Carlos.Scripts
         public TaskManager taskManager;
 
         [Header("--- PLANE ---")]
+        [SerializeField] private Transform playerSpawnPlane;
         [SerializeField] private GameObject planeVehicle;
         [SerializeField] private GameObject planeVirtualCam;
         [SerializeField] private GameObject planeFreeLookCam;
@@ -374,8 +375,17 @@ namespace Members.Carlos.Scripts
             
             planeVehicle.SetActive(true);
 
-            player.transform.position = planeVehicle.transform.position;
-            player.transform.rotation = planeVehicle.transform.rotation;
+            if (!PlaneGroundDetecter.instance.ChangeSpawnPos)
+            {
+                player.transform.position = playerSpawnPlane.transform.position;
+                player.transform.rotation = playerSpawnPlane.transform.rotation;
+            }
+            else
+            {
+                player.transform.position = new Vector3(playerSpawnPlane.transform.position.x, playerSpawnPlane.transform.position.y + 3f, playerSpawnPlane.transform.position.z + 2f);
+                player.transform.rotation = playerSpawnPlane.transform.rotation;
+            }
+            
         }
     
         private void PlaneCameraMovement()
@@ -470,6 +480,7 @@ namespace Members.Carlos.Scripts
             planeVehicle.SetActive(false);
             planeVirtualCam.SetActive(false);
             planeFreeLookCam.SetActive(false);
+            PlaneGroundDetecter.instance.ChangeSpawnPos = false;
         
             carVehicle.SetActive(false);
             carVirtualCam.SetActive(false);
@@ -538,6 +549,7 @@ namespace Members.Carlos.Scripts
             planeVirtualCam.GetComponent<CinemachineVirtualCamera>().LookAt = AudioManager.instance.currentAvion.transform.GetChild(0);
             planeFreeLookCam.GetComponent<CinemachineFreeLook>().Follow = AudioManager.instance.currentAvion.transform;
             planeFreeLookCam.GetComponent<CinemachineFreeLook>().LookAt = AudioManager.instance.currentAvion.transform.GetChild(0);
+            playerSpawnPlane = AudioManager.instance.currentAvion.transform.GetChild(9);
         }
 
         private void ElegirTexturaAvion()
